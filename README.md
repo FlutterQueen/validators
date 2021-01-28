@@ -19,7 +19,7 @@ which problem does this package solve ?
 ## you can use validator functions any where the will return a boolean
 
 ```dart
-import 'package/queen_validation/index.dart';
+import 'package/queen_validators/index.dart';
 void main(){
    final foo = 'queen 👑';
    print(isEmail(foo));    // false
@@ -33,7 +33,7 @@ void main(){
 ## a function that can user more the one rule to validate **TextFormField** Widget
 
 ```dart
-import 'package/queen_validation/index.dart';
+import 'package/queen_validators/index.dart';
 @override
 Widget build(BuildContext context) {
 return   TextFormField(
