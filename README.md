@@ -30,7 +30,7 @@ void main(){
 
 ## **Queen Validators**
 
-## a function that can user more the one rule to validate **TextFormField** Widget
+## a function that takes List of rules to validate **TextFormField** Widget
 
 ```dart
 import 'package/queen_validators/index.dart';
