@@ -1,5 +1,5 @@
 import 'package:queen_validators/src/imp/validation.dart';
-import 'package:queen_validators/index.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 class IsEmail extends QueenValidationRule<String> {
   IsEmail({String msg}) : super(msg);

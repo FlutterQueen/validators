@@ -1,42 +1,46 @@
 # Queen validators 👑
 
-which problem does this package solve ?
+<!-- - [Queen validators](#Queen-validators) -->
 
-- [x] validate flutter TextFormFields
-- [x] validate Dtos
+# Table of Contents
 
-# features
+- [Queen validators 👑](#queen-validators-)
+- [Table of Contents](#table-of-contents)
+  - [Validate variables](#validate-variables)
+  - [Validate Forms](#validate-forms)
+  - [Validate Dto](#validate-dto)
+  - [Features](#features)
+  - [TODO](#todo)
+  - [installation](#installation)
 
-- [x] easily customize error massages with any localization solution
-- [x] can use it how ever you want
-- [x] easily add new Rules
-- [x] validate Dtos directly after instantiate them
-
-# Examples
-
-## **Functions**
-
-## you can use validator functions any where the will return a boolean
+## Validate variables
 
 ```dart
-import 'package/queen_validators/index.dart';
-void main(){
-   final foo = 'queen 👑';
-   print(isEmail(foo));    // false
-   final bar = 'queen@kingdom.com';
-   print(isEmail(foo));    // true
-}
+const badEmail = 'QueenRoyal.kingdom';
+print(badEmail.isEmail) // false
+
+const validEmail = 'Queen@Royal.kingdom';
+print(validEmail.isEmail) // true
+
 ```
 
-## **Queen Validators**
+```dart
+const badUrl = 'queen url validation';
+print(badUrl.isURL) // false
 
-## a function that takes List of rules to validate **TextFormField** Widget
+const validUrl = 'https://www.abc.com';
+print(validUrl.isURL) // true
+
+```
+
+## Validate Forms
 
 ```dart
-import 'package/queen_validators/index.dart';
+import 'package/queen_validators/queen_validators.dart';
 @override
 Widget build(BuildContext context) {
-return   TextFormField(
+return TextFormField(
+     // use qValidator function and provider list of rules to apply on this field
     validator: qValidator([
       IsEmail(),
       MinLength(8),
@@ -46,12 +50,10 @@ return   TextFormField(
   }
 ```
 
-## **QueenDto**
-
-## some times you might need to validate entire object at once also the queen can help you with that
+## Validate Dto
 
 ```dart
-import 'package:queen_validators/index.dart';
+import 'package:queen_validators/queen_validators.dart';
  // extends QueenDto
 class LoginDto extends QueenDto {
   final String email;
@@ -66,7 +68,7 @@ class LoginDto extends QueenDto {
 
 // setup your keys and rules
   @override
-  Map<String, List<QueenValidationRule>> get roles => {
+  Map<String, List<QueenValidationRule>> get rules => {
         'email': [IsEmail()],
         'password': [MinLength(5),MaxLength(50)]
       };
@@ -75,7 +77,9 @@ class LoginDto extends QueenDto {
 // make sure to user same keys you used in the roles getter
   @override
   Map<String, dynamic> toMap() {
-    return {'email': this.email, 'password': this.password};
+    return {'email': this.email,
+            'password': this.password,
+            };
   }
 }
 
@@ -83,31 +87,28 @@ void main() {
   try {
      // it will trow QValidationException containing the failed rules
     LoginDto(email: 'queen@kingdom.com', password: 'bar');
-    print('ok 201');
-  } on QValidationException catch (e) {
+   } on QValidationException catch (e) {
     print(e.errors);
   }
 }
 
 ```
 
-# Supported Rules
+## Features
 
-refer to src/functions in the source code
+- easily customize form validation error massages with any localization solution
+- need a rule is not in this package ? just extend QueenValidationRule<T> class and build your own rule
+- validate DTO s directly after instantiate them
 
-# TODO
+## TODO
 
-- [ ] update readme
-- [ ] add functions to the docs
 - [ ] arabic documentation
-- [ ] comment the code
-- [ ] add new validator functions
 - [ ] example app
 - [ ] publish to pub.dev
 - [ ] tests
 
-# installation
+## installation
 
-### for now you can only use it from the github repo
+for now you can only use it from the github repo
 
 **[how to use flutter package from github](https://stackoverflow.com/a/54023220/14834591)**

@@ -1,4 +1,4 @@
-import 'package:queen_validators/index.dart';
+import 'package:queen_validators/queen_validators.dart';
 import 'package:queen_validators/src/imp/validation.dart';
 
 class IsNotEmpty extends QueenValidationRule<String> {
