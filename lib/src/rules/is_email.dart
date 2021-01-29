@@ -1,11 +1,12 @@
-import 'package:queen_validators/src/functions/string.dart';
 import 'package:queen_validators/src/imp/validation.dart';
+import 'package:queen_validators/index.dart';
 
-class IsEmail extends QueenValidationRule {
+class IsEmail extends QueenValidationRule<String> {
   IsEmail({String msg}) : super(msg);
 
   @override
-  String run(String val) {
-    return isEmail(val) ? null : msg ?? 'not a valid email address';
-  }
+  String get errorMsg => 'not a valid email address';
+
+  @override
+  bool validate(String val) => val.isEmail();
 }

@@ -1,4 +1,5 @@
 import 'package:queen_validators/index.dart';
+import 'package:queen_validators/src/imp/validation.dart';
 
 class LoginDto extends QueenDto {
   final String email;
@@ -10,7 +11,7 @@ class LoginDto extends QueenDto {
   }) : super();
 
   @override
-  Map<String, List<QueenValidationRule>> get roles => {
+  Map<String, List<QueenValidationRule>> get rules => {
         'email': [
           IsEmail(msg: "تاكد من الابريد الالكتروني"),
           MinLength(5, msg: "البريد الالكتروني قصير جدا "),

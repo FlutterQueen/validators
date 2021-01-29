@@ -8,7 +8,7 @@ abstract class QueenDto {
   void _validate() {
     Map<String, List<String>> errorsResponse = {};
     final objMap = toMap();
-    roles.forEach((key, value) {
+    rules.forEach((key, value) {
       List<String> errors = [];
       value.forEach((element) {
         final currentRuleError = element.run(objMap[key]);
@@ -21,5 +21,5 @@ abstract class QueenDto {
   }
 
   Map<String, dynamic> toMap();
-  Map<String, List<QueenValidationRule>> get roles;
+  Map<String, List<QueenValidationRule>> get rules;
 }

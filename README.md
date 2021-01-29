@@ -97,12 +97,14 @@ refer to src/functions in the source code
 
 # TODO
 
+- [ ] update readme
 - [ ] add functions to the docs
 - [ ] arabic documentation
 - [ ] comment the code
 - [ ] add new validator functions
 - [ ] example app
 - [ ] publish to pub.dev
+- [ ] tests
 
 # installation
 

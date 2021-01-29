@@ -1,11 +1,12 @@
-import 'package:queen_validators/src/functions/string.dart';
+import 'package:queen_validators/index.dart';
 import 'package:queen_validators/src/imp/validation.dart';
 
-class IsNotEmpty extends QueenValidationRule {
+class IsNotEmpty extends QueenValidationRule<String> {
   IsNotEmpty({String msg}) : super(msg);
 
   @override
-  String run(String val) {
-    return isNotEmpty(val) ? null : msg ?? 'is empty';
-  }
+  String get errorMsg => 'must not be empty';
+
+  @override
+  bool validate(String val) => val.isNotEmptyString();
 }
