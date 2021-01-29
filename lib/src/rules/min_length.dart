@@ -1,5 +1,6 @@
-import 'package:queen_validators/queen_validators.dart';
 import 'package:queen_validators/src/imp/validation.dart';
+
+/// checks if the input charachtrs length is bigger than the min feild
 
 class MinLength extends QueenValidationRule<String> {
   final int min;
@@ -12,5 +13,5 @@ class MinLength extends QueenValidationRule<String> {
 
   @override
   bool validate(String val) =>
-      trim ? val.trim().minLength(min) : val.minLength(min);
+      trim ? val.trim().length > min : val.length > min;
 }

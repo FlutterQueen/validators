@@ -1,4 +1,4 @@
-extension DynamicValiadtors on dynamic {
+extension dynamicExtension on dynamic {
   bool get isString {
     return this.runtimeType == String;
   }
@@ -29,5 +29,13 @@ extension DynamicValiadtors on dynamic {
 
   bool isSameRef(dynamic val) {
     return identical(this, val);
+  }
+
+  bool get isNull {
+    return this == null;
+  }
+
+  bool get isNotNull {
+    return this != null;
   }
 }

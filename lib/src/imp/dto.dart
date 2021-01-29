@@ -5,6 +5,9 @@ abstract class QueenDto {
   QueenDto() {
     _validate();
   }
+
+  /// trigerrs when new instace is created
+  /// ! might throw  QValidationException
   void _validate() {
     Map<String, List<String>> errorsResponse = {};
     final objMap = toMap();
@@ -14,12 +17,13 @@ abstract class QueenDto {
         final currentRuleError = element.run(objMap[key]);
         if (currentRuleError != null) errors.add(currentRuleError);
       });
-      if (errors.length > 0) errorsResponse[key] = errors;
+      if (errors.isNotEmpty) errorsResponse[key] = errors;
     });
 
     throw QValidationException(errorsResponse);
   }
 
   Map<String, dynamic> toMap();
+
   Map<String, List<QueenValidationRule>> get rules;
 }

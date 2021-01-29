@@ -1,17 +1,22 @@
 # Queen validators 👑
 
-<!-- - [Queen validators](#Queen-validators) -->
-
 # Table of Contents
 
 - [Queen validators 👑](#queen-validators-)
 - [Table of Contents](#table-of-contents)
+  - [installation](#installation)
   - [Validate variables](#validate-variables)
   - [Validate Forms](#validate-forms)
   - [Validate Dto](#validate-dto)
   - [Features](#features)
   - [TODO](#todo)
-  - [installation](#installation)
+
+## installation
+
+```yaml
+dependencies:
+  queen_validators: ^0.0.1+2-beta
+```
 
 ## Validate variables
 
@@ -74,7 +79,7 @@ class LoginDto extends QueenDto {
       };
 
 
-// make sure to user same keys you used in the roles getter
+// make sure to use same keys you used in the roles getter
   @override
   Map<String, dynamic> toMap() {
     return {'email': this.email,
@@ -85,7 +90,7 @@ class LoginDto extends QueenDto {
 
 void main() {
   try {
-     // it will trow QValidationException containing the failed rules
+     // it will throw QValidationException containing the failed rules
     LoginDto(email: 'queen@kingdom.com', password: 'bar');
    } on QValidationException catch (e) {
     print(e.errors);
@@ -97,18 +102,11 @@ void main() {
 ## Features
 
 - easily customize form validation error massages with any localization solution
-- need a rule is not in this package ? just extend QueenValidationRule<T> class and build your own rule
+- need a new rule ? just extend QueenValidationRule<T> class and build your own rule
 - validate DTO s directly after instantiate them
+- extension on String and dynamic Types give you little push
 
 ## TODO
 
-- [ ] arabic documentation
 - [ ] example app
-- [ ] publish to pub.dev
 - [ ] tests
-
-## installation
-
-for now you can only use it from the github repo
-
-**[how to use flutter package from github](https://stackoverflow.com/a/54023220/14834591)**

@@ -1,18 +1,4 @@
-extension StringValiadtors on String {
-  bool required(int min) {
-    return this != null && this.isNotEmpty;
-  }
-
-  bool minLength(int min) {
-    return this.length > min;
-  }
-
-  bool maxLength(
-    int max,
-  ) {
-    return this.length < max;
-  }
-
+extension stringExtension on String {
   bool isNotEmptyString() {
     return this.trim().isNotEmpty;
   }

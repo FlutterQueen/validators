@@ -1,3 +1,4 @@
+// interface for the queen validation rule
 abstract class QueenValidationRule<T> {
   // ? message to show case validations fails
   // ? user might want to display custom message
