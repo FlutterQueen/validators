@@ -9,7 +9,7 @@ class IsIn extends QueenValidationRule<String> {
         super(msg);
 
   @override
-  String get errorMsg => 'did not match';
+  String get errorMsg => 'is not accepted';
 
   @override
   bool validate(String val) {

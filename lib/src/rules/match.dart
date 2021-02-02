@@ -1,7 +1,7 @@
 import 'package:queen_validators/src/imp/validation.dart';
 import 'package:queen_validators/src/extensions/string.dart';
 
-/// checks if the input is not empty string
+/// checks if the input is match other string
 class Match extends QueenValidationRule<String> {
   final String stringToMatchWith;
   final bool ignoreCase;

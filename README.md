@@ -4,18 +4,41 @@
 
 - [Queen validators 👑](#queen-validators-)
 - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Supported Rules](#supported-rules)
   - [installation](#installation)
   - [Validate variables](#validate-variables)
   - [Validate Forms](#validate-forms)
   - [Validate Dto](#validate-dto)
-  - [Features](#features)
   - [TODO](#todo)
+
+## Features
+
+- easily customize form validation error massages with any localization solution
+- need a new rule ? just extend QueenValidationRule<T> class and build your own rule
+- validate DTO s directly after instantiate them
+- extension on String and dynamic Types give you little push
+
+## Supported Rules
+
+| Rule                                                          | #                                                   | default message            |
+| ------------------------------------------------------------- | --------------------------------------------------- | -------------------------- |
+| IsOptional                                                    | allows you to skip the errors if the input is empty |                            |
+| IsRequired                                                    | the input value must not be empty                   | required                   |
+| IsEmail                                                       | the input value must be a valid `email` address     | is not valid email address |
+| IsUrl                                                         | the input value must be a valid `url` address       | not valid URL              |
+| Match(`String` stringToMatchWith,{`bool` ignoreCase = false}) | the input value must match other String             | did not match              |
+| IsIn(`List<String>`)                                          | the input value must be in the provided list        | is not accepted            |
+| IsNotIn(`List<String>`)                                       | the input value must not be in the provided list    | is not valid email address |
+| MaxLength(`int` max)                                          | the input value length must not be > the max        | 'max length is $max'       |
+| MinLength(`int` min)                                          | the input value length must not be < the min        | 'min length is $min'       |
+| RegExpRule(`RegExp` regX)                                     | the input value mush match the provided regX        | did not match              |
 
 ## installation
 
 ```yaml
 dependencies:
-  queen_validators: ^0.0.1+2-beta
+  queen_validators: ^0.0.1+3-beta
 ```
 
 ## Validate variables
@@ -99,14 +122,10 @@ void main() {
 
 ```
 
-## Features
-
-- easily customize form validation error massages with any localization solution
-- need a new rule ? just extend QueenValidationRule<T> class and build your own rule
-- validate DTO s directly after instantiate them
-- extension on String and dynamic Types give you little push
-
 ## TODO
 
-- [ ] example app
+- [x] example app
+- [ ] phone validation
+- [ ] color validation
+- [ ] date validation
 - [ ] tests
