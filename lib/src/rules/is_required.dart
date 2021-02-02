@@ -9,5 +9,5 @@ class IsRequired extends QueenValidationRule<String> {
   String get errorMsg => 'required';
 
   @override
-  bool validate(String val) => val.isNotEmptyString();
+  bool validate(String val) => val.isEmptyEmptyString;
 }

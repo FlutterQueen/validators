@@ -1,3 +1,10 @@
+## [0.0.1+3-beta]
+
+- move unrelated validation extensions to `queen_extension` package !
+- add Rule for passwords matching
+- add isIn isNotIn extensions on String
+- add Match, IsIn , IsNotIn Rules
+
 ## [0.0.1+2-beta] - [28-1-2021] update
 
 - add IsRequired Rule
