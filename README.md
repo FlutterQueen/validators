@@ -128,4 +128,4 @@ void main() {
 - [ ] phone validation
 - [ ] color validation
 - [ ] date validation
-- [ ] tests
+- [x] tests

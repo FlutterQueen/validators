@@ -1,3 +1,9 @@
+## [0.0.1+4-beta]
+
+- Add tests
+- fix `isEmail` ,`IsUrl` validation
+- add matchRegx extensions to match regular expressions on `String`
+
 ## [0.0.1+3-beta]
 
 - move unrelated validation extensions to `queen_extension` package !

@@ -9,5 +9,5 @@ class IsEmail extends QueenValidationRule<String> {
   String get errorMsg => 'is not valid email address';
 
   @override
-  bool validate(String val) => val.isEmail();
+  bool validate(String val) => val.isEmail;
 }

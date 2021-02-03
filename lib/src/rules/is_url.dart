@@ -9,5 +9,5 @@ class IsUrl extends QueenValidationRule<String> {
   String get errorMsg => 'not valid URL';
 
   @override
-  bool validate(String val) => val.isURL();
+  bool validate(String val) => val.isURL;
 }

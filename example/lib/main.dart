@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                     obscureText: true,
                     decoration: InputDecoration(labelText: 'password'),
                     validator: qValidator([
-                      IsNotEmpty(msg: 'required'),
+                      isRequired(),
                       MinLength(16, msg: 'password is to short'),
                       MaxLength(50),
                     ]),
@@ -47,18 +47,11 @@ class HomePage extends StatelessWidget {
                     color: Colors.blue,
                     child: Text('validate the form '),
                     onPressed: () {
-                      try {
-                        bool x = _formKey.currentState.validate();
-                        if (x) {
-                          Scaffold.of(context)
-                              .showSnackBar(SnackBar(content: Text('pass')));
-                        }
-                        Scaffold.of(context)
-                            .showSnackBar(SnackBar(content: Text('fails')));
-                      } catch (e) {
-                        Scaffold.of(context).showSnackBar(
-                            SnackBar(content: Text(e.toString())));
+                      bool isFormValid = _formKey.currentState.validate();
+                      if (isFormValid) {
+                        Scaffold.of(context).showSnackBar(SnackBar(content: Text('pass')));
                       }
+                      Scaffold.of(context).showSnackBar(SnackBar(content: Text('fails')));
                     },
                   ),
                 ],
