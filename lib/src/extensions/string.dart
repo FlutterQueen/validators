@@ -4,7 +4,7 @@ extension stringExtension on String {
   bool get isNotEmptyString => this.trim().isNotEmpty;
 
   /// return true if `trimmed string` is empty
-  bool get isEmptyEmptyString => this.trim().isEmpty;
+  bool get isEmptyString => this.trim().isEmpty;
 
   /// cheks if the value can be well formated email address
   bool get isEmail {

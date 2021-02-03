@@ -91,10 +91,10 @@ packages:
   queen_validators:
     dependency: "direct main"
     description:
-      name: queen_validators
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.1+4-beta"
+      path: "packages/queen_validators"
+      relative: true
+    source: path
+    version: "0.0.1+5-beta"
   sky_engine:
     dependency: transitive
     description: flutter

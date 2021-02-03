@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
                   TextFormField(
                     decoration: InputDecoration(labelText: 'email'),
                     validator: qValidator([
+                      IsRequired(msg: 'required'),
                       IsEmail(),
                       MaxLength(50),
                     ]),
@@ -38,7 +39,7 @@ class HomePage extends StatelessWidget {
                     obscureText: true,
                     decoration: InputDecoration(labelText: 'password'),
                     validator: qValidator([
-                      isRequired(),
+                      IsOptional(),
                       MinLength(16, msg: 'password is to short'),
                       MaxLength(50),
                     ]),

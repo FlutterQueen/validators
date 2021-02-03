@@ -1,6 +1,6 @@
 name: queen_validators
 description:  validate variables , forms and DTO s validation + extensions methods
-version: 0.0.1+4-beta
+version: 0.0.1+6-beta
 homepage: https://github.com/maxzod/queen_validators
 repository: https://github.com/maxzod/queen_validators
 issue_tracker: https://github.com/maxzod/queen_validators/issues

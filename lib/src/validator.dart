@@ -1,5 +1,5 @@
 import 'package:queen_validators/src/imp/validation.dart';
-import 'package:queen_validators/src/extensions/dynamic.dart';
+import 'package:queen_validators/src/extensions/string.dart';
 import 'package:queen_validators/src/rules/is_optional.dart';
 
 /// ? build and return String Function(String value) function wich triggires the provided validation rules
@@ -17,7 +17,7 @@ Function(String) qValidator(List<QueenValidationRule> rules) {
       msg = rule.run(val);
       if (msg != null) break;
     }
-    if (isOptional && val.isNull) return null;
+    if (isOptional && val.isEmptyString) return null;
     return msg;
   };
 }

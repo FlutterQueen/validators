@@ -1,3 +1,11 @@
+## [0.0.1+6-beta]
+
+- fix `isRequired` and `IsOptional` conflict .
+- fix `qValidator` now it validate properly
+- rename isEmptyEmptyString to isNotEmptyString 'it trims then check length';
+
+## [0.0.1+5-beta]
+
 ## [0.0.1+4-beta]
 
 - Add tests
