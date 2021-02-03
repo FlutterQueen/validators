@@ -94,7 +94,7 @@ packages:
       name: queen_validators
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.1+1-beta"
+    version: "0.0.1+4-beta"
   sky_engine:
     dependency: transitive
     description: flutter

@@ -41,4 +41,5 @@ extension stringExtension on String {
   /// check if `string` is `NOT` in `List` of Strings
   /// ! automaticly ignore case sensitivty
   bool isNotIn(List<String> list) => list.where((e) => this.match(e, ignoreCase: true)).isEmpty;
+  bool matchRegx(RegExp regExp) => regExp.hasMatch(this);
 }
