@@ -2,7 +2,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid url
-class IsUrl extends QueenValidationRule<String> {
+class IsUrl extends QueenValidationRule {
   IsUrl({String msg}) : super(msg);
 
   @override

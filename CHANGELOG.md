@@ -1,3 +1,12 @@
+## [0.0.1+7-beta]
+
+- fix `MinLength` AND `MaxLength` as the were missing or = operator
+  and will work as expected
+- update the example app
+- add `Contains` and `ContainsAny`
+- add `NotContains` and `NotContainsAny`
+- add arabic article to the docs
+
 ## [0.0.1+6-beta]
 
 - fix `isRequired` and `IsOptional` conflict .

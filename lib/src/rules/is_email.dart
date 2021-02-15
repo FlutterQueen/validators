@@ -2,7 +2,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `email` address
-class IsEmail extends QueenValidationRule<String> {
+class IsEmail extends QueenValidationRule {
   IsEmail({String msg}) : super(msg);
 
   @override

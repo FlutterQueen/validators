@@ -1,5 +1,5 @@
 // interface for the queen validation rule
-abstract class QueenValidationRule<T> {
+abstract class QueenValidationRule {
   // ? message to show case validations fails
   // ? user might want to display custom message
   final String msg;
@@ -10,11 +10,11 @@ abstract class QueenValidationRule<T> {
   String get errorMsg;
 
   // ? return a bool Either he succeeds or fails the validation
-  bool validate(T val);
+  bool validate(String val);
 
   // * will applay the validation then reutrn the user cutsom error message
   // * in case user message == null it will return the default error message
-  String run(T v) {
+  String run(String v) {
     if (validate(v)) return null;
     return msg ?? errorMsg;
   }

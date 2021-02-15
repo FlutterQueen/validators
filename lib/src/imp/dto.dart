@@ -3,11 +3,13 @@ import 'package:queen_validators/src/imp/validation.dart';
 
 abstract class QueenDto {
   QueenDto() {
+    /// when a new istance of child of this class created
+    /// calling super in its constractor will call the `_validae()` function
+    /// wich will trigger the `DTO` validation process
     _validate();
   }
 
-  /// trigerrs when new instace is created
-  /// ! might throw  QValidationException
+  /// ! might throw QValidationException
   void _validate() {
     Map<String, List<String>> errorsResponse = {};
     final objMap = toMap();

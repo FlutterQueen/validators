@@ -1,5 +1,12 @@
 import 'package:queen_validators/queen_validators.dart';
 
+/*
+ * will not test these rule as they does not 
+ * have extenoions just simple logic to test there Lenght or some thing like that
+ * MaxLenght  >=
+ * MinLenght  <=
+ * Contains   String.contains()
+ */
 void main() {
   /// * is valid email
   test(
@@ -69,8 +76,9 @@ void main() {
     valid: ['alpha', 'beta', 'omega', 'abcd'],
     notValid: ['foo', 'bar', 'zee', 'queen', 'validators'],
   );
-  // test(name: '', func: (String val) {}, valid: [], notValid: []);
-  print(' Done 👑 ');
+
+  /// * Contains rule
+  print('Done 👑');
 }
 
 void test({String name, List<String> valid, List<String> notValid, bool Function(String val) func}) {

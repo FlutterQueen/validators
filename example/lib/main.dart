@@ -5,6 +5,7 @@ void main() => runApp(MaterialApp(
       title: 'Queen Validators 👑',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      theme: ThemeData.light(),
     ));
 
 class HomePage extends StatelessWidget {
@@ -13,51 +14,70 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Queen Validators 👑'), centerTitle: true),
-      body: Center(
-        child: Form(
-          key: _formKey,
-          child: Card(
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.width * 0.05,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.check),
+        onPressed: () {
+          bool isFormValid = _formKey.currentState.validate();
+          if (isFormValid)
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('the form is valid')));
+          else
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('not valid')));
+        },
+      ),
+      body: Form(
+        key: _formKey,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(labelText: 'IsRequired'),
+                validator: qValidator([
+                  // if textFeild trimmed value lenght > 0 it will pass
+                  IsRequired(msg: 'required'),
+                ]),
               ),
-              width: MediaQuery.of(context).size.width * 0.90,
-              height: MediaQuery.of(context).size.height * 0.25,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text('login with email and password'),
-                  TextFormField(
-                    decoration: InputDecoration(labelText: 'email'),
-                    validator: qValidator([
-                      IsRequired(msg: 'required'),
-                      IsEmail(),
-                      MaxLength(50),
-                    ]),
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(labelText: 'password'),
-                    validator: qValidator([
-                      IsOptional(),
-                      MinLength(16, msg: 'password is to short'),
-                      MaxLength(50),
-                    ]),
-                  ),
-                  MaterialButton(
-                    color: Colors.blue,
-                    child: Text('validate the form '),
-                    onPressed: () {
-                      bool isFormValid = _formKey.currentState.validate();
-                      if (isFormValid) {
-                        Scaffold.of(context).showSnackBar(SnackBar(content: Text('pass')));
-                      }
-                      Scaffold.of(context).showSnackBar(SnackBar(content: Text('fails')));
-                    },
-                  ),
-                ],
+              TextFormField(
+                decoration: InputDecoration(labelText: 'IsOptional'),
+                validator: qValidator([
+                  // if the textField contains value the rest of the validators will run
+                  // else it will pass the validation with checking them
+                  IsOptional(),
+
+                  /// the input value must be a valid (`well formatted`) email address
+                  IsEmail(),
+                ]),
               ),
-            ),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'IsRequired AND IsEmail'),
+                validator: qValidator([
+                  IsRequired(),
+
+                  /// the input value must be a valid (`well formatted`) email address
+                  IsEmail(),
+                ]),
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'MinLenght AND IsEmail'),
+                validator: qValidator([
+                  IsRequired(),
+
+                  /// the input min length must be >= 5
+                  MinLength(5),
+
+                  /// the input max length must be <= 10
+                  MinLength(10),
+                ]),
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'IsIn AND IsNotIn'),
+                validator: qValidator([
+                  IsRequired(),
+                  IsIn(['white', 'black', 'gray']),
+                  IsNotIn(['red', 'blue', 'orange']),
+                ]),
+              ),
+            ],
           ),
         ),
       ),
