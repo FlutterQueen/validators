@@ -1,6 +1,6 @@
 name: queen_validators
 description:  validate variables with extensions , pure flutter TextFormFeild with qValidator function and DTO
-version: 0.0.1+7-beta
+version: 0.0.1+8-beta
 homepage: https://github.com/maxzod/queen_validators
 repository: https://github.com/maxzod/queen_validators
 issue_tracker: https://github.com/maxzod/queen_validators/issues
