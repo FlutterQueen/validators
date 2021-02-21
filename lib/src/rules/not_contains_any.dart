@@ -8,7 +8,8 @@ class NotContainsAny extends QueenValidationRule {
   NotContainsAny(this.value, {String msg}) : super(msg);
 
   @override
-  String get errorMsg => 'must contain at least one of the whitelisted keywords';
+  String get errorMsg =>
+      'must contain at least one of the whitelisted keywords';
 
   @override
   bool validate(String val) {

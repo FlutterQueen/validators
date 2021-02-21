@@ -12,7 +12,8 @@ extension stringExtension on String {
     /// readon : userEmail@WithoutValidcom passed but should have failed !
     // final emailRegx = RegExp(
     //     r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
-    final emailRegx = RegExp(r"([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})");
+    final emailRegx =
+        RegExp(r"([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})");
     return emailRegx.hasMatch(this.trim());
   }
 
@@ -36,10 +37,12 @@ extension stringExtension on String {
 
   /// check if `string` is in `List` of Strings
   /// ! automaticly ignore case sensitivty
-  bool isIn(List<String> list) => list.where((e) => this.match(e, ignoreCase: true)).isNotEmpty;
+  bool isIn(List<String> list) =>
+      list.where((e) => this.match(e, ignoreCase: true)).isNotEmpty;
 
   /// check if `string` is `NOT` in `List` of Strings
   /// ! automaticly ignore case sensitivty
-  bool isNotIn(List<String> list) => list.where((e) => this.match(e, ignoreCase: true)).isEmpty;
+  bool isNotIn(List<String> list) =>
+      list.where((e) => this.match(e, ignoreCase: true)).isEmpty;
   bool matchRegx(RegExp regExp) => regExp.hasMatch(this);
 }

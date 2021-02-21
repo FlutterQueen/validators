@@ -12,6 +12,9 @@ class ContainsAny extends QueenValidationRule {
 
   @override
   bool validate(String val) {
-    return this.value.where((element) => val.trim().contains(element)).isNotEmpty;
+    return this
+        .value
+        .where((element) => val.trim().contains(element))
+        .isNotEmpty;
   }
 }

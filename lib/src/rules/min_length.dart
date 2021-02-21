@@ -12,5 +12,6 @@ class MinLength extends QueenValidationRule {
   String get errorMsg => 'min length is $min';
 
   @override
-  bool validate(String val) => trim ? val.trim().length >= min : val.length >= min;
+  bool validate(String val) =>
+      trim ? val.trim().length >= min : val.length >= min;
 }
