@@ -1,6 +1,6 @@
 import 'package:queen_validators/src/imp/validation.dart';
 
-/// checks if the input does not contain the provided value;
+/// checks if the input does contain the provided value;
 
 class Contains extends QueenValidationRule {
   final String value;

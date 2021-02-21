@@ -7,7 +7,7 @@ export 'package:queen_validators/src/validator.dart';
 export 'package:queen_validators/src/imp/dto.dart';
 export 'package:queen_validators/src/imp/validation.dart';
 
-/// export aviliable rule
+/// export aviliable rules
 export 'package:queen_validators/src/rules/index.dart';
 
 /// export aviliable extensions methods to validate variables

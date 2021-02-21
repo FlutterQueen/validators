@@ -1,3 +1,8 @@
+## [0.0.1+8-beta]
+
+- fix missing exports
+- update the docs
+
 ## [0.0.1+7-beta]
 
 - fix `MinLength` AND `MaxLength` as the were missing or = operator
