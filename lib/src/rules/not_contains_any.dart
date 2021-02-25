@@ -13,6 +13,6 @@ class NotContainsAny extends QueenValidationRule {
 
   @override
   bool validate(String val) {
-    return this.value.where((element) => val.trim().contains(element)).isEmpty;
+    return value.where((element) => val.trim().contains(element)).isEmpty;
   }
 }

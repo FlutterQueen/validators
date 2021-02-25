@@ -8,7 +8,7 @@ import 'package:queen_validators/src/rules/is_optional.dart';
 /// if the role is type of optional it waill mark the validation process for ths item as optonal
 /// wich mans in case of any validation fails and the value is null there will be no error
 /// but if the validations fails and the value is not null will return the first fail error message
-Function(String) qValidator(List<QueenValidationRule> rules) {
+String Function(String) qValidator(List<QueenValidationRule> rules) {
   /// if the validator loop has any `IsOptional` Rule this will make
   /// this varables = `true`;
   /// we will need to decide leater on if the loop has `IsOptional` rule on it or not

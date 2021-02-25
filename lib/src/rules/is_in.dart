@@ -13,6 +13,6 @@ class IsIn extends QueenValidationRule {
 
   @override
   bool validate(String val) {
-    return val.isIn(this.list);
+    return val.isIn(list);
   }
 }

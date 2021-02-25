@@ -1,30 +1,30 @@
-extension dynamicExtension on dynamic {
+extension DynamicExtension on dynamic {
   bool get isString {
-    return this.runtimeType == String;
+    return runtimeType == String;
   }
 
   bool get isBool {
-    return this.runtimeType == bool;
+    return runtimeType == bool;
   }
 
   bool get isInt {
-    return this.runtimeType == int;
+    return runtimeType == int;
   }
 
   bool get isDouble {
-    return this.runtimeType == double;
+    return runtimeType == double;
   }
 
   bool get isChar {
-    return this.isString && this.length == 1;
+    return isString && this.length == 1;
   }
 
   bool get isList {
-    return this.runtimeType == List;
+    return runtimeType == List;
   }
 
   bool get isMap {
-    return this.runtimeType == Map;
+    return runtimeType == Map;
   }
 
   bool isSameRef(dynamic val) {

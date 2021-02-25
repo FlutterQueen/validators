@@ -23,24 +23,6 @@ void main() {
     func: (val) => val.isEmail,
   );
 
-  /// * is valid url
-  test(
-    name: 'is isURL',
-    valid: [
-      'http://www.flutter.dev',
-      'https://www.flutter.dev',
-      'someShing.someThingelse',
-      'ftp:abcedf.com',
-      'subdomain.domain.com.',
-      'subdomain.domain.com/users/69.'
-    ],
-    notValid: [
-      'random chars',
-      'abc://www.flutter.dev',
-    ],
-    func: (val) => val.isURL,
-  );
-
   /// * is match with case sensitivy
   test(
     name: 'match with case sensitivty',
@@ -78,33 +60,33 @@ void main() {
   );
 
   /// * Contains rule
+  // ignore: avoid_print
   print('Done 👑');
 }
 
 void test({String name, List<String> valid, List<String> notValid, bool Function(String val) func}) {
   int index;
   String currentList;
-  try {
-    /// validate the `Valid` list first
-    index = 0;
-    currentList = 'valid';
-    valid.forEach((element) {
-      if (!func(element)) {
-        printFail(name, index, currentList, '$element failed but should have passed !');
-      }
-      index++;
-    });
 
-    ///  validate the `NOT` valid list first
-    index = 0;
-    currentList = 'notValid';
-    notValid.forEach((element) {
-      if (func(element)) {
-        printFail(name, index, currentList, '$element passed but should have failed !');
-      }
-      index++;
-    });
-  } catch (e) {}
+  /// validate the `Valid` list first
+  index = 0;
+  currentList = 'valid';
+  for (final String element in valid) {
+    if (!func(element)) {
+      printFail(name, index, currentList, '$element failed but should have passed !');
+    }
+    index++;
+  }
+
+  ///  validate the `NOT` valid list first
+  index = 0;
+  currentList = 'notValid';
+  for (final String element in notValid) {
+    if (func(element)) {
+      printFail(name, index, currentList, '$element passed but should have failed !');
+    }
+    index++;
+  }
 }
 
 void printFail(String name, int index, String list, String msg) {
@@ -114,6 +96,7 @@ void printFail(String name, int index, String list, String msg) {
   // print('|>====================<|  Msg  |>=========================<|');
   // print(msg);
 
+  // ignore: avoid_print
   print('testing : $name at index : $index at $list list $msg');
 
   // print('|>====================<| End   |>=========================<|');

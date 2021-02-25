@@ -1,3 +1,10 @@
+## [0.0.1+9-beta]
+
+- remove dto validation
+- remove isUrl validation
+- depend on lint package
+- qValidator now reutrn `String` insted of `dynamic`
+
 ## [0.0.1+8-beta]
 
 - fix missing exports
