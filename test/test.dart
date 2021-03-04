@@ -64,14 +64,19 @@ void main() {
   print('Done 👑');
 }
 
-void test({String name, List<String> valid, List<String> notValid, bool Function(String val) func}) {
+void test({
+  required String name,
+  required List<String> valid,
+  required List<String> notValid,
+  required bool Function(String val) func,
+}) {
   int index;
   String currentList;
 
   /// validate the `Valid` list first
   index = 0;
   currentList = 'valid';
-  for (final String element in valid) {
+  for (final element in valid) {
     if (!func(element)) {
       printFail(name, index, currentList, '$element failed but should have passed !');
     }
@@ -81,7 +86,7 @@ void test({String name, List<String> valid, List<String> notValid, bool Function
   ///  validate the `NOT` valid list first
   index = 0;
   currentList = 'notValid';
-  for (final String element in notValid) {
+  for (final element in notValid) {
     if (func(element)) {
       printFail(name, index, currentList, '$element passed but should have failed !');
     }

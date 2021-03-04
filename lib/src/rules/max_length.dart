@@ -4,7 +4,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class MaxLength extends QueenValidationRule {
   final int max;
   final bool trim;
-  MaxLength(this.max, {String msg, this.trim = true}) : super(msg);
+  MaxLength(this.max, {String? msg, this.trim = true}) : super(msg);
 
   @override
   String get errorMsg => 'max length is $max';

@@ -4,9 +4,7 @@ import 'package:queen_validators/src/extensions/string.dart';
 /// checks if the input `is in` provided List;
 class IsIn extends QueenValidationRule {
   final List<String> list;
-  IsIn(this.list, {String msg})
-      : assert(list != null),
-        super(msg);
+  IsIn(this.list, {String? msg}) : super(msg);
 
   @override
   String get errorMsg => 'is not accepted';

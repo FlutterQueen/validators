@@ -17,11 +17,12 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.check),
         onPressed: () {
-          bool isFormValid = _formKey.currentState.validate();
-          if (isFormValid)
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('the form is valid')));
-          else
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('not valid')));
+          final isFormValid = _formKey.currentState!.validate();
+          if (isFormValid) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('the form is valid')));
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('not valid')));
+          }
         },
       ),
       body: Form(
@@ -63,10 +64,10 @@ class HomePage extends StatelessWidget {
                   IsRequired(),
 
                   /// the input min length must be >= 5
-                  MinLength(5),
+                  MinLength(10),
 
                   /// the input max length must be <= 10
-                  MinLength(10),
+                  MaxLength(15),
                 ]),
               ),
               TextFormField(

@@ -1,18 +1,22 @@
 extension DynamicExtension on dynamic {
   bool get isString {
-    return runtimeType == String;
+    // ignore: unnecessary_this
+    return this.runtimeType == String;
   }
 
   bool get isBool {
-    return runtimeType == bool;
+    // ignore: unnecessary_this
+    return this.runtimeType == bool;
   }
 
   bool get isInt {
-    return runtimeType == int;
+    // ignore: unnecessary_this
+    return this.runtimeType == int;
   }
 
   bool get isDouble {
-    return runtimeType == double;
+    // ignore: unnecessary_this
+    return this.runtimeType == double;
   }
 
   bool get isChar {
@@ -20,11 +24,13 @@ extension DynamicExtension on dynamic {
   }
 
   bool get isList {
-    return runtimeType == List;
+    // ignore: unnecessary_this
+    return this.runtimeType == List;
   }
 
   bool get isMap {
-    return runtimeType == Map;
+    // ignore: unnecessary_this
+    return this.runtimeType == Map;
   }
 
   bool isSameRef(dynamic val) {

@@ -1,3 +1,7 @@
+## [0.2.0]
+
+- support null safety
+
 ## [0.0.1+9-beta]
 
 - remove dto validation

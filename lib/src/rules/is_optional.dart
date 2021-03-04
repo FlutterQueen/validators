@@ -7,7 +7,7 @@ class IsOptional extends QueenValidationRule {
   IsOptional() : super(null);
 
   @override
-  String get errorMsg => null;
+  String? get errorMsg => null;
 
   @override
   bool validate(String val) => true;

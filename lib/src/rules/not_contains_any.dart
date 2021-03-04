@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class NotContainsAny extends QueenValidationRule {
   final List<String> value;
 
-  NotContainsAny(this.value, {String msg}) : super(msg);
+  NotContainsAny(this.value, {String? msg}) : super(msg);
 
   @override
   String get errorMsg =>
