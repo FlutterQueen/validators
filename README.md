@@ -22,7 +22,7 @@
 
 ```yaml
 dependencies:
-  queen_validators: ^0.0.1+9-beta
+  queen_validators: ^2.0.0
 ```
 
 ## Validate variables
