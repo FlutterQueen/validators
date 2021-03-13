@@ -1,3 +1,7 @@
+## [0.2.1]
+
+- fix email validation #1
+
 ## [0.2.0]
 
 - support null safety
