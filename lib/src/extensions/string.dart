@@ -1,4 +1,6 @@
 // collection of extions related to strig validations
+import 'package:email_validator/email_validator.dart';
+
 extension StringExtension on String {
   /// return true if `trimmed string` is not empy
   bool get isNotEmptyString => trim().isNotEmpty;
@@ -8,13 +10,15 @@ extension StringExtension on String {
 
   /// cheks if the value can be well formated email address
   bool get isEmail {
-    /// ! not valid any more
-    /// readon : userEmail@WithoutValidcom passed but should have failed !
+    // is horribly broken :D
+    // so i will go with email_validator since it in null safetry and does not depend on any other packages
     // final emailRegx = RegExp(
     //     r'^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$');
-    final emailRegx =
-        RegExp(r'([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})');
-    return emailRegx.hasMatch(trim());
+    //
+    // final emailRegx =
+    //     RegExp(r'([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})');
+    // return emailRegx.hasMatch(trim());
+    return EmailValidator.validate(this);
   }
 
   /// checks if tow `strings` are the same

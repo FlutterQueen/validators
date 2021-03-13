@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  email_validator:
+    dependency: transitive
+    description:
+      name: email_validator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0-nullsafety"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -33,7 +40,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1+9-beta"
+    version: "0.2.0"
   sky_engine:
     dependency: transitive
     description: flutter

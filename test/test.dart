@@ -11,10 +11,7 @@ void main() {
   /// * is valid email
   test(
     name: 'is Email',
-    valid: [
-      'username@dmain.xxxx',
-      'userNameWithNumbers132231@domain.com',
-    ],
+    valid: ['username@dmain.xxxx', 'userNameWithNumbers132231@domain.com'],
     notValid: [
       'userEmailWithoutAtSign.com',
       'userEmail@WithoutValidDomaincom',
