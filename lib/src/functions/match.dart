@@ -1,9 +1,16 @@
 /// checks if two `Strings` are the same
 /// !`after trimming them`
-bool match(String string1, String string2, {bool ignoreCase = false}) {
-  if (ignoreCase) {
-    return string1.trim().toLowerCase() == string2.trim().toLowerCase();
+bool match(dynamic? val1, dynamic? val2, {bool ignoreCase = false}) {
+  if (val1 == null || val2 == null) {
+    return false;
+  }
+  if (val1 is String && val2 is String) {
+    if (ignoreCase) {
+      return val1.trim().toLowerCase() == val2.trim().toLowerCase();
+    } else {
+      return val1.trim() == val2.trim();
+    }
   } else {
-    return string1.trim() == string2.trim();
+    return val1 == val2;
   }
 }

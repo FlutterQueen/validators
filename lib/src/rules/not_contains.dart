@@ -11,5 +11,5 @@ class NotContains extends QueenValidationRule {
   String get errorMsg => 'must not contain $value';
 
   @override
-  bool validate(String val) => !val.trim().contains(value);
+  bool validate(dynamic val) => !(val as String).trim().contains(value);
 }

@@ -10,7 +10,7 @@ class IsIn extends QueenValidationRule {
   String get errorMsg => 'is not accepted';
 
   @override
-  bool validate(String val) {
+  bool validate(dynamic val) {
     return isIn(val, list);
   }
 }

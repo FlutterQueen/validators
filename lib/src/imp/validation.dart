@@ -10,11 +10,11 @@ abstract class QueenValidationRule {
   String? get errorMsg;
 
   // ? return a bool Either he succeeds or fails the validation
-  bool validate(String val);
+  bool validate(dynamic? val);
 
   // * will apply the validation then return the user custom error message
   // * in case user message == null it will return the default error message
-  String? run(String? v) {
+  String? run(dynamic? v) {
     if (v == null) {
       return null;
     } else if (validate(v)) {

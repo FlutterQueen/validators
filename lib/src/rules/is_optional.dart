@@ -10,5 +10,5 @@ class IsOptional extends QueenValidationRule {
   String? get errorMsg => null;
 
   @override
-  bool validate(String val) => true;
+  bool validate(dynamic val) => true;
 }

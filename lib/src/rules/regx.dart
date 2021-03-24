@@ -9,5 +9,5 @@ class RegExpRule extends QueenValidationRule {
   String get errorMsg => 'did not match';
 
   @override
-  bool validate(String val) => regX.hasMatch(val);
+  bool validate(dynamic val) => regX.hasMatch(val.toString());
 }

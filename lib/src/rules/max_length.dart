@@ -10,6 +10,12 @@ class MaxLength extends QueenValidationRule {
   String get errorMsg => 'max length is $max';
 
   @override
-  bool validate(String val) =>
-      trim ? val.trim().length <= max : val.length <= max;
+  bool validate(dynamic? val) {
+    if (val == null) return true;
+    if (val is String) {
+      return trim ? val.trim().length <= max : val.length <= max;
+    } else {
+      return false;
+    }
+  }
 }

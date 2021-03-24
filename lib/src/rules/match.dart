@@ -5,14 +5,13 @@ import 'package:queen_validators/src/imp/validation.dart';
 class Match extends QueenValidationRule {
   final String stringToMatchWith;
   final bool? ignoreCase;
-  const Match(this.stringToMatchWith, {String? msg, this.ignoreCase})
-      : super(msg);
+  const Match(this.stringToMatchWith, {String? msg, this.ignoreCase}) : super(msg);
 
   @override
   String get errorMsg => 'did not match';
 
   @override
-  bool validate(String val) {
+  bool validate(dynamic? val) {
     return match(val, stringToMatchWith, ignoreCase: ignoreCase!);
   }
 }

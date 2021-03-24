@@ -8,11 +8,10 @@ class NotContainsAny extends QueenValidationRule {
   const NotContainsAny(this.value, {String? msg}) : super(msg);
 
   @override
-  String get errorMsg =>
-      'must contain at least one of the whitelisted keywords';
+  String get errorMsg => 'must contain at least one of the whitelisted keywords';
 
   @override
-  bool validate(String val) {
-    return value.where((element) => val.trim().contains(element)).isEmpty;
+  bool validate(dynamic? val) {
+    return value.where((element) => (val as String).trim().contains(element)).isEmpty;
   }
 }

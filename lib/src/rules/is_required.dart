@@ -10,5 +10,11 @@ class IsRequired extends QueenValidationRule {
   String get errorMsg => 'required';
 
   @override
-  bool validate(String val) => isNotEmpty(val);
+  bool validate(dynamic val) {
+    if (val is String) {
+      return isNotEmpty(val);
+    } else {
+      return val != null;
+    }
+  }
 }

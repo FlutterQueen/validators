@@ -3,14 +3,14 @@ import 'package:queen_validators/src/imp/validation.dart';
 
 /// checks if the input `is NOT in` provided List;
 class IsNotIn extends QueenValidationRule {
-  final List<String> list;
+  final List<dynamic> list;
   const IsNotIn(this.list, {String? msg}) : super(msg);
 
   @override
   String get errorMsg => 'is not accepted';
 
   @override
-  bool validate(String val) {
+  bool validate(dynamic val) {
     return isNotIn(val, list);
   }
 }

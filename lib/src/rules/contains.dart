@@ -11,5 +11,5 @@ class Contains extends QueenValidationRule {
   String get errorMsg => 'must contain $value';
 
   @override
-  bool validate(String val) => val.trim().contains(value);
+  bool validate(dynamic val) => (val as String).trim().contains(value);
 }

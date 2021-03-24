@@ -11,7 +11,7 @@ class ContainsAny extends QueenValidationRule {
   String get errorMsg => 'must contain any blacklisted keywords';
 
   @override
-  bool validate(String val) {
-    return value.where((element) => val.trim().contains(element)).isNotEmpty;
+  bool validate(dynamic val) {
+    return value.where((element) => (val as String).trim().contains(element)).isNotEmpty;
   }
 }
