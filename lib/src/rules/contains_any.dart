@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class ContainsAny extends QueenValidationRule {
   final List<String> value;
 
-  ContainsAny(this.value, {String? msg}) : super(msg);
+  const ContainsAny(this.value, {String? msg}) : super(msg);
 
   @override
   String get errorMsg => 'must contain any blacklisted keywords';

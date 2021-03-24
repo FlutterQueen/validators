@@ -4,15 +4,15 @@ abstract class QueenValidationRule {
   // ? user might want to display custom message
   final String? msg;
 
-  QueenValidationRule(this.msg);
+  const QueenValidationRule(this.msg);
 
-  // ? default message in case the user did't use another one
+  // ? default message in case the user didn't use another one
   String? get errorMsg;
 
   // ? return a bool Either he succeeds or fails the validation
   bool validate(String val);
 
-  // * will applay the validation then reutrn the user cutsom error message
+  // * will apply the validation then return the user custom error message
   // * in case user message == null it will return the default error message
   String? run(String? v) {
     if (v == null) {

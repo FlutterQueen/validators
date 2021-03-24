@@ -1,11 +1,11 @@
 import 'package:queen_validators/src/imp/validation.dart';
 
-/// check if the value does not contin any item from the provided list
+/// check if the value does not contain any item from the provided list
 
 class NotContainsAny extends QueenValidationRule {
   final List<String> value;
 
-  NotContainsAny(this.value, {String? msg}) : super(msg);
+  const NotContainsAny(this.value, {String? msg}) : super(msg);
 
   @override
   String get errorMsg =>

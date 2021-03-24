@@ -1,5 +1,5 @@
 # include: package:lint/analysis_options.yaml
-include: package:pedantic/analysis_options.yaml
+include: package:lint/analysis_options_package.yaml
 analyzer:
   errors:
     unnecessary_this: ignore

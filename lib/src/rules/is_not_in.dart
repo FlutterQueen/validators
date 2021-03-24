@@ -1,16 +1,16 @@
+import 'package:queen_validators/src/functions/is_not_in.dart';
 import 'package:queen_validators/src/imp/validation.dart';
-import 'package:queen_validators/src/extensions/string.dart';
 
 /// checks if the input `is NOT in` provided List;
 class IsNotIn extends QueenValidationRule {
   final List<String> list;
-  IsNotIn(this.list, {String? msg}) : super(msg);
+  const IsNotIn(this.list, {String? msg}) : super(msg);
 
   @override
   String get errorMsg => 'is not accepted';
 
   @override
   bool validate(String val) {
-    return val.isNotIn(list);
+    return isNotIn(val, list);
   }
 }

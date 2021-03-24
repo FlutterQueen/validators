@@ -1,10 +1,10 @@
 import 'package:queen_validators/src/imp/validation.dart';
 
-/// checks if the input charachtrs length is smaller than the min feild
+/// checks if the input characters length is smaller than the min field
 class MaxLength extends QueenValidationRule {
   final int max;
   final bool trim;
-  MaxLength(this.max, {String? msg, this.trim = true}) : super(msg);
+  const MaxLength(this.max, {String? msg, this.trim = true}) : super(msg);
 
   @override
   String get errorMsg => 'max length is $max';

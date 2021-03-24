@@ -1,5 +1,11 @@
 ## [0.2.1]
 
+- BREAKING : remove extensions (use functions instead)
+- NEW : add validation functions ''.isEmail => isEmail('')
+- NEW : More Rules And functions for more validation coverage
+
+## [0.2.1]
+
 - fix email validation #1
 
 ## [0.2.0]
@@ -11,7 +17,7 @@
 - remove dto validation
 - remove isUrl validation
 - depend on lint package
-- qValidator now reutrn `String` insted of `dynamic`
+- qValidator now return `String` instead of `dynamic`
 
 ## [0.0.1+8-beta]
 
