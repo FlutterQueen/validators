@@ -2,14 +2,14 @@ import 'package:queen_validators/src/imp/validation.dart';
 
 /// checks if the input does contain the provided value;
 
-class Contains extends QueenValidationRule {
+class Contains extends QueenValidationRule<String> {
   final String value;
 
   const Contains(this.value, {String? msg}) : super(msg);
 
   @override
-  String get errorMsg => 'must contain $value';
+  String get defaultError => 'must contain $value';
 
   @override
-  bool validate(dynamic val) => (val as String).trim().contains(value);
+  bool isValid(String val) => val.trim().contains(value);
 }

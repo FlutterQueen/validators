@@ -3,12 +3,12 @@ import 'package:queen_validators/src/imp/validation.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `email` address
-class IsEmail extends QueenValidationRule {
+class IsEmail extends QueenValidationRule<String> {
   const IsEmail({String? msg}) : super(msg);
 
   @override
-  String get errorMsg => 'is not valid email address';
+  String get defaultError => 'is not valid email address';
 
   @override
-  bool validate(dynamic val) => isEmail(val.toString());
+  bool isValid(String val) => isEmail(val);
 }

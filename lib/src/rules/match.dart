@@ -2,16 +2,16 @@ import 'package:queen_validators/src/functions/match.dart';
 import 'package:queen_validators/src/imp/validation.dart';
 
 /// checks if the input is match other string
-class Match extends QueenValidationRule {
+class Match extends QueenValidationRule<String> {
   final String stringToMatchWith;
-  final bool? ignoreCase;
-  const Match(this.stringToMatchWith, {String? msg, this.ignoreCase}) : super(msg);
+
+  const Match(this.stringToMatchWith, {String? msg}) : super(msg);
 
   @override
-  String get errorMsg => 'did not match';
+  String get defaultError => 'did not match';
 
   @override
-  bool validate(dynamic? val) {
-    return match(val, stringToMatchWith, ignoreCase: ignoreCase!);
+  bool isValid(String val) {
+    return match(val, stringToMatchWith);
   }
 }

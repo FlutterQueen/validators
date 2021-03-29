@@ -1,26 +1,38 @@
-// interface for the queen validation rule
-abstract class QueenValidationRule {
-  // ? message to show case validations fails
-  // ? user might want to display custom message
-  final String? msg;
+import 'package:meta/meta.dart';
 
-  const QueenValidationRule(this.msg);
+/// * interface for the queen validation rules
+/// * T => Type Of Input to apllay validation to
+/// ?   val is! T   => failure
+abstract class QueenValidationRule<T> {
+  /// ? message to show case validations fails
 
-  // ? default message in case the user didn't use another one
-  String? get errorMsg;
+  final String? error;
 
-  // ? return a bool Either he succeeds or fails the validation
-  bool validate(dynamic? val);
+  @mustCallSuper
+  const QueenValidationRule(this.error);
 
-  // * will apply the validation then return the user custom error message
-  // * in case user message == null it will return the default error message
+  /// ? default message in case the user didn't use another one
+  String get defaultError;
+
+  // ? return a bool Either valid or NOT
+  bool isValid(T val);
+
+  // * will apply the validation to the input
+  // * in case of error return the default error message
   String? run(dynamic? v) {
-    if (v == null) {
-      return null;
-    } else if (validate(v)) {
-      return null;
-    } else {
-      return msg ?? errorMsg;
-    }
+    // if input is null return null
+    // else is same type  AND isValid ? return null
+    // else return some String
+
+    // return v != null && v is T && isValid(v) ? null : error ?? defaultError;
+    return v == null || (v is T && isValid(v)) ? null : error ?? defaultError;
+
+    // return v == null
+    //     ? null
+    //     : v is T && isValid(v)
+    //         ? null
+    //         : error ?? defaultError;
+    // if (v == null) return null;
+    // return v is T && isValid(v) ? null : error ?? defaultError;
   }
 }
