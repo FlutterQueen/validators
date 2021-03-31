@@ -1,15 +1,40 @@
-# Queen validators 👑
+# **`Queen validators 👑`**
 
-# Table of Contents
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
-[مقال يشرح بالعربي الفائده من المكتبة وطريقة الاستخدام](https://maxzodblog.blogspot.com/2021/02/validation.html)
+[**مقال يشرح بالعربي الفائده من المكتبة وطريقة الاستخدام**](https://maxzodblog.blogspot.com/2021/02/validation.html)
 
-- [Queen validators 👑](#queen-validators-)
-- [Table of Contents](#table-of-contents)
+## supported platforms
+
+Support null Safety
+
+- `DART`
+- `NATIVE`
+- `JS`
+- `FLUTTER`
+- `ANDROID`
+- `IOS`
+- `LINUX`
+- `MACOS`
+- `WEB`
+- `WINDOWS`
+
+# NOTE :
+
+- for basic form validation i think we cover big part of it
+- but for variables validation we miss a lot of functionalities and
+  the tests does not cover every thing , if you would to help feel free to add more rules and functions
+
+# `Table of Contents`
+
+- [**`Queen validators 👑`**](#queen-validators-)
+  - [supported platforms](#supported-platforms)
+- [NOTE :](#note-)
+- [`Table of Contents`](#table-of-contents)
   - [Features](#features)
   - [installation](#installation)
-  - [Validate variables](#validate-variables)
   - [Validate Forms](#validate-forms)
+  - [Validate variables](#validate-variables)
   - [Supported Rules](#supported-rules)
 
 ## Features
@@ -17,23 +42,13 @@
 - easily customize form validation error massages with any localization solution
 - need a new rule ? just extend QueenValidationRule<T> class and build your own rule
 - extension on String and dynamic Types give you little push
+- Support null Safety
 
 ## installation
 
 ```yaml
 dependencies:
   queen_validators:
-```
-
-## Validate variables
-
-```dart
-const badEmail = 'QueenRoyal.kingdom';
-print(badEmail.isEmail) // false
-
-const validEmail = 'Queen@Royal.kingdom';
-print(validEmail.isEmail) // true
-
 ```
 
 ## Validate Forms
@@ -51,6 +66,17 @@ return TextFormField(
     ]),
   );
   }
+```
+
+## Validate variables
+
+```dart
+const badEmail = 'QueenRoyal.kingdom';
+print(badEmail.isEmail) // false
+
+const validEmail = 'Queen@Royal.kingdom';
+print(validEmail.isEmail) // true
+
 ```
 
 ## Supported Rules

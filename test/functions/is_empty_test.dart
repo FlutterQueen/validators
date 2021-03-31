@@ -1,7 +1,7 @@
 import 'package:queen_validators/queen_validators.dart' as q;
 import 'package:test/test.dart';
 
-void main(List<String> args) {
+void main() {
   group('is empty String', () {
     const emptyStrings = [' ', '  ', '  ', '   ', '    '];
 

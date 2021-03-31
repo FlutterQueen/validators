@@ -1,7 +1,7 @@
 import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart';
 
-void main(List<String> args) {
+void main() {
   group('is valid boolean', () {
     const validBooleanFormat = ['true', 'false', 'True', 'False', 'TrUe', 'FaLse ', '1', '0', 1, 0, true, false, 1.0, 0.0];
     for (final v in validBooleanFormat) {
