@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:queen_validators/queen_validators.dart';
+import 'package:queen_validators_example/screens/password_confirmation.dart';
 
-void main() => runApp(MaterialApp(
-      title: 'Queen Validators 👑',
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
-      theme: ThemeData.light(),
-    ));
+void main() => runApp(
+      MaterialApp(
+        title: 'Queen Validators 👑',
+        debugShowCheckedModeBanner: false,
+        // home: HomePage(),
+        home: PasswordConfirmationExample(),
+        theme: ThemeData.light(),
+      ),
+    );
 
 class HomePage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -35,7 +39,7 @@ class HomePage extends StatelessWidget {
                 decoration: InputDecoration(labelText: 'IsRequired'),
                 validator: qValidator([
                   // if textFeild trimmed value lenght > 0 it will pass
-                  IsRequired(msg: 'required'),
+                  IsRequired(),
                 ]),
               ),
               TextFormField(

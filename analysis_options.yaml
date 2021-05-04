@@ -1,4 +1,4 @@
 include: package:lint/analysis_options_package.yaml
-analyzer:
-  errors:
-    todo: ignore
+# analyzer:
+# errors:
+# todo: ignore
