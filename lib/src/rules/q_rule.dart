@@ -1,8 +1,8 @@
 import 'package:queen_validators/queen_validators.dart';
 
-class QValidationRule extends TextValidationRule {
+class QRule extends TextValidationRule {
   final String? Function(String? value) validationMethod;
-  QValidationRule(this.validationMethod);
+  QRule(this.validationMethod);
   @override
   String get defaultError => 'not valid';
 

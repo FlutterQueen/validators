@@ -8,7 +8,10 @@ class PasswordConfirmationExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Queen Validators 👑'), centerTitle: true),
+      appBar: AppBar(
+        title: Text('Queen Validators 👑'),
+        centerTitle: true,
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.check),
         onPressed: () {

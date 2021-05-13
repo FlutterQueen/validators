@@ -11,3 +11,4 @@ export 'package:queen_validators/src/rules/min_length.dart';
 export 'package:queen_validators/src/rules/not_contains_any.dart';
 export 'package:queen_validators/src/rules/not_contains.dart';
 export 'package:queen_validators/src/rules/regx.dart';
+export 'package:queen_validators/src/rules/q_rule.dart';
