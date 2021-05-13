@@ -1,6 +1,5 @@
 name: queen_validators
-description: validate variables with extensions and pure flutter TextFormFelid
-  with qValidator function
+description: helper functions to make the validaation processs easier for variables and forms
 version: 0.2.3
 homepage: https://github.com/maxzod/queen_validators
 repository: https://github.com/maxzod/queen_validators
@@ -8,7 +7,7 @@ issue_tracker: https://github.com/maxzod/queen_validators/issues
 environment:
   sdk: ">=2.12.0 <3.0.0"
 dependencies:
-  email_validator: ^2.0.0-nullsafety
+  email_validator: ^2.0.1
   meta: ^1.3.0
 
 dev_dependencies:
