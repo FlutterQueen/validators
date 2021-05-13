@@ -17,9 +17,11 @@ class PasswordConfirmationExample extends StatelessWidget {
         onPressed: () {
           final isFormValid = _formKey.currentState!.validate();
           if (isFormValid) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('the form is valid')));
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('the form is valid')));
           } else {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('not valid')));
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('not valid')));
           }
         },
       ),

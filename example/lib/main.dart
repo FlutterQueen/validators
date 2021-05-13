@@ -23,9 +23,11 @@ class HomePage extends StatelessWidget {
         onPressed: () {
           final isFormValid = _formKey.currentState!.validate();
           if (isFormValid) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('the form is valid')));
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('the form is valid')));
           } else {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('not valid')));
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('not valid')));
           }
         },
       ),
@@ -54,7 +56,8 @@ class HomePage extends StatelessWidget {
                 ]),
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'IsRequired AND IsEmail'),
+                decoration:
+                    InputDecoration(labelText: 'IsRequired AND IsEmail'),
                 validator: qValidator([
                   IsRequired(),
 

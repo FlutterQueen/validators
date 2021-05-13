@@ -1,3 +1,10 @@
+## [0.2.3]
+
+- add `QRule` rule
+- add match example
+- fix issues
+- rename `QueenValidationRule<T>` to `TextValidationRule`
+
 ## [0.2.1]
 
 - BREAKING : remove extensions (use functions instead)
