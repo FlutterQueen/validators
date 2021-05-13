@@ -4,6 +4,7 @@
 - add match example
 - fix issues
 - rename `QueenValidationRule<T>` to `TextValidationRule`
+- make `msg` parameter positional instead of optional
 
 ## [0.2.1]
 
