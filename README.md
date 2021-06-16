@@ -25,6 +25,7 @@
   - [Validate variables](#validate-variables)
 - [Supported Rules](#supported-rules)
 - [NOTE :](#note-)
+- [TODO ::](#todo-)
 
 # Features
 
@@ -76,3 +77,23 @@ print(validEmail.isEmail) // true
 - for basic form validation i think we cover big part of it
 - but for variables validation we miss a lot of functionalities and
   the tests does not cover every thing , if you would to help feel free to do so
+
+# TODO ::
+
+- [ ] isEven
+- [ ] isOdd
+- [ ] isNegativeNumber
+- [ ] isPositiveNumber
+- [ ] isCreditCard
+- [ ] isVisa
+- [ ] isMasterCard
+- [ ] isPhoneNumber
+- [ ] isCountryCode
+- [ ] isIp
+- [ ] isMacAddress
+- [ ] isDoubleNumber
+- [ ] isRtlLanguage
+- [ ] isLtrLanguage
+- [ ] isDate
+- [ ] isUrl
+- [ ]
