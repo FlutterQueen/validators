@@ -80,10 +80,10 @@ print(validEmail.isEmail) // true
 
 # TODO ::
 
-- [ ] isEven
-- [ ] isOdd
-- [ ] isNegativeNumber
-- [ ] isPositiveNumber
+- [x] isEven
+- [x] isOdd
+- [x] isNegativeNumber
+- [x] isPositiveNumber
 - [ ] isCreditCard
 - [ ] isVisa
 - [ ] isMasterCard
