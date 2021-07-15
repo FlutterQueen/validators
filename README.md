@@ -96,4 +96,5 @@ print(validEmail.isEmail) // true
 - [ ] isLtrLanguage
 - [ ] isDate
 - [ ] isUrl
-- [ ]
+- [ ] isStrongPassword()
+- [ ] isWeekPassword
