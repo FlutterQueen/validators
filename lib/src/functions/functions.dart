@@ -1,5 +1,6 @@
 export 'contains_any.dart';
 export 'is_ascii.dart';
+export 'is_bank_card.dart';
 export 'is_base32.dart';
 export 'is_base58.dart';
 export 'is_base64.dart';

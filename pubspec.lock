@@ -127,13 +127,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
-  lint:
-    dependency: "direct dev"
-    description:
-      name: lint
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.5.3"
   logging:
     dependency: transitive
     description:
@@ -184,12 +177,12 @@ packages:
     source: hosted
     version: "1.8.0"
   pedantic:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: pedantic
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.11.0"
+    version: "1.11.1"
   pool:
     dependency: transitive
     description:

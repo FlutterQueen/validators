@@ -26,6 +26,7 @@
 - [Supported Rules](#supported-rules)
 - [NOTE :](#note-)
 - [TODO ::](#todo-)
+- [NEXT](#next)
 
 # Features
 
@@ -84,6 +85,12 @@ print(validEmail.isEmail) // true
 - [x] isOdd
 - [x] isNegativeNumber
 - [x] isPositiveNumber
+- [ ] isStrongPassword
+- [ ] isMediumPassword
+- [ ] containsCapitalChars
+
+# NEXT
+
 - [ ] isCreditCard
 - [ ] isVisa
 - [ ] isMasterCard
@@ -92,9 +99,7 @@ print(validEmail.isEmail) // true
 - [ ] isIp
 - [ ] isMacAddress
 - [ ] isDoubleNumber
-- [ ] isRtlLanguage
-- [ ] isLtrLanguage
+- [x] isRtlLanguage
+- [x] isLtrLanguage
 - [ ] isDate
-- [ ] isUrl
-- [ ] isStrongPassword()
-- [ ] isWeekPassword
+- [x] isUrl
