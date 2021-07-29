@@ -3,7 +3,7 @@ import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `even` intger
 class IsDouble extends TextValidationRule {
-  const IsDouble([String? msg]) : super(msg);
+  IsDouble([String? msg]) : super(msg);
 
   @override
   String get defaultError => 'is not even number';

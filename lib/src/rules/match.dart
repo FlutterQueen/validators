@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class Match extends TextValidationRule {
   final String stringToMatchWith;
 
-  const Match(this.stringToMatchWith, [String? msg]) : super(msg);
+  Match(this.stringToMatchWith, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'did not match';

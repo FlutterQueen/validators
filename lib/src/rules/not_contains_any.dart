@@ -5,11 +5,10 @@ import 'package:queen_validators/src/imp/validation.dart';
 class NotContainsAny extends TextValidationRule {
   final List<String> value;
 
-  const NotContainsAny(this.value, [String? msg]) : super(msg);
+  NotContainsAny(this.value, [String? msg]) : super(msg);
 
   @override
-  String get defaultError =>
-      'must contain at least one of the whitelisted keywords';
+  String get defaultError => 'must contain at least one of the whitelisted keywords';
 
   @override
   bool isValid(String val) {

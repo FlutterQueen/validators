@@ -1,5 +1,3 @@
-# **`#GazzaUnderAttack`**
-
 # **`Queen validators 👑`**
 
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
@@ -15,7 +13,6 @@
 
 # Table of Contents
 
-- [**`#GazzaUnderAttack`**](#gazzaunderattack)
 - [**`Queen validators 👑`**](#queen-validators-)
 - [Features](#features)
 - [Table of Contents](#table-of-contents)
@@ -25,7 +22,6 @@
   - [Validate variables](#validate-variables)
 - [Supported Rules](#supported-rules)
 - [NOTE :](#note-)
-- [TODO ::](#todo-)
 - [NEXT](#next)
 
 # Features
@@ -79,7 +75,7 @@ print(validEmail.isEmail) // true
 - but for variables validation we miss a lot of functionalities and
   the tests does not cover every thing , if you would to help feel free to do so
 
-# TODO ::
+# NEXT
 
 - [x] isEven
 - [x] isOdd
@@ -88,9 +84,6 @@ print(validEmail.isEmail) // true
 - [ ] isStrongPassword
 - [ ] isMediumPassword
 - [ ] containsCapitalChars
-
-# NEXT
-
 - [ ] isCreditCard
 - [ ] isVisa
 - [ ] isMasterCard

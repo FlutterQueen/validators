@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class Contains extends TextValidationRule {
   final String value;
 
-  const Contains(this.value, [String? msg]) : super(msg);
+  Contains(this.value, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'must contain $value';

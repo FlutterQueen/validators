@@ -3,7 +3,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 /// allow using a regular expression as validation rule
 class RegExpRule extends TextValidationRule {
   final RegExp regX;
-  const RegExpRule(this.regX, [String? msg]) : super(msg);
+  RegExpRule(this.regX, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'did not match';

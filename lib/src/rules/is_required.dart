@@ -4,7 +4,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 
 /// checks if the input is not empty string
 class IsRequired extends TextValidationRule {
-  const IsRequired([String? msg]) : super(msg);
+  IsRequired([String? msg]) : super(msg);
 
   @override
   String get defaultError => 'required';

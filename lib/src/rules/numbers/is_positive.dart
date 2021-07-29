@@ -3,7 +3,7 @@ import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `odd` intger
 class IsPositiveNumber extends TextValidationRule {
-  const IsPositiveNumber([String? msg]) : super(msg);
+  IsPositiveNumber([String? msg]) : super(msg);
 
   @override
   String get defaultError => 'is not odd number';

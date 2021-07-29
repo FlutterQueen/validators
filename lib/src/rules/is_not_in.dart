@@ -4,7 +4,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 /// checks if the input `is NOT in` provided List;
 class IsNotIn extends TextValidationRule {
   final List<dynamic> list;
-  const IsNotIn(this.list, [String? msg]) : super(msg);
+  IsNotIn(this.list, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'is not accepted';

@@ -6,7 +6,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class ContainsAny extends TextValidationRule {
   final List<String> value;
 
-  const ContainsAny(this.value, [String? msg]) : super(msg);
+  ContainsAny(this.value, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'must contain at least one of the keywords';

@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class MinLength extends TextValidationRule {
   final int min;
 
-  const MinLength(this.min, [String? msg]) : super(msg);
+  MinLength(this.min, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'min length is $min';

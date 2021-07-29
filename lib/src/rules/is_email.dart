@@ -4,7 +4,7 @@ import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `email` address
 class IsEmail extends TextValidationRule {
-  const IsEmail([String? msg]) : super(msg);
+  IsEmail([String? msg]) : super(msg);
 
   @override
   String get defaultError => 'is not valid email address';

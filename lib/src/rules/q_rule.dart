@@ -10,5 +10,5 @@ class QRule extends TextValidationRule {
   bool isValid(String val) => false;
 
   @override
-  String? run(String? val) => validationMethod(val);
+  String? run(String? v) => validationMethod(v);
 }

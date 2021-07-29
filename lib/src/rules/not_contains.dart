@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class NotContains extends TextValidationRule {
   final String value;
 
-  const NotContains(this.value, [String? msg]) : super(msg);
+  NotContains(this.value, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'must not contain $value';

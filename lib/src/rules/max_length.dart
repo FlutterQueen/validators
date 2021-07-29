@@ -5,7 +5,7 @@ import 'package:queen_validators/src/imp/validation.dart';
 class MaxLength extends TextValidationRule {
   final int max;
 
-  const MaxLength(this.max, [String? msg]) : super(msg);
+  MaxLength(this.max, [String? msg]) : super(msg);
 
   @override
   String get defaultError => 'max length is $max';
