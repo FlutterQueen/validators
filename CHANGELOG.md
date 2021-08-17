@@ -1,5 +1,12 @@
+## [0.2.5]
+
+- new rules 🆕
+  - IsDate 📅
+
 ## [0.2.4]
+
 - feat: `isPort`
+
 ## [0.2.3]
 
 - add `QRule` rule

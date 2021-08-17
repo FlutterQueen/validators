@@ -48,9 +48,11 @@ return TextFormField(
      // use qValidator function and provider list of rules to apply on this field
     validator: qValidator([
       IsRequired(),
+      IsOptional()
       IsEmail(),
       MinLength(8),
       MaxLength(30, "optionally you can override the failure if the validation fails"),
+      // there is more rules 🔥 🚀
     ]),
   );
   }
@@ -60,10 +62,10 @@ return TextFormField(
 
 ```dart
 const badEmail = 'QueenRoyal.kingdom';
-print(badEmail.isEmail) // false
+print(isEmail(badEmail)) // false
 
 const validEmail = 'Queen@Royal.kingdom';
-print(validEmail.isEmail) // true
+print(isEmail(validEmail)) // true
 
 ```
 
