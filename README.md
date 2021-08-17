@@ -1,41 +1,38 @@
-# **`Queen validators 👑`**
+# **`Queen validators 1👑`**
 
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
 [**مقال يشرح بالعربي الفائده من المكتبة وطريقة الاستخدام**](https://maxzodblog.blogspot.com/2021/02/validation.html)
 
-# Features
+# Introduction
 
-- support all platforms
-- support Null Safety
-- support Flutter Form validation
-- support variable validation
+Welcome to the v1 of the `queen_validators` a Gift Made with 💜
 
-# Table of Contents
+## What is New ?
 
-- [**`Queen validators 👑`**](#queen-validators-)
-- [Features](#features)
-- [Table of Contents](#table-of-contents)
-- [Features](#features-1)
-- [installation](#installation)
-  - [Validate Forms](#validate-forms)
-  - [Validate variables](#validate-variables)
-- [Supported Rules](#supported-rules)
-- [NOTE :](#note-)
-- [NEXT](#next)
+- More Rules 🛡
+- More Tests 🧪
+- More Flexibility 💪
+  - easily integrate with any localization solution
+  - magic rules `IsOptional()` `IsRequired()` ✊
+  - extend the base class `TextValidationRule` and build your own custom rules
+  - use `.when(WhenCallback)` to make the rule optional base on the callback result 😎
+  - use `qValidation(args,onFailureCallBack)` to execute code on specific FromFelid failure 🤘
+  - use `QueenValidators.enableLogs()` to enable console Logs 🚧
+  -
+- Documentation for each Rule 📃
+- Support for
+  - All platforms 🌍
+  - Null Safety 🦺
+  - All Flutter versions 🐦
+  - Flutter vanilla Form validation
+  - Variable validation
 
-# Features
-
-- easily customize form validation error massages with any localization solution
-- need a new rule ? just extend QueenValidationRule<T> class and build your own rule
-- extension on String and dynamic Types give you little push
-- Support null Safety
-
-# installation
+# Get Started
 
 ```yaml
 dependencies:
-  queen_validators: ^0.2.3
+  queen_validators: ^1.0.0
 ```
 
 ## Validate Forms
@@ -52,7 +49,6 @@ return TextFormField(
       IsEmail(),
       MinLength(8),
       MaxLength(30, "optionally you can override the failure if the validation fails"),
-      // there is more rules 🔥 🚀
     ]),
   );
   }
@@ -69,32 +65,4 @@ print(isEmail(validEmail)) // true
 
 ```
 
-# [Supported Rules](https://pub.dev/documentation/queen_validators/latest/queen_validators/queen_validators-library.html)
-
-# NOTE :
-
-- for basic form validation i think we cover big part of it
-- but for variables validation we miss a lot of functionalities and
-  the tests does not cover every thing , if you would to help feel free to do so
-
-# NEXT
-
-- [x] isEven
-- [x] isOdd
-- [x] isNegativeNumber
-- [x] isPositiveNumber
-- [ ] isStrongPassword
-- [ ] isMediumPassword
-- [ ] containsCapitalChars
-- [ ] isCreditCard
-- [ ] isVisa
-- [ ] isMasterCard
-- [ ] isPhoneNumber
-- [ ] isCountryCode
-- [ ] isIp
-- [ ] isMacAddress
-- [ ] isDoubleNumber
-- [x] isRtlLanguage
-- [x] isLtrLanguage
-- [ ] isDate
-- [x] isUrl
+# [Click to Open Supported Rules List](https://pub.dev/documentation/queen_validators/latest/queen_validators/queen_validators-library.html)
