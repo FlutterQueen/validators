@@ -66,3 +66,7 @@ print(isEmail(validEmail)) // true
 ```
 
 # [Click to Open Supported Rules List](https://pub.dev/documentation/queen_validators/latest/queen_validators/queen_validators-library.html)
+
+# NOTES
+
+- some rules takes the failure message as optional param like `IsDateMilli`

@@ -15,3 +15,6 @@ export 'package:queen_validators/src/rules/it/regx.dart';
 export 'text/is_empty.dart';
 export 'text/is_not_empty.dart';
 export 'it/is_port.dart';
+export 'dates/is_date.dart';
+export 'dates/is_date_mills.dart';
+export 'dates/is_date_micro.dart';
