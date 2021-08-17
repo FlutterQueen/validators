@@ -1,4 +1,4 @@
-import 'package:queen_validators/src/functions/is_port.dart';
+import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart';
 
 const _validPorts = <String>[

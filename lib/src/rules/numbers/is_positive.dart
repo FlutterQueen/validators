@@ -1,4 +1,4 @@
-import 'package:queen_validators/src/imp/validation.dart';
+import 'package:queen_validators/src/text_rule_class.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `odd` intger
@@ -9,11 +9,13 @@ class IsPositiveNumber extends TextValidationRule {
   String get defaultError => 'is not odd number';
 
   @override
-  bool isValid(String val) {
-    final asNumber = num.tryParse(val);
-    if (asNumber != null) {
-      return !asNumber.isNegative;
-    }
-    return false;
+  bool isValid(String val) => isPositiveNumber(val);
+}
+
+bool isPositiveNumber(String val) {
+  final asNumber = num.tryParse(val);
+  if (asNumber != null) {
+    return !asNumber.isNegative;
   }
+  return false;
 }

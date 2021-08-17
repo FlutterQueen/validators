@@ -1,6 +1,6 @@
-import 'package:queen_validators/src/functions/is_empty.dart';
-import 'package:queen_validators/src/imp/validation.dart';
-import 'package:queen_validators/src/rules/is_optional.dart';
+import 'package:queen_validators/src/rules/text/is_empty.dart';
+import 'package:queen_validators/src/text_rule_class.dart';
+import 'package:queen_validators/src/rules/magic/is_optional.dart';
 
 /// ? build and return String Function(String value) function which triggers the provided validation rules
 /// * how the validation loop works

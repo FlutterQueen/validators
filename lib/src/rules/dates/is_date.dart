@@ -1,0 +1,16 @@
+import 'package:queen_validators/src/text_rule_class.dart';
+
+/// checks if the input is a valid `date`
+class IsDate extends TextValidationRule {
+  IsDate([String? msg]) : super(msg);
+
+  @override
+  String get defaultError => 'is not valid date format';
+
+  @override
+  bool isValid(String val) => isDate(val);
+}
+
+bool isDate(String v) {
+  return DateTime.tryParse(v) != null;
+}

@@ -1,0 +1,1 @@
+//  checks if list does not contains the gaiven string splited

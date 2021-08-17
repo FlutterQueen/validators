@@ -4,11 +4,7 @@ library queen_validators;
 export 'package:queen_validators/src/validator.dart';
 
 /// `abstract` `class` to implement your own  rule
-export 'package:queen_validators/src/imp/validation.dart';
+export 'package:queen_validators/src/text_rule_class.dart';
 
-/// rules
-
-export 'package:queen_validators/src/rules/rules.dart';
-
-/// functions
-export 'package:queen_validators/src/functions/functions.dart';
+/// * rules
+export 'package:queen_validators/src/rules/index.dart';
