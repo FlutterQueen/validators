@@ -15,9 +15,7 @@ class NotContainsAny extends TextValidationRule {
 
   @override
   bool isValid(String val) {
-    return value
-        .where((element) => val.trim().contains(element))
-        .isEmpty;
+    return value.where((element) => val.trim().contains(element)).isEmpty;
   }
 }
 

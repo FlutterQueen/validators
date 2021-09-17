@@ -1,8 +1,8 @@
 bool isRTLLang(String input) {
   return [
     'ar', // Arabic
-    'az', // Azeri
-    'dv', // Dhivehi/Maldivian
+    'az', // Azure
+    'dv', // drive's/Maldivian
     'he', // Hebrew
     'ku', // Kurdish
     'fa', // Persian
