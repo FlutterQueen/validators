@@ -1,28 +1,23 @@
 import 'package:test/test.dart';
-import 'package:queen_validators/queen_validators.dart' as q;
+import 'package:queen_validators/queen_validators.dart';
 
 void main() {
-  group('max length [valid]', () {
-    const keywordsWith6Length = [
-      'Queen ',
-      'valid ',
-      '  dart  ',
-      'تحيا   ',
-      'مصر   ',
-    ];
-    for (final keyword in keywordsWith6Length) {
-      test(keyword, () => expect(q.maxLength(keyword, 6), isTrue));
-    }
-  });
-  group('max length [Not valid]', () {
-    const keywordsWith6Length = [
-      'Queen Validators     ',
-      '     Flutter Egypt',
-      'تحيا   مصر ',
-      'احفاد كيمت',
-    ];
-    for (final keyword in keywordsWith6Length) {
-      test(keyword, () => expect(q.maxLength(keyword, 6), isFalse));
-    }
-  });
+  group(
+    'MaxLength rule',
+    () {
+      test('trims the string before checking', () {
+        expect(MaxLength(5).isValid('    queen    '), isTrue);
+      });
+
+      test('returns true when length equls the max length', () {
+        expect(MaxLength(5).isValid('queen'), isTrue);
+      });
+      test('returns true when length < max length', () {
+        expect(MaxLength(10).isValid('queen'), isTrue);
+      });
+      test('returns false when length >  max length', () {
+        expect(MaxLength(1).isValid('queen'), isFalse);
+      });
+    },
+  );
 }
