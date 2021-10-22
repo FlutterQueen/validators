@@ -22,19 +22,24 @@ void main() {
       test(
         'returns true if is valid color',
         () {
-          for (final c in validColors) {
-            expect(isHexColor(c), isTrue);
+          for (final color in validColors) {
+            expect(isHexColor(color), isTrue);
           }
         },
       );
       test(
         'returns false if is not valid color',
-        () => notValidColors.map((e) => expect(isHexColor('#FOOBAR'), isFalse)),
+        () {
+          for (final color in notValidColors) {
+            expect(isHexColor(color), isFalse);
+          }
+        },
       );
       test(
         'can start with # or not ',
         () => expect(isHexColor('#FFFFFF') && isHexColor('FFFFFF'), isTrue),
       );
+      // TODO :: suuport color opacity
       // test(
       //   'support obacity',
       //   () => expect(isHexColor('#FFFFFFFF'), isTrue),
