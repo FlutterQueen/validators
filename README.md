@@ -62,3 +62,24 @@ print(isEmail(validEmail)) // true
 # NOTES
 
 - some rules takes the failure message as optional param like `IsDateMilli`
+
+# TODO
+
+## Colors
+
+- support hex colors opacity
+
+# Rules
+
+## Text
+
+| Rule          | Function               | Description                             | trims | Notes                       |
+| ------------- | ---------------------- | --------------------------------------- | ----- | --------------------------- |
+| `Contains`    | ❌                     | if input contains some some value       | ✔     | --------------------------- |
+| `NotContains` | ❌                     | if input NOT contains the some value    | ✔     | --------------------------- |
+| `IsEmpty`     | `isEmpty(String)`      | if input is empty                       | ✔     | --------------------------- |
+| `IsNotEmpty`  | `isNotEmpty(String)`   | if input is not empty                   | ✔     | --------------------------- |
+| `IsRequired`  | ❌                     | --------------------------------------- | ✔     | identical with `IsNotEmpty` |
+| `Match`       | `match(Object,Object)` | if two inputs is the same type && value | ❌    | --------------------------- |
+| `MaxLength`   | ❌                     | if input length <= max                  | ✔     | --------------------------- |
+| `MinLength`   | ❌                     | if input length >= min                  | ✔     | --------------------------- |
