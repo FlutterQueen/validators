@@ -4,7 +4,6 @@ export 'package:queen_validators/src/rules/it/is_email.dart';
 export 'package:queen_validators/src/rules/lists/is_in.dart';
 export 'package:queen_validators/src/rules/lists/is_not_in.dart';
 export 'package:queen_validators/src/rules/magic/is_optional.dart';
-export 'package:queen_validators/src/rules/magic/is_required.dart';
 export 'package:queen_validators/src/rules/text/match.dart';
 export 'package:queen_validators/src/rules/text/max_length.dart';
 export 'package:queen_validators/src/rules/text/min_length.dart';

@@ -4,35 +4,27 @@
 
 [**مقال يشرح بالعربي الفائده من المكتبة وطريقة الاستخدام**](https://maxzodblog.blogspot.com/2021/02/validation.html)
 
-# Introduction
+# Features
 
-Welcome to the v1 of the `queen_validators` a Gift Made with 💜
-
-## What is New ?
-
-- More Rules 🛡
-- More Tests 🧪
-- More Flexibility 💪
-  - easily integrate with any localization solution
-  - magic rules `IsOptional()` `IsRequired()` ✊
-  - extend the base class `TextValidationRule` and build your own custom rules
-  - use `.when(WhenCallback)` to make the rule optional base on the callback result 😎
-  - use `qValidation(args,onFailureCallBack)` to execute code on specific FromFelid failure 🤘
-  - use `QueenValidators.enableLogs()` to enable console Logs 🚧
-  -
-- Documentation for each Rule 📃
-- Support for
-  - All platforms 🌍
-  - Null Safety 🦺
-  - All Flutter versions 🐦
-  - Flutter vanilla Form validation
-  - Variable validation
+- [x] Support Null Safety
+- [x] Support all platforms
+- [x] Validate Flutter Forms in vanilla flutter
+- [x] Validate Varibales (each rule have function in same name put in camelCase)
+- [ ] Localization
+  - [x] easily integrate with any localization solution
+  - [ ] support Nations out of the box
+- [ ] magic rules `IsOptional()` `IsRequired()` ✊
+- [ ] extend the base class `TextValidationRule` and build your own custom rules
+- [ ] use `.when(WhenCallback)` to make the rule optional base on the callback result 😎
+- [ ] use `qValidation(args,onFailureCallBack)` to execute code on specific FromFelid failure 🤘
+- [ ] use `QueenValidators.enableLogs()` to enable console Logs 🚧
+- [ ] Documentation for each Rule 📃
 
 # Get Started
 
 ```yaml
 dependencies:
-  queen_validators: ^1.0.0
+  queen_validators: <latest_version>
 ```
 
 ## Validate Forms

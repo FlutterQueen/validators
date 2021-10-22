@@ -2,13 +2,27 @@ import 'package:queen_validators/src/rules/text/is_empty.dart';
 import 'package:queen_validators/src/text_rule_class.dart';
 import 'package:queen_validators/src/rules/magic/is_optional.dart';
 
+typedef OnFailureCallBack = void Function(
+  /// the text field content
+  String text,
+
+  /// the rules for tihs feiled
+  List<TextValidationRule> rules,
+
+  ///
+  TextValidationRule failedRule,
+);
+
 /// ? build and return String Function(String value) function which triggers the provided validation rules
 /// * how the validation loop works
 /// it will loop for each in the rules List
 /// if the role is type of optional it wail mark the validation process for ths item as optional
 /// which mans in case of any validation fails and the value is null there will be no error
 /// but if the validations fails and the value is not null will return the first fail error message
-String? Function(String?) qValidator(List<TextValidationRule> rules) {
+String? Function(String?) qValidator(
+  List<TextValidationRule> rules, [
+  OnFailureCallBack? onFailure,
+]) {
   /// if the validator loop has any `IsOptional` Rule this will make
   /// this variables = `true`;
   /// we will need to decide later on if the loop has `IsOptional` rule on it or not
@@ -38,6 +52,7 @@ String? Function(String?) qValidator(List<TextValidationRule> rules) {
       if (msg != null) break;
     }
     if (isOptional && val != null && isEmpty(val)) return null;
+
     return msg;
   };
 }
