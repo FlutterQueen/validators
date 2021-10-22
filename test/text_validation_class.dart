@@ -11,17 +11,19 @@ void main() {
   test('validation rule when false does not apply the rule', () {
     final validator = qValidator(
       [
-        IsRequired().when(() => false),
+        // IsRequired().when(() => false),
       ],
     );
     final msg = validator('');
     expect(msg, equals(null));
   });
 
-  test('validation rule when false does not apply the rule && any other rule works fine', () {
+  test(
+      'validation rule when false does not apply the rule && any other rule works fine',
+      () {
     final validator = qValidator(
       [
-        IsRequired().when(() => false),
+        // IsRequired().when(() => false),
         MinLength(5),
       ],
     );
