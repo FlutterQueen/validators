@@ -4,7 +4,7 @@ import 'package:queen_validators/src/rules/magic/is_optional.dart';
 
 typedef OnFailureCallBack = void Function(
   /// the text field content
-  String text,
+  String? input,
 
   /// the rules for tihs feiled
   List<TextValidationRule> rules,
@@ -49,9 +49,12 @@ String? Function(String?) qValidator(
       /// that means some rule has failed
       /// and we return only the first failure
       /// so there is no reason to continue validation the remain rules
-      if (msg != null) break;
+      if (msg != null) {
+        onFailure?.call(val, rules, rule);
+        break;
+      }
     }
-    if (isOptional && val != null && isEmpty(val)) return null;
+    if (isOptional && isEmpty(val ?? '')) return null;
 
     return msg;
   };

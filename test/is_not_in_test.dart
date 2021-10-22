@@ -3,12 +3,30 @@ import 'package:queen_validators/queen_validators.dart' as q;
 
 void main() {
   group('is Not in List<String>', () {
-    const stringsList = <String>['foo', 'bar', 'zee', 'queen', 'validators', 'palace', 'dart', 'flutter'];
+    const stringsList = <String>[
+      'foo',
+      'bar',
+      'zee',
+      'queen',
+      'validators',
+      'palace',
+      'dart',
+      'flutter'
+    ];
     final validList = [...stringsList];
     for (final v in validList) {
       test(v, () => expect(q.isNotIn(v, stringsList), isFalse));
     }
-    const notValidList = <String>['foao', 'baR', 'zee ', 'queen  ', ' validators ', '  palace', 'dar1t', 'dart on server'];
+    const notValidList = <String>[
+      'foao',
+      'baR',
+      'zee ',
+      'queen  ',
+      ' validators ',
+      '  palace',
+      'dar1t',
+      'dart on server'
+    ];
     for (final v in notValidList) {
       test(v, () => expect(q.isNotIn(v, stringsList), isTrue));
     }

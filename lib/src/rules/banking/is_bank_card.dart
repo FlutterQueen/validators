@@ -2,5 +2,5 @@
 /// for some like me it will take time to implement it with solid keelage about
 /// how and why  so i have to do it later
 // bool isBankCard(String str) {
-  // return false;
+// return false;
 // }
