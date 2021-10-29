@@ -1,4 +1,5 @@
-import 'package:queen_validators/src/rules/numbers/is_number.dart';
+import 'package:queen_validators/queen_validators.dart';
+
 import 'package:test/test.dart';
 
 const _validNumbers = <String>[

@@ -1,5 +1,4 @@
-import 'package:queen_validators/src/rules/numbers/is_int.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 class IsDateMilli extends TextValidationRule {
   final bool isUtc;

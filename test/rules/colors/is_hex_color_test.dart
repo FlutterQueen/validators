@@ -39,6 +39,7 @@ void main() {
         'can start with # or not ',
         () => expect(isHexColor('#FFFFFF') && isHexColor('FFFFFF'), isTrue),
       );
+
       // TODO :: suuport color opacity
       // test(
       //   'support obacity',

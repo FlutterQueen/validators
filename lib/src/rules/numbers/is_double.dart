@@ -6,13 +6,12 @@ class IsDouble extends TextValidationRule {
   IsDouble([String? msg]) : super(msg);
 
   @override
-  String get defaultError => 'is not even number';
+  String get defaultError => 'is not dobule digit number';
 
   @override
-  bool isValid(String val) => isDouble(val);
+  bool isValid(String val) => isDouble(val.trim());
 }
 
-bool isDouble(String val) {
-  final asNumber = double.tryParse(val);
-  return asNumber != null;
-}
+bool isDouble(Object val) =>
+    val is double ||
+    (val is String && val.contains('.') && double.tryParse(val) != null);
