@@ -3,7 +3,7 @@ import 'package:queen_validators/queen_validators.dart';
 
 void main() {
   group(
-    'MinLength rule',
+    'StartsWith rule',
     () {
       test('trims the string before checking', () {
         expect(StartsWith('q').isValid('    queen    '), isTrue);
