@@ -28,14 +28,12 @@ abstract class TextValidationRule {
     // else if isValid ? return null
     // else return the failureMessage
     if (applyThisRule) {
-      return v != null && isValid(v)
-          ? null
-          : failureMessage ?? defaultError;
+      return v != null && isValid(v) ? null : failureMessage ?? defaultError;
     }
   }
 
-  TextValidationRule when(WhenCallBack whenCallBack) {
-    applyThisRule = whenCallBack();
-    return this;
-  }
+  // TextValidationRule when(WhenCallBack whenCallBack) {
+  //   applyThisRule = whenCallBack();
+  //   return this;
+  // }
 }
