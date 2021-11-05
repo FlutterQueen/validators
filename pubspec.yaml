@@ -1,5 +1,5 @@
 name: queen_validators
-description: functions to make the validation processs easier for variables and forms with ZERO extra widgets TextFormFeild
+description: queen support for validation in flutter , functions for variables validation , Rules for Forms with ZERO extra widgets
 version: 1.0.0-beta
 homepage: https://github.com/maxzod/queen_validators
 repository: https://github.com/maxzod/queen_validators
@@ -8,6 +8,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 dependencies:
   email_validator: ^2.0.1
+  meta: ^1.7.0
 
 dev_dependencies:
   lints: ^1.0.1

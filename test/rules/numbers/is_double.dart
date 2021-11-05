@@ -1,25 +1,7 @@
 import 'package:queen_validators/queen_validators.dart';
-import 'package:queen_validators/src/rules/numbers/is_double.dart';
 import 'package:test/test.dart';
 
 void main() {
-  const validDoubles = [
-    '0.0',
-    '1.0',
-    '0.1',
-    0.0,
-    0.1,
-    1.0,
-  ];
-  const notValidDoubles = [
-    '0',
-    '1',
-    '2',
-    0,
-    1,
-    2,
-  ];
-
   group('Rule', () {
     test(
       'it should return True when the text is double digit number',

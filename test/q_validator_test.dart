@@ -2,8 +2,6 @@ import 'package:queen_validators/queen_validators.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
-class _FailureCalledException implements Exception {}
-
 void main() {
   group('qValidator function', () {
     test('stops on first failure', () {

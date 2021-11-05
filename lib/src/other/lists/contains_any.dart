@@ -4,7 +4,6 @@ import 'package:queen_validators/src/text_rule_class.dart';
 
 class ContainsAny extends TextValidationRule {
   final List<String> value;
-  bool? _trim;
   bool? caseSensitive;
   ContainsAny(this.value, [String? msg]) : super(msg);
 
