@@ -1,3 +1,10 @@
+## [1.0.0-beta]
+
+- more rules
+- more tests
+- NEW :: `OnFailureCallBack` pass it to `qValidator` and it gets called when a a field fails
+- BREAKING :: remove `when` callback
+
 ## [0.2.5]
 
 - new rules 🆕
