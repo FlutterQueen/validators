@@ -5,7 +5,7 @@ class StartsWith extends TextValidationRule {
   StartsWith(this.pattren, [String? msg]) : super(msg);
 
   @override
-  String get defaultError => 'must_be_empty';
+  String get defaultError => 'must_start_with $pattren';
 
   @override
   bool isValid(String val) => val.trim().startsWith(pattren);

@@ -22,3 +22,4 @@ export 'package:queen_validators/src/other/numbers/is_number.dart';
 export 'text/is_empty.dart';
 export 'text/is_not_empty.dart';
 export 'text/starts_with.dart';
+export 'text/ends_with.dart';
