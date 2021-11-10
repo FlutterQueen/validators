@@ -11,7 +11,7 @@ class IsNotIn extends TextValidationRule {
   String get defaultError => 'is not accepted';
 
   @override
-  bool isValid(String val) => isNotIn(val, list);
+  bool isValid(String input) => isNotIn(input, list);
 }
 
 /// check if `value` is `NOT` in `List`

@@ -9,7 +9,7 @@ class IsIn extends TextValidationRule {
   String get defaultError => 'is not accepted';
 
   @override
-  bool isValid(String val) => isIn(val, list);
+  bool isValid(String input) => isIn(input, list);
 }
 
 ///  check if `string` is in `List<String>`

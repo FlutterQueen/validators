@@ -7,10 +7,11 @@ class IsEmpty extends TextValidationRule {
   String get defaultError => 'must_be_empty';
 
   @override
-  bool isValid(String val) => isEmpty(val);
+  bool isValid(String input) => isEmpty(input);
 }
 
 /// `trim` the string then checks if `isEmpty`
-bool isEmpty(String string) {
-  return string.trim().isEmpty;
+/// if string is empty it will returns true
+bool isEmpty(String? input) {
+  return input?.trim().isEmpty ?? true;
 }

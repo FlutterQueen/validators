@@ -10,8 +10,8 @@ class IsNotEmpty extends TextValidationRule {
   String get defaultError => 'required';
 
   @override
-  bool isValid(String val) {
-    return isNotEmpty(val);
+  bool isValid(String input) {
+    return isNotEmpty(input);
   }
 }
 
@@ -25,6 +25,6 @@ class IsRequired extends IsNotEmpty {
 }
 
 /// `trim` the string then checks if `isNotEmpty`
-bool isNotEmpty(String string) {
-  return string.trim().isNotEmpty;
+bool isNotEmpty(String? string) {
+  return string?.trim().isNotEmpty ?? false;
 }

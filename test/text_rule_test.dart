@@ -8,7 +8,7 @@ class TestRule extends TextValidationRule {
   String get defaultError => 'the_message';
 
   @override
-  bool isValid(String val) => val.isNotEmpty;
+  bool isValid(String input) => input.isNotEmpty;
 }
 
 void main() {

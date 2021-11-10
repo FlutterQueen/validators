@@ -11,11 +11,12 @@ class MinLength extends TextValidationRule {
   String get defaultError => 'min length is $min';
 
   @override
-  bool isValid(String val) {
-    return val.trim().length >= min;
+  bool isValid(String input) {
+    return input.trim().length >= min;
   }
 }
 
-bool minLength(String val, int min) {
-  return val.trim().length >= min;
+bool minLength(String? input, int min) {
+  if (input == null) return false;
+  return input.trim().length >= min;
 }

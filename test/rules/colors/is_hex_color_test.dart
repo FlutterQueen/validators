@@ -19,6 +19,9 @@ void main() {
   group(
     'isHexColor function',
     () {
+      test('it returns false if input is null', () {
+        expect(isHexColor(null), isFalse);
+      });
       test(
         'returns true if is valid color',
         () {

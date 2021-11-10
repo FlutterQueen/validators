@@ -11,5 +11,5 @@ class Contains extends TextValidationRule {
   String get defaultError => 'must contain $value';
 
   @override
-  bool isValid(String val) => val.trim().contains(value);
+  bool isValid(String input) => input.trim().contains(value);
 }

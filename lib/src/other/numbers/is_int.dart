@@ -9,10 +9,10 @@ class IsInt extends TextValidationRule {
   String get defaultError => 'is not valid int';
 
   @override
-  bool isValid(String val) => isInt(val);
+  bool isValid(String input) => isInt(input);
 }
 
-bool isInt(String val) {
-  final asNumber = int.tryParse(val);
+bool isInt(String input) {
+  final asNumber = int.tryParse(input);
   return asNumber != null;
 }

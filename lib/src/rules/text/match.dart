@@ -14,15 +14,18 @@ class Match extends TextValidationRule {
   String get defaultError => 'does not match';
 
   @override
-  bool isValid(String val) => caseSensitve
-      ? match(val, other)
-      : match(val.toLowerCase(), other.toLowerCase());
+  bool isValid(String input) => caseSensitve
+      ? match(input, other)
+      : match(input.toLowerCase(), other.toLowerCase());
 }
 
 /// checks if two `Strings` are the same
 bool match(
-  Object val,
-  Object other,
+  Object? input,
+  Object? other,
 ) =>
-    val.runtimeType == other.runtimeType && identical(val, other) ||
-    val == other;
+    input != null &&
+        other != null &&
+        input.runtimeType == other.runtimeType &&
+        identical(input, other) ||
+    input == other;

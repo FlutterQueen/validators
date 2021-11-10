@@ -5,6 +5,10 @@ void main() {
   group(
     'match function',
     () {
+      test('it returns false if input is null', () {
+        expect(match(null, ''), isFalse);
+        expect(match('', null), isFalse);
+      });
       test(
         'returns True if the two objects are idintical',
         () {

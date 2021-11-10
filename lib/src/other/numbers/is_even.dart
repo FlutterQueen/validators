@@ -9,11 +9,11 @@ class IsEven extends TextValidationRule {
   String get defaultError => 'is not even number';
 
   @override
-  bool isValid(String val) => isEven(val);
+  bool isValid(String input) => isEven(input);
 }
 
-bool isEven(String val) {
-  final asNumber = num.tryParse(val);
+bool isEven(String input) {
+  final asNumber = num.tryParse(input);
   if (asNumber != null) {
     return asNumber.toInt().isEven;
   }

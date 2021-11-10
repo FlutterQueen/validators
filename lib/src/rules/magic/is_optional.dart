@@ -10,5 +10,5 @@ class IsOptional extends TextValidationRule {
   String get defaultError => '';
 
   @override
-  bool isValid(val) => true;
+  bool isValid(input) => true;
 }

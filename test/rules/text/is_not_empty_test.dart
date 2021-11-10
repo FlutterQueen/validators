@@ -3,6 +3,9 @@ import 'package:test/test.dart' hide isNotEmpty;
 
 void main() {
   group('isNotEmpty function ', () {
+    test('it returns false if input is null', () {
+      expect(isNotEmpty(null), isFalse);
+    });
     test(
       'trims the string before checking',
       () {

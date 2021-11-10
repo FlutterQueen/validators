@@ -20,7 +20,7 @@ void main() {
 
   test('valid isDateMicro test', () {
     for (final date in validDates) {
-      print((date));
+      // print((date));
       expect(isDateMicro(date), isTrue);
     }
   });

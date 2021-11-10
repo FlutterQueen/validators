@@ -9,11 +9,11 @@ class IsOdd extends TextValidationRule {
   String get defaultError => 'is not odd number';
 
   @override
-  bool isValid(String val) => isOdd(val);
+  bool isValid(String input) => isOdd(input);
 }
 
-bool isOdd(String val) {
-  final asNumber = num.tryParse(val);
+bool isOdd(String input) {
+  final asNumber = num.tryParse(input);
   if (asNumber != null) {
     return asNumber.toInt().isOdd;
   }

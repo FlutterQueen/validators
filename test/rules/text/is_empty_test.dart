@@ -5,6 +5,9 @@ void main() {
   group(
     'isEmpty function',
     () {
+      test('it returns true if input is null', () {
+        expect(isEmpty(null), isTrue);
+      });
       test(
         'trims the string before checking',
         () {

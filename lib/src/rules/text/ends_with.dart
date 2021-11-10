@@ -8,5 +8,5 @@ class EndsWith extends TextValidationRule {
   String get defaultError => 'must_end_with $end';
 
   @override
-  bool isValid(String val) => val.trim().endsWith(end);
+  bool isValid(String input) => input.trim().endsWith(end);
 }

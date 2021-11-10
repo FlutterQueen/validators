@@ -9,5 +9,5 @@ class RegExpRule extends TextValidationRule {
   String get defaultError => 'did not match';
 
   @override
-  bool isValid(String val) => regX.hasMatch(val);
+  bool isValid(String input) => regX.hasMatch(input);
 }

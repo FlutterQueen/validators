@@ -11,7 +11,7 @@ class IsDateMilli extends TextValidationRule {
   String get defaultError => 'is not valid Milli seconds Since Epoch';
 
   @override
-  bool isValid(String val) => isDateMills(val, isUtc: isUtc);
+  bool isValid(String input) => isDateMills(input, isUtc: isUtc);
 }
 
 /// checks if the input is a valid `date` to parse by `DateTime.fromMillisecondsSinceEpoch` factory

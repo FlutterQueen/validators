@@ -1,3 +1,7 @@
+## [1.0.2-beta]
+
+- variable validations support null values and all of them return false if the input is null
+
 ## [1.0.0-beta]
 
 - more rules

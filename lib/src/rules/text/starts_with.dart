@@ -8,5 +8,5 @@ class StartsWith extends TextValidationRule {
   String get defaultError => 'must_start_with $pattren';
 
   @override
-  bool isValid(String val) => val.trim().startsWith(pattren);
+  bool isValid(String input) => input.trim().startsWith(pattren);
 }

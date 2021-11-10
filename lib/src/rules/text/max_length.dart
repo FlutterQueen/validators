@@ -10,5 +10,5 @@ class MaxLength extends TextValidationRule {
   String get defaultError => 'max length is $max';
 
   @override
-  bool isValid(String val) => val.trim().length <= max;
+  bool isValid(String input) => input.trim().length <= max;
 }

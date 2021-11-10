@@ -9,11 +9,11 @@ class IsNegativeNumber extends TextValidationRule {
   String get defaultError => 'is not a negative number';
 
   @override
-  bool isValid(String val) => isNegativeNumber(val);
+  bool isValid(String input) => isNegativeNumber(input);
 }
 
-bool isNegativeNumber(String val) {
-  final asNumber = num.tryParse(val);
+bool isNegativeNumber(String input) {
+  final asNumber = num.tryParse(input);
   if (asNumber != null) {
     return asNumber.isNegative;
   }

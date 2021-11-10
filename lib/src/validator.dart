@@ -28,7 +28,7 @@ String? Function(String?) qValidator(
   /// we will need to decide later on if the loop has `IsOptional` rule on it or not
   var isOptional = false;
 
-  return (String? val) {
+  return (String? input) {
     /// will contains the first failed rule message
     String? msg;
 
@@ -43,18 +43,18 @@ String? Function(String?) qValidator(
       /// if it return null then the will be no error;
       /// else ir will return the failure message
       /// which will be return as the validation error for the entire validation process
-      msg = rule.run(val);
+      msg = rule.run(input);
 
       /// if the failure message `msg` has value on it
       /// that means some rule has failed
       /// and we return only the first failure
       /// so there is no reason to continue validation the remain rules
       if (msg != null) {
-        onFailure?.call(val, rules, rule);
+        onFailure?.call(input, rules, rule);
         break;
       }
     }
-    if (isOptional && isEmpty(val ?? '')) return null;
+    if (isOptional && isEmpty(input ?? '')) return null;
 
     return msg;
   };

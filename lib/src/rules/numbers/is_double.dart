@@ -9,9 +9,9 @@ class IsDouble extends TextValidationRule {
   String get defaultError => 'is not dobule digit number';
 
   @override
-  bool isValid(String val) => isDouble(val.trim());
+  bool isValid(String input) => isDouble(input.trim());
 }
 
-bool isDouble(Object val) =>
-    val is double ||
-    (val is String && val.contains('.') && double.tryParse(val) != null);
+bool isDouble(Object? input) =>
+    input != null &&
+    (input is double || (input is String && double.tryParse(input) != null));

@@ -14,8 +14,8 @@ class NotContainsAny extends TextValidationRule {
       'must contain at least one of the whitelisted keywords';
 
   @override
-  bool isValid(String val) {
-    return value.where((element) => val.trim().contains(element)).isEmpty;
+  bool isValid(String input) {
+    return value.where((element) => input.trim().contains(element)).isEmpty;
   }
 }
 

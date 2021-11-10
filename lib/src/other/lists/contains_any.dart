@@ -12,7 +12,7 @@ class ContainsAny extends TextValidationRule {
       'must contain at least one of the white listed keywords';
 
   @override
-  bool isValid(String val) => containsAny(val, value);
+  bool isValid(String input) => containsAny(input, value);
 }
 
 // check if the provider string contains any keywords form the provided list

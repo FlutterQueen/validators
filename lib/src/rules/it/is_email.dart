@@ -10,8 +10,8 @@ class IsEmail extends TextValidationRule {
   String get defaultError => 'is not valid email address';
 
   @override
-  bool isValid(String val) => isEmail(val);
+  bool isValid(String input) => isEmail(input);
 }
 
 /// checks if the value can be well formatted email address
-bool isEmail(String email) => EmailValidator.validate(email);
+bool isEmail(String? email) => email != null && EmailValidator.validate(email);

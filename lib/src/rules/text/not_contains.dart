@@ -11,5 +11,5 @@ class NotContains extends TextValidationRule {
   String get defaultError => 'must not contain $value';
 
   @override
-  bool isValid(String val) => !val.trim().contains(value);
+  bool isValid(String input) => !input.trim().contains(value);
 }

@@ -19,7 +19,7 @@ void main() {
 
   test('valid isDateMills dtest', () {
     for (final date in validDates) {
-      print(date);
+      // print(date);
       expect(isDateMills(date), isTrue);
     }
   });

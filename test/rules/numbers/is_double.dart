@@ -2,6 +2,11 @@ import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart';
 
 void main() {
+  group('isDouble()', () {
+    test('it returns false if input is null', () {
+      expect(isDouble(null), isFalse);
+    });
+  });
   group('Rule', () {
     test(
       'it should return True when the text is double digit number',

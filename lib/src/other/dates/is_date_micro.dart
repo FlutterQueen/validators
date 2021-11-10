@@ -11,7 +11,7 @@ class IsDateMicro extends TextValidationRule {
   String get defaultError => 'is not valid Micro Seconds Since Epoch';
 
   @override
-  bool isValid(String val) => isDateMicro(val, isUtc: isUtc);
+  bool isValid(String input) => isDateMicro(input, isUtc: isUtc);
 }
 
 /// checks if the input is a valid `date` to parse by `DateTime.fromMicrosecondsSinceEpoch` factory

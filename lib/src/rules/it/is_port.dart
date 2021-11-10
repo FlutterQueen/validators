@@ -8,10 +8,16 @@ class IsPort extends TextValidationRule {
   String get defaultError => 'is not valid port number';
 
   @override
-  bool isValid(String val) => isPort(val);
+  bool isValid(String input) => isPort(input);
 }
 
-bool isPort(String port) {
-  final _port = int.tryParse(port);
+// returns true if the input is valid port number
+bool isPort(Object? input) {
+  num? _port;
+  if (input is String) {
+    _port = int.tryParse(input);
+  } else if (input is num) {
+    _port = input;
+  }
   return _port != null && _port >= 0 && _port < 65535;
 }
