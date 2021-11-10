@@ -16,5 +16,9 @@ void main() {
     test('it trims it', () {
       expect(isPort(' 80 '), true);
     });
+    test('it return true if is valid port', () {
+      expect(isPort(0), isTrue);
+      expect(isPort(65535), isTrue);
+    });
   });
 }

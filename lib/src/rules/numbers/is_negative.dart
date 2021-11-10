@@ -12,10 +12,4 @@ class IsNegativeNumber extends TextValidationRule {
   bool isValid(String input) => isNegativeNumber(input);
 }
 
-bool isNegativeNumber(String input) {
-  final asNumber = num.tryParse(input);
-  if (asNumber != null) {
-    return asNumber.isNegative;
-  }
-  return false;
-}
+bool isNegativeNumber(String input) => num.tryParse(input)?.isNegative ?? false;

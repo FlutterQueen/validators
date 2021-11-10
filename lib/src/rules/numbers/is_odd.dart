@@ -12,10 +12,4 @@ class IsOdd extends TextValidationRule {
   bool isValid(String input) => isOdd(input);
 }
 
-bool isOdd(String input) {
-  final asNumber = num.tryParse(input);
-  if (asNumber != null) {
-    return asNumber.toInt().isOdd;
-  }
-  return false;
-}
+bool isOdd(String? input) => num.tryParse(input ?? '')?.toInt().isOdd ?? false;

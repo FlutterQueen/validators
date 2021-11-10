@@ -12,10 +12,5 @@ class IsPositiveNumber extends TextValidationRule {
   bool isValid(String input) => isPositiveNumber(input);
 }
 
-bool isPositiveNumber(String input) {
-  final asNumber = num.tryParse(input);
-  if (asNumber != null) {
-    return !asNumber.isNegative;
-  }
-  return false;
-}
+bool isPositiveNumber(String? input) =>
+    num.tryParse(input ?? '')?.isNegative ?? false;

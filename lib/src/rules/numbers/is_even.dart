@@ -12,10 +12,5 @@ class IsEven extends TextValidationRule {
   bool isValid(String input) => isEven(input);
 }
 
-bool isEven(String input) {
-  final asNumber = num.tryParse(input);
-  if (asNumber != null) {
-    return asNumber.toInt().isEven;
-  }
-  return false;
-}
+bool isEven(String? input) =>
+    num.tryParse(input ?? '')?.toInt().isEven ?? false;

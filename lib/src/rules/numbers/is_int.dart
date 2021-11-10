@@ -12,7 +12,4 @@ class IsInt extends TextValidationRule {
   bool isValid(String input) => isInt(input);
 }
 
-bool isInt(String input) {
-  final asNumber = int.tryParse(input);
-  return asNumber != null;
-}
+bool isInt(String? input) => int.tryParse(input ?? '') != null;
