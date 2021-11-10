@@ -1,6 +1,8 @@
 // Business Identifier Codes
 // aka Swift code
-bool isBIC(String str) {
+bool isBIC(String? str) {
   final isBICReg = RegExp(r'/^[A-z]{4}[A-z]{2}\w{2}(\w{3})?$/');
-  return isBICReg.hasMatch(str);
+  return isBICReg.hasMatch(str ?? '');
 }
+
+bool isSwiftCode(String? str) => isBIC(str);

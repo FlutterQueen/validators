@@ -1,13 +1,15 @@
-bool isRTLLang(String input) {
-  return [
-    'ar', // Arabic
-    'az', // Azure
-    'dv', // drive's/Maldivian
-    'he', // Hebrew
-    'ku', // Kurdish
-    'fa', // Persian
-    'ur', // Urdu
-  ].contains(
-    input.toLowerCase(),
-  );
-}
+// TODO :: rule for each function
+
+const _rtlLocales = <String>[
+  'ar', // Arabic
+  'fa', // Farsi
+  'he', // Hebrew
+  'ps', // Pashto
+  'ur', // Urdu
+];
+
+bool isRtlLanguage(String languageCode) =>
+    _rtlLocales.contains(languageCode.toLowerCase());
+
+bool isLtrLanguage(String languageCode) =>
+    !_rtlLocales.contains(languageCode.toLowerCase());

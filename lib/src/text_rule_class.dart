@@ -5,8 +5,6 @@ import 'package:meta/meta.dart';
 ///    input is! T   => failure
 ///
 
-typedef WhenCallBack = bool Function();
-
 abstract class TextValidationRule {
   ///  message to show case validations fails
 
