@@ -11,6 +11,4 @@ class IsDate extends TextValidationRule {
 }
 
 /// checks if the input is a valid `date` to parse by Dart `DateTime` class
-bool isDate(String v) {
-  return DateTime.tryParse(v) != null;
-}
+bool isDate(String? v) => DateTime.tryParse(v ?? '') != null;

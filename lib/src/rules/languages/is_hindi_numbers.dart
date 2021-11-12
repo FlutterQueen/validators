@@ -1,2 +1,2 @@
-// TODO :: isHindiNumbers
-bool isHindiNumbers(String input) => true;
+// TODO(Rule) :: isHindiNumbers
+// bool isHindiNumbers(String input) => true;

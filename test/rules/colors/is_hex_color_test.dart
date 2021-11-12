@@ -3,13 +3,6 @@ import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
 void main() {
-  const validColors = <String>[
-    '#FFFFFF', // starts with #  and does not have opacity
-    'FFFFFF', // does not starts with #
-    // '#FFFFFFFF', // have opacity
-    '#FFF'
-  ];
-
   const notValidColors = <String>[
     '#FF', // too short
     '#FFFFF-', // un expected characyers
@@ -20,14 +13,40 @@ void main() {
     'isHexColor function',
     () {
       test('it returns false if input is null', () {
-        expect(isHexColor(null), isFalse);
+        expect(
+          isHexColor(null),
+          isFalse,
+          reason: 'null is not a valid color',
+        );
       });
       test(
         'returns true if is valid color',
         () {
-          for (final color in validColors) {
-            expect(isHexColor(color), isTrue);
-          }
+          expect(
+            isHexColor('#FFFFFF'),
+            isTrue,
+            reason: '#FFFFFF is a valid color',
+          );
+          expect(
+            isHexColor('FFF'),
+            isTrue,
+            reason: '#FFFFFF is a valid color',
+          );
+          expect(
+            isHexColor('#FFF'),
+            isTrue,
+            reason: '#FFFFFF is a valid color',
+          );
+          expect(
+            isHexColor('FFFFFF'),
+            isTrue,
+            reason: '# is not required to be a valid color',
+          );
+          expect(
+            isHexColor('FFFFFFFF'),
+            isTrue,
+            reason: 'can support opacity',
+          );
         },
       );
       test(
@@ -43,11 +62,10 @@ void main() {
         () => expect(isHexColor('#FFFFFF') && isHexColor('FFFFFF'), isTrue),
       );
 
-      // TODO :: suuport color opacity
-      // test(
-      //   'support obacity',
-      //   () => expect(isHexColor('#FFFFFFFF'), isTrue),
-      // );
+      test(
+        'support obacity',
+        () => expect(isHexColor('#990000FF'), isTrue),
+      );
     },
   );
 

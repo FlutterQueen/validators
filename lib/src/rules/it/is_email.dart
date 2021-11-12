@@ -14,4 +14,4 @@ class IsEmail extends TextValidationRule {
 }
 
 /// checks if the value can be well formatted email address
-bool isEmail(String? email) => email != null && EmailValidator.validate(email);
+bool isEmail(String? email) => EmailValidator.validate(email ?? '');

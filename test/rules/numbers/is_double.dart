@@ -20,7 +20,7 @@ void main() {
       'it should return False when the text is not double digit number',
       () {
         for (final number in ['0', '1', '2']) {
-          expect(IsDouble().isValid(number.toString()), isFalse);
+          expect(IsDouble().isValid(number), isFalse);
         }
       },
     );

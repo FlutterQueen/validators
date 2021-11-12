@@ -23,12 +23,12 @@ String? Function(String?) qValidator(
   List<TextValidationRule> rules, [
   OnFailureCallBack? onFailure,
 ]) {
-  /// if the validator loop has any `IsOptional` Rule this will make
-  /// this variables = `true`;
-  /// we will need to decide later on if the loop has `IsOptional` rule on it or not
-  var isOptional = false;
-
   return (String? input) {
+    /// if the validator loop has any `IsOptional` Rule this will make
+    /// this variables = `true`;
+    /// we will need to decide later on if the loop has `IsOptional` rule on it or not
+    var isOptional = false;
+
     /// will contains the first failed rule message
     String? msg;
 
@@ -54,6 +54,7 @@ String? Function(String?) qValidator(
         break;
       }
     }
+
     if (isOptional && isEmpty(input ?? '')) return null;
 
     return msg;

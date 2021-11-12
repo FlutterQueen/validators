@@ -1,5 +1,7 @@
 {
-   "cSpell.words": [
-      "abcdefgh"
-   ]
+  "cSpell.words": ["abcdefgh"],
+  "editor.tokenColorCustomizations": {
+    "comments": "",
+    "textMateRules": []
+  }
 }

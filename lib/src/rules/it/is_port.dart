@@ -19,5 +19,5 @@ bool isPort(Object? input) {
   } else if (input is num) {
     _port = input;
   }
-  return _port != null && _port >= 0 && _port < 65535;
+  return _port != null && 0 <= _port && _port <= 65535;
 }

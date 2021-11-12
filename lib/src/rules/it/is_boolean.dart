@@ -1,4 +1,16 @@
-bool isBoolean(dynamic v) {
+import 'package:queen_validators/queen_validators.dart';
+
+class IsBool extends TextValidationRule {
+  IsBool([String? msg]) : super(msg);
+
+
+  @override
+   String get defaultError => 'Must be a boolean'; 
+    @override
+  bool isValid(String input) => isBool(input);
+
+}
+bool isBool(Object? v) {
   return [
     'true',
     'false',

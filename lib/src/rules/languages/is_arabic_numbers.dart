@@ -1,2 +1,2 @@
-// TODO :: isArabic Numbers
+// TODO(Rule) :: isArabic Numbers
 bool isArabicNumbers(String input) => true;

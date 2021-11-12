@@ -21,7 +21,7 @@ void main() {
       0.0
     ];
     for (final v in validBooleanFormat) {
-      test(v, () => expect(isBoolean(v), isTrue));
+      test(v, () => expect(isBool(v), isTrue));
     }
   });
   group('is not valid boolean format', () {
@@ -37,7 +37,7 @@ void main() {
       'f'
     ];
     for (final v in notValidBooleanFormat) {
-      test(v, () => expect(isBoolean(v), isFalse));
+      test(v, () => expect(isBool(v), isFalse));
     }
   });
 }

@@ -10,8 +10,6 @@ abstract class TextValidationRule {
 
   final String? failureMessage;
 
-  bool applyThisRule = true;
-
   @mustCallSuper
   TextValidationRule([this.failureMessage]);
 
@@ -25,9 +23,8 @@ abstract class TextValidationRule {
     // if input is null return null
     // else if isValid ? return null
     // else return the failureMessage
-    if (applyThisRule) {
-      return v != null && isValid(v) ? null : failureMessage ?? defaultError;
-    }
+
+    return v != null && isValid(v) ? null : failureMessage ?? defaultError;
   }
 
   // TextValidationRule when(WhenCallBack whenCallBack) {
