@@ -4,11 +4,8 @@ class IsDateMicro extends TextValidationRule {
   final bool isUtc;
   IsDateMicro({
     this.isUtc = false,
-    String? msg,
+    String msg = 'is not valid Micro Seconds Since Epoch',
   }) : super(msg);
-
-  @override
-  String get defaultError => 'is not valid Micro Seconds Since Epoch';
 
   @override
   bool isValid(String input) => isDateMicro(input, isUtc: isUtc);

@@ -6,7 +6,7 @@ typedef OnFailureCallBack = void Function(
   /// the text field content
   String? input,
 
-  /// the rules for tihs feiled
+  /// the rules for this failed
   List<TextValidationRule> rules,
 
   ///

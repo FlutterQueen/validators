@@ -3,9 +3,7 @@ import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
 class TestRule extends TextValidationRule {
-  TestRule({String? msg}) : super(msg);
-  @override
-  String get defaultError => 'the_message';
+  TestRule({String? msg}) : super(msg ?? 'the_message');
 
   @override
   bool isValid(String input) => input.isNotEmpty;
@@ -30,7 +28,7 @@ void main() {
         },
       );
       test(
-        'can override the error message from the constractor',
+        'can override the error message from the constructor',
         () {
           final testRule = TestRule(msg: 'foo');
           expect(testRule.run(''), equals('foo'));

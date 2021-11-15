@@ -20,7 +20,7 @@ const _notValidNumbers = <String>[
   '50s',
   '  ',
   '',
-  'twxt',
+  'AWS',
 ];
 void main() {
   test('is valid number', () {

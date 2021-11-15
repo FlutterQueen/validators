@@ -9,7 +9,7 @@ void main() {
         expect(MinLength(5).isValid('    queen    '), isTrue);
       });
 
-      test('returns true when length equls the min length', () {
+      test('returns true when length equals the min length', () {
         expect(MinLength(5).isValid('queen'), isTrue);
       });
       test('returns true when length > min length', () {
@@ -20,4 +20,16 @@ void main() {
       });
     },
   );
+
+  test('minLength', () {
+    expect(minLength('', 1), isFalse);
+    expect(minLength('a', 2), isFalse);
+    expect(minLength('ab', 3), isFalse);
+    expect(minLength('abc', 4), isFalse);
+    expect(minLength('abcd', 5), isFalse);
+    expect(minLength('abcde', 6), isFalse);
+    expect(minLength('abcdef', 7), isFalse);
+    expect(minLength(' abcdef', 7), isFalse, reason: 'trimming');
+    expect(minLength('  abcdef', 8), isFalse, reason: 'trimming');
+  });
 }

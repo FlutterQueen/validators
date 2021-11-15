@@ -3,10 +3,7 @@ import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `double`
 class IsDouble extends TextValidationRule {
-  IsDouble([String? msg]) : super(msg);
-
-  @override
-  String get defaultError => 'is not dobule digit number';
+  IsDouble([String? msg]) : super(msg ?? 'is not double digit number');
 
   @override
   bool isValid(String input) => isDouble(input.trim());

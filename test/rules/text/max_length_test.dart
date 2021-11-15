@@ -9,7 +9,7 @@ void main() {
         expect(MaxLength(5).isValid('    queen    '), isTrue);
       });
 
-      test('returns true when length equls the max length', () {
+      test('returns true when length equals the max length', () {
         expect(MaxLength(5).isValid('queen'), isTrue);
       });
       test('returns true when length < max length', () {

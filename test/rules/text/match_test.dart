@@ -10,14 +10,14 @@ void main() {
         expect(match('', null), isFalse);
       });
       test(
-        'returns True if the two objects are idintical',
+        'returns True if the two objects are identical',
         () {
           const foo = 'foo';
           expect(match(foo, foo), isTrue);
         },
       );
       test(
-        'returns false if the two objects are from differnt types',
+        'returns false if the two objects are from different types',
         () {
           const foo = 'foo';
           const bar = 123;
@@ -34,8 +34,8 @@ void main() {
 
           /// *  bool type
           const boolFoo = true;
-          const boolgBar = true;
-          expect(match(boolFoo, boolgBar), isTrue);
+          const boolBar = true;
+          expect(match(boolFoo, boolBar), isTrue);
 
           /// *  int type
           const intFoo = 1;
@@ -60,8 +60,8 @@ void main() {
 
       /// *  bool type
       const boolFoo = true;
-      const boolgBar = false;
-      expect(match(boolFoo, boolgBar), isFalse);
+      const boolBar = false;
+      expect(match(boolFoo, boolBar), isFalse);
 
       /// *  int type
       const intFoo = 1;
@@ -94,19 +94,19 @@ void main() {
         },
       );
       test(
-        'returns True when are matched and ignoreing case sensitivity',
+        'returns True when are matched and ignoring case sensitivity',
         () {
           expect(
-            Match('queen', caseSensitve: false).isValid('Queen'),
+            Match('queen', caseSensitive: false).isValid('Queen'),
             isTrue,
           );
           expect(
-            Match('queen_validators', caseSensitve: false)
+            Match('queen_validators', caseSensitive: false)
                 .isValid('QUEEN_VALIDATORS'),
             isTrue,
           );
           expect(
-            Match('QueeN _ Validators', caseSensitve: false)
+            Match('QueeN _ Validators', caseSensitive: false)
                 .isValid('QUEEN _ ValidAtorS'),
             isTrue,
           );
@@ -123,24 +123,24 @@ void main() {
         },
       );
       test(
-        'returns False when are not matched and ignoreing case sensitivity',
+        'returns False when are not matched and ignoring case sensitivity',
         () {
           expect(
             Match(
               'Fqueen',
-              caseSensitve: false,
+              caseSensitive: false,
             ).isValid('Queen'),
             isFalse,
           );
           expect(
             Match(
               'queen_validators',
-              caseSensitve: false,
+              caseSensitive: false,
             ).isValid('FQUEEN_VALIDATORS'),
             isFalse,
           );
           expect(
-              Match('QueeN_Validators', caseSensitve: false).isValid(
+              Match('QueeN_Validators', caseSensitive: false).isValid(
                 'FQUEEN_ValidAtorS',
               ),
               isFalse);

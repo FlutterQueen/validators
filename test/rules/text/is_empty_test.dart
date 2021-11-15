@@ -47,7 +47,6 @@ void main() {
         expect(IsEmpty().isValid('   '), isTrue);
         expect(IsEmpty().isValid('''
 
-        
         '''), isTrue);
       },
     );

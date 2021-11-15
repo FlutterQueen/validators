@@ -4,10 +4,7 @@ import 'package:queen_validators/src/text_rule_class.dart';
 /// * if the input is null and fails any role
 /// * with instance of this class the qValidator will ignore the field rule
 class IsOptional extends TextValidationRule {
-  IsOptional();
-
-  @override
-  String get defaultError => '';
+  IsOptional() : super('');
 
   @override
   bool isValid(input) => true;

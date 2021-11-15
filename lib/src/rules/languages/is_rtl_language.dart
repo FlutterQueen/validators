@@ -1,5 +1,3 @@
-// TODO(Rule) :: for each function
-
 const _rtlLocales = <String>[
   'ar', // Arabic
   'fa', // Farsi

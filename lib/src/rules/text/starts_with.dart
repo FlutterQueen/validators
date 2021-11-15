@@ -1,12 +1,11 @@
 import '../../../queen_validators.dart';
 
 class StartsWith extends TextValidationRule {
-  final Pattern pattren;
-  StartsWith(this.pattren, [String? msg]) : super(msg);
+  final Pattern pattern;
+
+  StartsWith(this.pattern, [String? msg])
+      : super(msg ?? 'must_start_with $pattern');
 
   @override
-  String get defaultError => 'must_start_with $pattren';
-
-  @override
-  bool isValid(String input) => input.trim().startsWith(pattren);
+  bool isValid(String input) => input.trim().startsWith(pattern);
 }

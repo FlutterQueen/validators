@@ -1,18 +1,17 @@
 import 'package:queen_validators/queen_validators.dart';
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
+import 'package:test/test.dart';
 
 void main() {
   group('qValidator function', () {
     test('stops on first failure', () {
       final msg = qValidator([
         IsRequired(),
-        IsOptional(),
+        MinLength(500),
       ])('');
       expect(msg, isA<String>());
     });
 
-    test('support optional feilds', () {
+    test('support optional felids', () {
       final msg = qValidator(
         [
           IsOptional(),
@@ -26,7 +25,7 @@ void main() {
           IsOptional(),
           MaxLength(1),
         ],
-      )('if enter value isOptional will not efeect any thing');
+      )('if enter value isOptional will not effect any thing');
       expect(msg2, isA<String>());
     });
     test('returns the first error message', () {
@@ -50,7 +49,6 @@ void main() {
             expect(rules.first, isA<IsOptional>());
             expect(rules.last, isA<MaxLength>());
             expect(rule, isA<MaxLength>());
-            // throw _FailureCalledException();
           },
         )('the-input');
 

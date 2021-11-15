@@ -3,10 +3,7 @@ import 'package:queen_validators/src/text_rule_class.dart';
 /// checks if the input `is in` provided List;
 class IsIn extends TextValidationRule {
   final List<String> list;
-  IsIn(this.list, [String? msg]) : super(msg);
-
-  @override
-  String get defaultError => 'is not accepted';
+  IsIn(this.list, [String? msg]) : super(msg ?? 'is not accepted');
 
   @override
   bool isValid(String input) => isIn(input, list);

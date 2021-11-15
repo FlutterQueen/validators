@@ -2,10 +2,7 @@ import 'package:queen_validators/src/text_rule_class.dart';
 
 /// checks if the input is a valid `port`
 class IsPort extends TextValidationRule {
-  IsPort([String? msg]) : super(msg);
-
-  @override
-  String get defaultError => 'is not valid port number';
+  IsPort([String msg = 'is not valid port number']) : super(msg);
 
   @override
   bool isValid(String input) => isPort(input);

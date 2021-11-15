@@ -83,3 +83,14 @@ print(isEmail(validEmail)) // true
 | `Match`       | `match(Object,Object)` | if two inputs is the same type && value | ❌    | --------------------------- |
 | `MaxLength`   | ❌                     | if input length <= max                  | ✔     | --------------------------- |
 | `MinLength`   | ❌                     | if input length >= min                  | ✔     | --------------------------- |
+
+// TODO :: number max value
+// TODO :: number min value
+// TODO(Rule) :: isArabic Chars
+// TODO(Rule) :: isArabic Numbers
+// TODO(Rule) :: isEnglishChars
+// TODO(Rule) :: isEnglishNumbers
+// TODO(Rule) :: isHindiChars
+// TODO(Rule) :: isHindiNumbers
+// TODO(Rule) :: for each function (isRtlLanguage isLtrLanguage)
+// TODO :: isBankCard

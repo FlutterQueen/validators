@@ -5,7 +5,7 @@ import 'package:test/scaffolding.dart';
 void main() {
   const notValidColors = <String>[
     '#FF', // too short
-    '#FFFFF-', // un expected characyers
+    '#FFFFF-', // un expected characters
     '', //empty
     '#',
   ];
@@ -63,7 +63,7 @@ void main() {
       );
 
       test(
-        'support obacity',
+        'support opacity',
         () => expect(isHexColor('#990000FF'), isTrue),
       );
     },

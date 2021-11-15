@@ -1,4 +1,3 @@
-// TODO(Rule) :: isArabic Chars
 import 'package:queen_validators/queen_validators.dart';
 
 bool isArabicChars(String input) => containsAny(

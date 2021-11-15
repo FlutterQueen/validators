@@ -9,11 +9,11 @@ void main() {
         expect(StartsWith('q').isValid('    queen    '), isTrue);
       });
 
-      test('returns true when text starts with pattren', () {
+      test('returns true when text starts with pattern', () {
         expect(StartsWith('qu').isValid('queen'), isTrue);
       });
 
-      test('returns false when text does not starts with pattren', () {
+      test('returns false when text does not starts with pattern', () {
         expect(StartsWith('king').isValid('queen'), isFalse);
       });
     },

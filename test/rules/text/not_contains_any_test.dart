@@ -6,7 +6,7 @@ void main() {
     'NotContains rule ',
     () {
       test(
-        'it should return True when the text does not conatians the provided word',
+        'it should return True when the text does not contains the provided word',
         () {
           final word = 'xxxxxxxx';
           expect(NotContains('a').isValid(word), isTrue);
@@ -18,7 +18,7 @@ void main() {
         },
       );
       test(
-        'it should return False when the text does not conatians the provided word',
+        'it should return False when the text does not contains the provided word',
         () {
           final word = 'ghi';
           expect(NotContains('g').isValid(word), isFalse);

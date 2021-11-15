@@ -5,10 +5,7 @@ class IsDateMilli extends TextValidationRule {
   IsDateMilli({
     this.isUtc = false,
     String? msg,
-  }) : super(msg);
-
-  @override
-  String get defaultError => 'is not valid Milli seconds Since Epoch';
+  }) : super(msg ?? 'is not valid Milli seconds Since Epoch');
 
   @override
   bool isValid(String input) => isDateMills(input, isUtc: isUtc);

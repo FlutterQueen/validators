@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   test(
-    'it should return True when the text conatians the provided word',
+    'it should return True when the text contains the provided word',
     () {
       final word = 'abcdef';
       expect(Contains('a').isValid(word), isTrue);
@@ -15,7 +15,7 @@ void main() {
     },
   );
   test(
-    'it should return False when the text does not conatians the provided word',
+    'it should return False when the text does not contains the provided word',
     () {
       final word = 'abcdef';
       expect(Contains('g').isValid(word), isFalse);

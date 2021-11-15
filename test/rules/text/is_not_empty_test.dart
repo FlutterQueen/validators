@@ -2,7 +2,7 @@ import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart' hide isNotEmpty;
 
 void main() {
-  group('isNotEmpty function ', () {
+  group('IsRequired function ', () {
     test('it returns false if input is null', () {
       expect(isNotEmpty(null), isFalse);
     });
@@ -36,23 +36,22 @@ void main() {
     );
   });
 
-  group('IsNotEmpty rule', () {
+  group('IsRequired rule', () {
     test(
       'it should return True when the there is text even single char',
       () {
-        expect(IsNotEmpty().isValid('q'), isTrue);
-        expect(IsNotEmpty().isValid('abcdef'), isTrue);
-        expect(IsNotEmpty().isValid('  word  '), isTrue);
+        expect(IsRequired().isValid('q'), isTrue);
+        expect(IsRequired().isValid('abcdef'), isTrue);
+        expect(IsRequired().isValid('  word  '), isTrue);
       },
     );
     test(
       'it should return False when the trimmed text is empty',
       () {
-        expect(IsNotEmpty().isValid(''), isFalse);
-        expect(IsNotEmpty().isValid('   '), isFalse);
-        expect(IsNotEmpty().isValid('''
+        expect(IsRequired().isValid(''), isFalse);
+        expect(IsRequired().isValid('   '), isFalse);
+        expect(IsRequired().isValid('''
 
-        
         '''), isFalse);
       },
     );
@@ -73,7 +72,6 @@ void main() {
         expect(IsRequired().isValid('   '), isFalse);
         expect(IsRequired().isValid('''
 
-        
         '''), isFalse);
       },
     );

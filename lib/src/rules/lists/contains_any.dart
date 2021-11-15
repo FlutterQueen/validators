@@ -5,11 +5,8 @@ import 'package:queen_validators/src/text_rule_class.dart';
 class ContainsAny extends TextValidationRule {
   final List<String> value;
   bool? caseSensitive;
-  ContainsAny(this.value, [String? msg]) : super(msg);
-
-  @override
-  String get defaultError =>
-      'must contain at least one of the white listed keywords';
+  ContainsAny(this.value, [String? msg])
+      : super(msg ?? 'must contain at least one of the white listed keywords');
 
   @override
   bool isValid(String input) => containsAny(input, value);
