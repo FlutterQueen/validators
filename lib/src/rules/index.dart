@@ -14,14 +14,12 @@ export 'package:queen_validators/src/rules/text/min_length.dart';
 export 'package:queen_validators/src/rules/lists/not_contains_any.dart';
 export 'package:queen_validators/src/rules/text/not_contains.dart';
 export 'package:queen_validators/src/rules/it/regx.dart';
-export 'package:queen_validators/src/rules/numbers/is_int.dart';
 export 'package:queen_validators/src/rules/languages/is_rtl_language.dart';
 export 'package:queen_validators/src/rules/it/is_boolean.dart';
-export 'package:queen_validators/src/rules/numbers/is_number.dart';
 // * text rules
 export 'text/is_empty.dart';
 export 'text/is_not_empty.dart';
 export 'text/starts_with.dart';
 export 'text/ends_with.dart';
 // * numbers
-export 'numbers/is_double.dart';
+export 'package:queen_validators/src/rules/numbers/is_number.dart';

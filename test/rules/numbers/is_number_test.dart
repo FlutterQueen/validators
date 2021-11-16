@@ -2,35 +2,44 @@ import 'package:queen_validators/queen_validators.dart';
 
 import 'package:test/test.dart';
 
-const _validNumbers = <String>[
-  '0',
-  '01',
-  '123',
-  '-123',
-  '-0',
-  '50.5',
-  '0.5',
-  '.5',
-  '1.0',
-  '0.0',
-];
-const _notValidNumbers = <String>[
-  'a0',
-  'O12',
-  '50s',
-  '  ',
-  '',
-  'AWS',
-];
 void main() {
+  group('IsNumber Rule', () {
+    //
+    test('return true if is valid number', () {
+      expect(IsNumber().isValid('0'), isTrue);
+      expect(IsNumber().isValid('01'), isTrue);
+      expect(IsNumber().isValid('123'), isTrue);
+      expect(IsNumber().isValid('-123'), isTrue);
+      expect(IsNumber().isValid('-0'), isTrue);
+      expect(IsNumber().isValid('50.5'), isTrue);
+      expect(IsNumber().isValid('0.5'), isTrue);
+      expect(IsNumber().isValid('.5'), isTrue);
+      expect(IsNumber().isValid('1.0'), isTrue);
+      expect(IsNumber().isValid('0.0'), isTrue);
+    });
+    test('return false if is valid number', () {
+      expect(IsNumber().isValid('0'), isFalse);
+      expect(IsNumber().isValid('a0'), isFalse);
+      expect(IsNumber().isValid('O12'), isFalse);
+      expect(IsNumber().isValid('50s'), isFalse);
+      expect(IsNumber().isValid('  '), isFalse);
+      expect(IsNumber().isValid(''), isFalse);
+      expect(IsNumber().isValid('AWS'), isFalse);
+    });
+
+    //
+  });
   test('is valid number', () {
-    for (final number in _validNumbers) {
-      expect(isNumber(number), isTrue);
-    }
+    expect(isNumber('0'), isTrue);
+    expect(isNumber('01'), isTrue);
+    expect(isNumber('123'), isTrue);
+    expect(isNumber('-123'), isTrue);
+    expect(isNumber('-0'), isTrue);
+    expect(isNumber('50.5'), isTrue);
+    expect(isNumber('0.5'), isTrue);
+    expect(isNumber('.5'), isTrue);
+    expect(isNumber('1.0'), isTrue);
+    expect(isNumber('0.0'), isTrue);
   });
-  test('is not valid number', () {
-    for (final number in _notValidNumbers) {
-      expect(isNumber(number), isFalse);
-    }
-  });
+  test('is not valid number', () {});
 }

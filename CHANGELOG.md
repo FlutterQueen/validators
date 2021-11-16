@@ -1,3 +1,7 @@
+## [1.0.3-beta]
+
+- remove `IsInt` and `IsDouble` in favor of `IsNumber`
+
 ## [1.0.2-beta]
 
 - variable validations support null values and all of them return false if the input is null

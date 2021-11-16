@@ -14,7 +14,7 @@ class IsDateMicro extends TextValidationRule {
 /// checks if the input is a valid `date` to parse by `DateTime.fromMicrosecondsSinceEpoch` factory
 bool isDateMicro(String v, {bool isUtc = false}) {
   try {
-    if (!isInt(v)) return false;
+    if (!(int.tryParse(v) != null)) return false;
     DateTime.fromMicrosecondsSinceEpoch(int.parse(v), isUtc: isUtc);
     return true;
   } catch (e) {
