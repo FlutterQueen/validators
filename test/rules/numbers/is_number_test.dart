@@ -18,7 +18,6 @@ void main() {
       expect(IsNumber().isValid('0.0'), isTrue);
     });
     test('return false if is valid number', () {
-      expect(IsNumber().isValid('0'), isFalse);
       expect(IsNumber().isValid('a0'), isFalse);
       expect(IsNumber().isValid('O12'), isFalse);
       expect(IsNumber().isValid('50s'), isFalse);
