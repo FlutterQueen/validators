@@ -1,3 +1,5 @@
+import '../../../queen_validators.dart';
+
 const _rtlLocales = <String>[
   'ar', // Arabic
   'fa', // Farsi
@@ -6,8 +8,12 @@ const _rtlLocales = <String>[
   'ur', // Urdu
 ];
 
+class IsRTLLanguage extends TextValidationRule {
+  IsRTLLanguage([String? msg]) : super(msg ?? 'is not RTL Language');
+
+  @override
+  bool isValid(String input) => isRtlLanguage(input);
+}
+
 bool isRtlLanguage(String languageCode) =>
     _rtlLocales.contains(languageCode.toLowerCase());
-
-bool isLtrLanguage(String languageCode) =>
-    !_rtlLocales.contains(languageCode.toLowerCase());

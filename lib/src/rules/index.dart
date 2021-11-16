@@ -1,7 +1,6 @@
 export 'package:queen_validators/src/rules/lists/contains_any.dart';
 export 'package:queen_validators/src/rules/dates/is_date.dart';
 export 'package:queen_validators/src/rules/dates/is_date_mills.dart';
-export 'package:queen_validators/src/rules/dates/is_date_micro.dart';
 export 'package:queen_validators/src/rules/text/contains.dart';
 export 'package:queen_validators/src/rules/it/is_email.dart';
 export 'package:queen_validators/src/rules/it/is_port.dart';

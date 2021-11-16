@@ -12,7 +12,7 @@ class ContainsAny extends TextValidationRule {
   bool isValid(String input) => containsAny(input, value);
 }
 
-// check if the provider string contains any keywords form the provided list
+// check if the provided string contains any keywords form the provided list
 bool containsAny(
   String v,
   List<String> list, {
