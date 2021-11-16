@@ -17,7 +17,18 @@ void main() {
     '26292403751785472629240375178547',
   ];
 
-  test('valid isDateMills dtest', () {
+  test('valid isDateMills test', () {
+    for (final date in validDates) {
+      // print(date);
+      expect(IsDateMilli().isValid(date), isTrue);
+    }
+  });
+  test('***NOT*** valid isDateMills test', () {
+    for (final date in notValidDates) {
+      expect(IsDateMilli().isValid(date), isFalse);
+    }
+  });
+  test('valid isDateMills test', () {
     for (final date in validDates) {
       // print(date);
       expect(isDateMills(date), isTrue);

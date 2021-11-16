@@ -9,12 +9,22 @@ void main() {
     '2017-11-10',
   ];
   const notValidDates = <String>[
-    /// using `/` instead of `-` will case faliure
+    /// using `/` instead of `-` will case failure
     '2017/11/10 00:26:13.373469',
     '2017/11/10 22:26:13.373469Z',
     '2017/11/10',
   ];
 
+  test('valid dates test', () {
+    for (final date in validDates) {
+      expect(IsDate().isValid(date), isTrue);
+    }
+  });
+  test('***NOT*** valid dates test', () {
+    for (final date in notValidDates) {
+      expect(IsDate().isValid(date), isFalse);
+    }
+  });
   test('valid dates test', () {
     for (final date in validDates) {
       expect(isDate(date), isTrue);

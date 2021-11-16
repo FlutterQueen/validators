@@ -12,7 +12,7 @@ class IsPort extends TextValidationRule {
 bool isPort(Object? input) {
   num? _port;
   if (input is String) {
-    _port = int.tryParse(input);
+    _port = num.tryParse(input);
   } else if (input is num) {
     _port = input;
   }
