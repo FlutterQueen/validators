@@ -9,7 +9,7 @@ LF:6
 LH:6
 end_of_record
 SF:lib\src\text_rule_class.dart
-DA:11,21
+DA:11,22
 DA:20,2
 DA:25,4
 LF:3
@@ -232,12 +232,12 @@ LF:4
 LH:4
 end_of_record
 SF:lib\src\rules\colors\is_hex_color.dart
-DA:4,0
-DA:6,0
-DA:7,0
+DA:4,2
+DA:6,1
+DA:7,1
 DA:12,1
 DA:14,2
 DA:15,2
 LF:6
-LH:3
+LH:6
 end_of_record
