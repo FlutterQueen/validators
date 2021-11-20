@@ -38,6 +38,7 @@ export 'numbers/is_number.dart';
 export 'numbers/is_odd.dart';
 export 'numbers/is_positive.dart';
 export 'numbers/max_value.dart';
+export 'numbers/min_value.dart';
 
 /// * password
 export 'password/is_strong_password.dart';
