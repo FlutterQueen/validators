@@ -1,15 +1,6 @@
-import 'package:queen_validators/src/rules/index.dart';
-import 'package:queen_validators/src/rules/languages/is_lr_language.dart';
+import 'package:queen_validators/queen_validators.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
-
-const _rtlLocales = <String>[
-  'ar', // Arabic
-  'fa', // Farsi
-  'he', // Hebrew
-  'ps', // Pashto
-  'ur', // Urdu
-];
 
 void main() {
   group('is RTL Rule ', () {

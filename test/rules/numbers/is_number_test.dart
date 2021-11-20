@@ -40,5 +40,12 @@ void main() {
     expect(isNumber('1.0'), isTrue);
     expect(isNumber('0.0'), isTrue);
   });
-  test('is not valid number', () {});
+  test('is not valid number', () {
+    expect(isNumber('a0'), isFalse);
+    expect(isNumber('O12'), isFalse);
+    expect(isNumber('50s'), isFalse);
+    expect(isNumber('  '), isFalse);
+    expect(isNumber(''), isFalse);
+    expect(isNumber('AWS'), isFalse);
+  });
 }
