@@ -4,11 +4,16 @@ version: 1.0.0-beta
 homepage: https://github.com/maxzod/queen_validators
 repository: https://github.com/maxzod/queen_validators
 issue_tracker: https://github.com/maxzod/queen_validators/issues
+publish_to: "none"
 environment:
   sdk: ">=2.12.0 <3.0.0"
 dependencies:
   email_validator: ^2.0.1
   meta: ^1.7.0
+  # * localization
+  nations:
+    git:
+      url: git@github.com:FlutterQueen/nations.git
 
 dev_dependencies:
   lint:

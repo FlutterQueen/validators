@@ -7,8 +7,11 @@ import 'contains_any.dart';
 class NotContainsAny extends TextValidationRule {
   final List<String> value;
 
-  NotContainsAny(this.value, [String? msg])
-      : super(msg ?? 'must contain at least one of the whitelisted keywords');
+  NotContainsAny(
+    this.value,
+  );
+  @override
+  String get error => throw UnimplementedError();
 
   @override
   bool isValid(String input) => notContainsAny(input, value);

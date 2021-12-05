@@ -20,12 +20,12 @@ void main() {
   test('valid isDateMills test', () {
     for (final date in validDates) {
       // print(date);
-      expect(IsDateMilli().isValid(date), isTrue);
+      expect(IsDateMillis().isValid(date), isTrue);
     }
   });
   test('***NOT*** valid isDateMills test', () {
     for (final date in notValidDates) {
-      expect(IsDateMilli().isValid(date), isFalse);
+      expect(IsDateMillis().isValid(date), isFalse);
     }
   });
   test('valid isDateMills test', () {

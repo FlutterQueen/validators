@@ -4,8 +4,10 @@ import 'package:queen_validators/src/text_rule_class.dart';
 class MaxLength extends TextValidationRule {
   final int max;
 
-  MaxLength(this.max, [String? msg]) : super(msg ?? 'max length is $max');
+  MaxLength(this.max);
 
   @override
   bool isValid(String input) => input.trim().length <= max;
+  @override
+  String get error => 'max length is $max';
 }

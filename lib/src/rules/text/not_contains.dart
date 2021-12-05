@@ -5,9 +5,10 @@ import 'package:queen_validators/src/text_rule_class.dart';
 class NotContains extends TextValidationRule {
   final String value;
 
-  NotContains(this.value, [String? msg])
-      : super(msg ?? 'must not contain $value');
+  NotContains(this.value);
 
   @override
   bool isValid(String input) => !input.trim().contains(value);
+  @override
+  String get error => throw UnimplementedError();
 }

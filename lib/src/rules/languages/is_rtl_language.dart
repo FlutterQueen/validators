@@ -9,10 +9,12 @@ const _rtlLocales = <String>[
 ];
 
 class IsRTLLanguage extends TextValidationRule {
-  IsRTLLanguage([String? msg]) : super(msg ?? 'is not RTL Language');
+  IsRTLLanguage();
 
   @override
   bool isValid(String input) => isRtlLanguage(input);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 bool isRtlLanguage(String languageCode) =>

@@ -7,10 +7,12 @@ import 'package:queen_validators/src/text_rule_class.dart';
 /// IsRequired is more convenient still
 /// wont be bad to have both
 class IsRequired extends TextValidationRule {
-  IsRequired([String? msg]) : super(msg ?? 'required');
+  IsRequired();
 
   @override
   bool isValid(String input) => isNotEmpty(input);
+  @override
+  String get error => 'this felid is required';
 }
 
 /// `trim` the string then checks if `isNotEmpty`

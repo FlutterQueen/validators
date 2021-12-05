@@ -1,6 +1,6 @@
+import 'package:queen_validators/src/rules/magic/is_optional.dart';
 import 'package:queen_validators/src/rules/text/is_empty.dart';
 import 'package:queen_validators/src/text_rule_class.dart';
-import 'package:queen_validators/src/rules/magic/is_optional.dart';
 
 typedef OnFailureCallBack = void Function(
   /// the text field content
@@ -20,10 +20,13 @@ typedef OnFailureCallBack = void Function(
 /// which mans in case of any validation fails and the value is null there will be no error
 /// but if the validations fails and the value is not null will return the first fail error message
 String? Function(String?) qValidator(
-  List<TextValidationRule> rules, [
-  OnFailureCallBack? onFailure,
-]) {
+  List<TextValidationRule> rules, {
+  OnFailureCallBack? onFail,
+  bool useNations = true,
+}) {
   return (String? input) {
+    if (input == null) return null;
+
     /// if the validator loop has any `IsOptional` Rule this will make
     /// this variables = `true`;
     /// we will need to decide later on if the loop has `IsOptional` rule on it or not
@@ -43,19 +46,19 @@ String? Function(String?) qValidator(
       /// if it return null then the will be no error;
       /// else ir will return the failure message
       /// which will be return as the validation error for the entire validation process
-      msg = rule.run(input);
+      msg = rule.isValid(input) ? null : rule.error;
 
       /// if the failure message `msg` has value on it
       /// that means some rule has failed
       /// and we return only the first failure
       /// so there is no reason to continue validation the remain rules
       if (msg != null) {
-        onFailure?.call(input, rules, rule);
+        onFail?.call(input, rules, rule);
         break;
       }
     }
 
-    if (isOptional && isEmpty(input ?? '')) return null;
+    if (isOptional && isEmpty(input)) return null;
 
     return msg;
   };

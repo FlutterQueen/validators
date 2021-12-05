@@ -2,10 +2,12 @@ import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `integer`
 class IsArabicNum extends TextValidationRule {
-  IsArabicNum([String? msg]) : super(msg ?? 'is not an arabic number');
+  IsArabicNum();
 
   @override
   bool isValid(String input) => isArabicNum(input);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 bool isArabicNum(String input) {

@@ -1,10 +1,12 @@
 import '../../../queen_validators.dart';
 
 class IsEmpty extends TextValidationRule {
-  IsEmpty([String? msg]) : super(msg ?? 'must_be_empty');
+  IsEmpty();
 
   @override
   bool isValid(String input) => isEmpty(input);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 /// `trim` the string then checks if `isEmpty`

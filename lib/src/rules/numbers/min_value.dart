@@ -3,11 +3,12 @@ import 'package:queen_validators/src/text_rule_class.dart';
 class MinValue extends TextValidationRule {
   final num min;
 
-  MinValue(this.min, [String message = 'below the minimum value'])
-      : super(message);
+  MinValue(this.min);
 
   @override
   bool isValid(String input) => minValue(input, min);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 bool minValue(Object? value, num min) {

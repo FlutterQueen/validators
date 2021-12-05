@@ -2,10 +2,12 @@ import 'package:queen_validators/queen_validators.dart';
 import 'package:queen_validators/src/text_rule_class.dart';
 
 class IsEgyptianPhone extends TextValidationRule {
-  IsEgyptianPhone([String? msg]) : super(msg ?? 'is not valid egyptian phone');
+  IsEgyptianPhone();
 
   @override
   bool isValid(String input) => isEgyptianNumber(input);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 bool isEgyptianNumber(String str) {

@@ -5,10 +5,12 @@ import 'is_in.dart';
 /// checks if the input `is NOT in` provided List;
 class IsNotIn extends TextValidationRule {
   final List<dynamic> list;
-  IsNotIn(this.list, [String? msg]) : super(msg ?? 'is not accepted');
+  IsNotIn(this.list);
 
   @override
   bool isValid(String input) => isNotIn(input, list);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 /// check if `value` is `NOT` in `List`

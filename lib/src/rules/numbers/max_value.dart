@@ -3,10 +3,12 @@ import 'package:queen_validators/src/text_rule_class.dart';
 class MaxValue extends TextValidationRule {
   final num max;
 
-  MaxValue(this.max, [String message = 'above max value']) : super(message);
+  MaxValue(this.max);
 
   @override
   bool isValid(String input) => maxValue(input, max);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 bool maxValue(Object? value, num max) {

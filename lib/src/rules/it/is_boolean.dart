@@ -1,10 +1,12 @@
 import 'package:queen_validators/queen_validators.dart';
 
 class IsBool extends TextValidationRule {
-  IsBool([String? msg]) : super(msg ?? 'Must be a boolean');
+  IsBool() : super();
 
   @override
   bool isValid(String input) => isBool(input);
+  @override
+  String get error => throw UnimplementedError();
 }
 
 bool isBool(Object? v) {

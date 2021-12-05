@@ -1,32 +1,21 @@
 import 'package:meta/meta.dart';
 
 ///  interface for the queen validation rules
-///  T => Type Of Input to apply validation to
-///    input is! T   => failure
+///  extend it and implement :
+///   `isValid` to override the validation logic
+///   `translatedError` return translated message from nations
+///   `nationsKey` return key to use with nations
 ///
 
 abstract class TextValidationRule {
   ///  message to show case validations fails
 
   @mustCallSuper
-  TextValidationRule(this.defaultError);
+  const TextValidationRule();
 
-  //  return a bool Either valid or NOT
+  ///  return a bool Either valid or NOT
   bool isValid(String input);
 
-  final String defaultError;
-  //  will apply the validation to the input
-  //  in case of error return the default error message
-  String? run(String? v) {
-    // if input is null return null
-    // else if isValid ? return null
-    // else return the failureMessage
-
-    return v != null && isValid(v) ? null : defaultError;
-  }
-
-  // TextValidationRule when(WhenCallBack whenCallBack) {
-  //   applyThisRule = whenCallBack();
-  //   return this;
-  // }
+  /// uses nations to translate rule error message
+  String get error;
 }

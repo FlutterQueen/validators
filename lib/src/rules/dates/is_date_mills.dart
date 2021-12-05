@@ -1,14 +1,21 @@
 import 'package:queen_validators/queen_validators.dart';
 
-class IsDateMilli extends TextValidationRule {
+/// checks if the input is a valid `date` to parse by `DateTime.fromMillisecondsSinceEpoch` factory
+
+class IsDateMillis extends TextValidationRule {
   final bool isUtc;
-  IsDateMilli({
+
+  /// * [isUtc] - if `true` the `DateTime` will be in UTC timezone, otherwise it will be in local timezone
+  /// * [error] - the error message to be displayed if the validation fails
+  IsDateMillis({
     this.isUtc = false,
-    String? msg,
-  }) : super(msg ?? 'is not valid Milli seconds Since Epoch');
+  }) : super();
 
   @override
   bool isValid(String input) => isDateMills(input, isUtc: isUtc);
+
+  @override
+  String get error => 'not_valid_date_millis';
 }
 
 /// checks if the input is a valid `date` to parse by `DateTime.fromMillisecondsSinceEpoch` factory

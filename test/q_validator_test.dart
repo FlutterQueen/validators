@@ -33,7 +33,7 @@ void main() {
         IsRequired(),
         MaxLength(1),
       ])('');
-      expect(msg, equals('required'));
+      expect(msg, equals('this felid is required'));
     });
 
     test(
@@ -43,7 +43,7 @@ void main() {
 
         qValidator(
           [IsOptional(), MaxLength(1)],
-          (input, rules, rule) {
+          onFail: (input, rules, rule) {
             getsCalled = true;
             expect(input, equals('the-input'));
             expect(rules.first, isA<IsOptional>());
