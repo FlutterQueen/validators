@@ -1,13 +1,14 @@
-import 'package:queen_validators/src/text_rule_class.dart';
+import 'package:nations/nations.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 class IsDate extends TextValidationRule {
-  IsDate() : super();
+  const IsDate();
 
   @override
   bool isValid(String input) => isDate(input);
 
   @override
-  String get error => throw UnimplementedError();
+  String get error => 'is_not_date_format'.tr;
 }
 
 /// checks if the input is a valid `date` to parse by Dart `DateTime` class

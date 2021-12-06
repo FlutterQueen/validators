@@ -1,4 +1,7 @@
 import '../../../queen_validators.dart';
+import 'package:nations/nations.dart';
+
+import '../../../queen_validators.dart';
 
 class EndsWith extends TextValidationRule {
   final String end;

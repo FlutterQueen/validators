@@ -1,4 +1,7 @@
 import 'package:queen_validators/src/text_rule_class.dart';
+import 'package:nations/nations.dart';
+
+import '../../../queen_validators.dart';
 
 /// checks if the input `is in` provided List;
 class IsIn extends TextValidationRule {

@@ -1,13 +1,15 @@
-import 'package:queen_validators/src/text_rule_class.dart';
+import 'package:nations/nations.dart';
+
+import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `port`
 class IsPort extends TextValidationRule {
-  IsPort() : super();
+  const IsPort();
 
   @override
   bool isValid(String input) => isPort(input);
   @override
-  String get error => throw UnimplementedError();
+  String get error => 'is_not_port'.tr;
 }
 
 // returns true if the input is valid port number

@@ -1,5 +1,6 @@
-// import 'package:queen_validators/queen_validators.dart';
+// import 'package:nations/nations.dart';
 
+// import '../../../queen_validators.dart';
 // class IsUri extends TextValidationRule {
 //   IsUri([String? msg]) : super(msg ?? 'Invalid URI');
 

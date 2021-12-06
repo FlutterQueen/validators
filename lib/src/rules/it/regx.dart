@@ -1,4 +1,6 @@
-import 'package:queen_validators/src/text_rule_class.dart';
+import 'package:nations/nations.dart';
+
+import '../../../queen_validators.dart';
 
 /// allow using a regular expression as validation rule
 class RegExpRule extends TextValidationRule {
@@ -8,5 +10,5 @@ class RegExpRule extends TextValidationRule {
   @override
   bool isValid(String input) => regX.hasMatch(input);
   @override
-  String get error => throw UnimplementedError();
+  String get error => 'is_not_valid'.tr;
 }

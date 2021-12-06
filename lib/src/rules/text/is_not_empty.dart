@@ -6,6 +6,10 @@ import 'package:queen_validators/src/text_rule_class.dart';
 
 /// IsRequired is more convenient still
 /// wont be bad to have both
+import 'package:nations/nations.dart';
+
+import '../../../queen_validators.dart';
+
 class IsRequired extends TextValidationRule {
   IsRequired();
 

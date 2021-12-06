@@ -1,0 +1,16 @@
+{
+   "": "",
+   "is_not_rtl_language_code": "is not Rtl language code.",
+   "is_not_ltr_language_code": "is not Ltr language code.",
+   "is_not_valid": "is not valid.",
+   "is_not_port": "is not valid port number.",
+   "required": "this feild is required.",
+   "min_length": "this feild must be at least :min characters.",
+   "max_length": "this feild must be at most :max characters.",
+   "range_length": "this feild must be between :min and :max characters.",
+   "is_not_email_address": "is not not valid email address.",
+   "is_not_bool": "is not a boolean.",
+   "is_not_date_format": "is not valid date format.",
+   "is_not_date_millis": "is not valid date milli seconds.",
+   "is_not_hex_color": "is not valid hex color."
+}
