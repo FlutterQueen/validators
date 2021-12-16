@@ -6,6 +6,7 @@ export 'banking/is_credit_card.dart';
 export 'colors/is_hex_color.dart';
 
 /// * dates
+export 'dates/date_after.dart';
 export 'dates/is_date.dart';
 export 'dates/is_date_mills.dart';
 

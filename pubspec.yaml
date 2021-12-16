@@ -12,8 +12,6 @@ dependencies:
   meta: ^1.7.0
   # * localization
   nations:
-    git:
-      url: git@github.com:FlutterQueen/nations.git
 
 dev_dependencies:
   lint:
