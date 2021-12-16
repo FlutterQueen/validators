@@ -12,5 +12,6 @@
    "is_not_bool": "is not a boolean.",
    "is_not_date_format": "is not valid date format.",
    "is_not_date_millis": "is not valid date milli seconds.",
-   "is_not_hex_color": "is not valid hex color."
+   "is_not_hex_color": "is not valid hex color.",
+   "is_not_after_date": "Must be After :date"
 }

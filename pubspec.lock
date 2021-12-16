@@ -215,12 +215,17 @@ packages:
   nations:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "7d687dc48077858ddb4c916ebaab3c03e473bb37"
-      url: "git@github.com:FlutterQueen/nations.git"
-    source: git
-    version: "0.0.3"
+      name: nations
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
+  nations_assets:
+    dependency: transitive
+    description:
+      name: nations_assets
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   node_preamble:
     dependency: transitive
     description:
