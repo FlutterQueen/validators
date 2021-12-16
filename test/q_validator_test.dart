@@ -30,8 +30,8 @@ void main() {
       expect(msg2, isA<String>());
     });
     test('returns the first error message', () {
-      final msg = qValidator([IsRequired(), MaxLength(1),])('');
-      expect(msg, equals('is_required'.tr));
+      final msg = qValidator([IsRequired("this field is required"), MaxLength(1),])('');
+      expect(msg, equals("this field is required"));
     });
 
     test(
