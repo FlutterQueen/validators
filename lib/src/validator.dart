@@ -46,7 +46,7 @@ String? Function(String?) qValidator(
       /// if it return null then the will be no error;
       /// else ir will return the failure message
       /// which will be return as the validation error for the entire validation process
-      msg = rule.isValid(input) ? null : rule.error;
+      msg = rule.isValid(input) ? null : rule.errorMessage;
 
       /// if the failure message `msg` has value on it
       /// that means some rule has failed

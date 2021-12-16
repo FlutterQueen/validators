@@ -7,16 +7,17 @@ class IsDateMillis extends TextValidationRule {
   final bool isUtc;
 
   /// * [isUtc] - if `true` the `DateTime` will be in UTC timezone, otherwise it will be in local timezone
-  /// * [error] - the error message to be displayed if the validation fails
+  /// * [localizedError] - the error message to be displayed if the validation fails
   const IsDateMillis({
     this.isUtc = false,
-  });
+    String? error,
+  }) : super(error);
 
   @override
   bool isValid(String input) => isDateMills(input, isUtc: isUtc);
 
   @override
-  String get error => 'not_valid_date_millis'.tr;
+  String get localizedError => 'not_valid_date_millis'.tr;
 }
 
 /// checks if the input is a valid `date` to parse by `DateTime.fromMillisecondsSinceEpoch` factory

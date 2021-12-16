@@ -11,12 +11,12 @@ import 'package:nations/nations.dart';
 import '../../../queen_validators.dart';
 
 class IsRequired extends TextValidationRule {
-  IsRequired();
+  IsRequired([String? error]) : super(error);
 
   @override
   bool isValid(String input) => isNotEmpty(input);
   @override
-  String get error => 'this felid is required';
+  String get localizedError => 'this felid is required';
 }
 
 /// `trim` the string then checks if `isNotEmpty`

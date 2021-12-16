@@ -8,7 +8,7 @@ import '../../../queen_validators.dart';
 class MinLength extends TextValidationRule {
   final int min;
 
-  MinLength(this.min);
+  MinLength(this.min, [String? error]) : super(error);
 
   @override
   bool isValid(String input) {
@@ -16,7 +16,7 @@ class MinLength extends TextValidationRule {
   }
 
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 bool minLength(String? input, int min) {

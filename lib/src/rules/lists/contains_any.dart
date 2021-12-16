@@ -8,12 +8,12 @@ import '../../../queen_validators.dart';
 class ContainsAny extends TextValidationRule {
   final List<String> value;
   bool? caseSensitive;
-  ContainsAny(this.value);
+  ContainsAny(this.value, [String? error]) : super(error);
 
   @override
   bool isValid(String input) => containsAny(input, value);
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 // check if the provided string contains any keywords form the provided list

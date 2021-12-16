@@ -11,11 +11,16 @@ abstract class TextValidationRule {
   ///  message to show case validations fails
 
   @mustCallSuper
-  const TextValidationRule();
+  const TextValidationRule(this.error);
 
   ///  return a bool Either valid or NOT
   bool isValid(String input);
 
   /// uses nations to translate rule error message
-  String get error;
+  String get localizedError;
+
+  /// passed throw constructor to skip localized error
+  final String? error;
+
+  String get errorMessage => error ?? localizedError;
 }

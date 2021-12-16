@@ -2,12 +2,12 @@ import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart';
 
 class TestRule extends TextValidationRule {
-  TestRule();
+  TestRule([String? error]) : super(error);
 
   @override
   bool isValid(String input) => input.isNotEmpty;
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 void main() {

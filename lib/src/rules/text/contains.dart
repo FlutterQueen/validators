@@ -8,10 +8,10 @@ import '../../../queen_validators.dart';
 class Contains extends TextValidationRule {
   final String value;
 
-  Contains(this.value);
+  Contains(this.value, [String? error]) : super(error);
 
   @override
   bool isValid(String input) => input.trim().contains(value);
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }

@@ -5,12 +5,12 @@ import 'package:nations/nations.dart';
 import '../../../queen_validators.dart';
 
 class IsEgyptianPhone extends TextValidationRule {
-  IsEgyptianPhone();
+  IsEgyptianPhone([String? error]) : super(error);
 
   @override
   bool isValid(String input) => isEgyptianNumber(input);
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 bool isEgyptianNumber(String str) {

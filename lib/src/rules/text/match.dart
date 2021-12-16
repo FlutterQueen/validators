@@ -10,14 +10,15 @@ class Match extends TextValidationRule {
   Match(
     this.other, {
     this.caseSensitive = true,
-  });
+    String? error,
+  }) : super(error);
 
   @override
   bool isValid(String input) => caseSensitive
       ? match(input, other)
       : match(input.toLowerCase(), other.toLowerCase());
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 /// checks if two `Strings` are the same

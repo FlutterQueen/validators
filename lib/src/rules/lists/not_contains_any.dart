@@ -10,10 +10,12 @@ class NotContainsAny extends TextValidationRule {
   final List<String> value;
 
   NotContainsAny(
-    this.value,
-  );
+    this.value, [
+    String? error,
+  ]) : super(error);
+
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 
   @override
   bool isValid(String input) => notContainsAny(input, value);

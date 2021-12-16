@@ -7,12 +7,12 @@ import 'is_in.dart';
 /// checks if the input `is NOT in` provided List;
 class IsNotIn extends TextValidationRule {
   final List<dynamic> list;
-  IsNotIn(this.list);
+  IsNotIn(this.list, [String? error]) : super(error);
 
   @override
   bool isValid(String input) => isNotIn(input, list);
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 /// check if `value` is `NOT` in `List`

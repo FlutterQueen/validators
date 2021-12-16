@@ -3,12 +3,12 @@ import 'package:nations/nations.dart';
 import '../../../queen_validators.dart';
 
 class IsBool extends TextValidationRule {
-  const IsBool();
+  const IsBool([String? error]) : super(error);
 
   @override
   bool isValid(String input) => isBool(input);
   @override
-  String get error => 'is_not_bool'.tr;
+  String get localizedError => 'is_not_bool'.tr;
 }
 
 bool isBool(Object? input) {

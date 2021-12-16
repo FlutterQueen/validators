@@ -5,12 +5,12 @@ import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `integer`
 class IsNumber extends TextValidationRule {
-  IsNumber();
+  IsNumber([String? error]) : super(error);
 
   @override
   bool isValid(String input) => isNumber(input);
   @override
-  String get error => throw UnimplementedError();
+  String get localizedError => throw UnimplementedError();
 }
 
 bool isNumber(String? input) => num.tryParse(input ?? '') != null;
