@@ -1,5 +1,5 @@
-import 'package:test/test.dart';
 import 'package:queen_validators/queen_validators.dart';
+import 'package:test/test.dart';
 
 void main() {
   const list = <String>['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'q'];
@@ -7,15 +7,18 @@ void main() {
     test('', () {
       expect(containsAny('abc', list, caseSensitive: true), isTrue);
       expect(
-          containsAny('abc ', list, trim: false, caseSensitive: true), isTrue);
+        containsAny('abc ', list, trim: false, caseSensitive: true),
+        isTrue,
+      );
     });
     test('returns true if string contains any item of the list', () {
       expect(
-          containsAny(
-            'HHHH',
-            list,
-          ),
-          isTrue);
+        containsAny(
+          'HHHH',
+          list,
+        ),
+        isTrue,
+      );
       expect(containsAny('hhh', list), isTrue);
       expect(containsAny('Faded', list), isTrue);
       expect(containsAny('Queen', list), isTrue);

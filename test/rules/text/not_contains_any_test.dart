@@ -8,7 +8,7 @@ void main() {
       test(
         'it should return True when the text does not contains the provided word',
         () {
-          final word = 'xxxxxxxx';
+          const word = 'xxxxxxxx';
           expect(NotContains('a').isValid(word), isTrue);
           expect(NotContains('b').isValid(word), isTrue);
           expect(NotContains('c').isValid(word), isTrue);
@@ -20,7 +20,7 @@ void main() {
       test(
         'it should return False when the text does not contains the provided word',
         () {
-          final word = 'ghi';
+          const word = 'ghi';
           expect(NotContains('g').isValid(word), isFalse);
           expect(NotContains('h').isValid(word), isFalse);
           expect(NotContains('i').isValid(word), isFalse);
@@ -29,7 +29,7 @@ void main() {
       test(
         'it trims the string before validating',
         () {
-          final word = '  Q  ';
+          const word = '  Q  ';
           expect(NotContains('V').isValid(word), isTrue);
           expect(NotContains(' ').isValid(word), isTrue);
         },

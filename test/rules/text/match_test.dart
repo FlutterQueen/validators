@@ -1,5 +1,5 @@
-import 'package:test/test.dart';
 import 'package:queen_validators/queen_validators.dart';
+import 'package:test/test.dart';
 
 void main() {
   group(
@@ -117,9 +117,13 @@ void main() {
         () {
           expect(Match('queen').isValid('Fqueen'), isFalse);
           expect(
-              Match('queen_validators').isValid('Fqueen_validators'), isFalse);
+            Match('queen_validators').isValid('Fqueen_validators'),
+            isFalse,
+          );
           expect(
-              Match('QueeN_Validators').isValid('FQueeN_Validators'), isFalse);
+            Match('QueeN_Validators').isValid('FQueeN_Validators'),
+            isFalse,
+          );
         },
       );
       test(
@@ -140,10 +144,11 @@ void main() {
             isFalse,
           );
           expect(
-              Match('QueeN_Validators', caseSensitive: false).isValid(
-                'FQUEEN_ValidAtorS',
-              ),
-              isFalse);
+            Match('QueeN_Validators', caseSensitive: false).isValid(
+              'FQUEEN_ValidAtorS',
+            ),
+            isFalse,
+          );
         },
       );
     },

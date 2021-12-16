@@ -17,12 +17,12 @@ void main() {
 
   test('valid dates test', () {
     for (final date in validDates) {
-      expect(IsDate().isValid(date), isTrue);
+      expect(const IsDate().isValid(date), isTrue);
     }
   });
   test('***NOT*** valid dates test', () {
     for (final date in notValidDates) {
-      expect(IsDate().isValid(date), isFalse);
+      expect(const IsDate().isValid(date), isFalse);
     }
   });
   test('valid dates test', () {

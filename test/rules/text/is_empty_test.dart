@@ -45,9 +45,14 @@ void main() {
       () {
         expect(IsEmpty().isValid(''), isTrue);
         expect(IsEmpty().isValid('   '), isTrue);
-        expect(IsEmpty().isValid('''
+        expect(
+          IsEmpty().isValid(
+            '''
 
-        '''), isTrue);
+        ''',
+          ),
+          isTrue,
+        );
       },
     );
     test(

@@ -1,4 +1,4 @@
-import 'package:nations/src/extensions/string.dart';
+import 'package:nations/nations.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 class IsDateAfter extends TextValidationRule {
@@ -10,7 +10,8 @@ class IsDateAfter extends TextValidationRule {
   bool isValid(String input) => isDateAfter(input, date);
 
   @override
-  String get localizedError =>  'is_not_after_date'.args({"date":date.toString()});
+  String get localizedError =>
+      'is_not_after_date'.args({"date": date.toString()});
 }
 
 bool isDateAfter(Object? input, DateTime date) {

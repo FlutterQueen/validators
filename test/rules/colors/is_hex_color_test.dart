@@ -71,7 +71,7 @@ void main() {
 
   group('IsHexColor Rule', () {
     test('return true if is valid color', () {
-      final rule = IsHexColor();
+      const rule = IsHexColor();
       expect(rule.isValid('#FFFFFF'), isTrue);
       expect(rule.isValid('#FFF'), isTrue);
       expect(rule.isValid('FFF'), isTrue);
@@ -79,7 +79,7 @@ void main() {
       expect(rule.isValid('FFFFFFFF'), isTrue);
     });
     test('return false if is valid color', () {
-      final rule = IsHexColor();
+      const rule = IsHexColor();
 
       expect(rule.isValid(''), isFalse);
     });

@@ -50,9 +50,14 @@ void main() {
       () {
         expect(IsRequired().isValid(''), isFalse);
         expect(IsRequired().isValid('   '), isFalse);
-        expect(IsRequired().isValid('''
+        expect(
+          IsRequired().isValid(
+            '''
 
-        '''), isFalse);
+        ''',
+          ),
+          isFalse,
+        );
       },
     );
   });
@@ -70,9 +75,14 @@ void main() {
       () {
         expect(IsRequired().isValid(''), isFalse);
         expect(IsRequired().isValid('   '), isFalse);
-        expect(IsRequired().isValid('''
+        expect(
+          IsRequired().isValid(
+            '''
 
-        '''), isFalse);
+        ''',
+          ),
+          isFalse,
+        );
       },
     );
   });

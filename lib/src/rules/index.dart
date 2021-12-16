@@ -31,17 +31,17 @@ export 'lists/not_contains_any.dart';
 
 /// * magic
 export 'magic/is_optional.dart';
+export 'numbers/is_arabic_num.dart';
 
 /// * numbers
 export 'numbers/is_even.dart';
+export 'numbers/is_hindi_num.dart';
 export 'numbers/is_negative.dart';
 export 'numbers/is_number.dart';
 export 'numbers/is_odd.dart';
 export 'numbers/is_positive.dart';
 export 'numbers/max_value.dart';
 export 'numbers/min_value.dart';
-export 'numbers/is_arabic_num.dart';
-export 'numbers/is_hindi_num.dart';
 
 /// * password
 export 'password/is_strong_password.dart';

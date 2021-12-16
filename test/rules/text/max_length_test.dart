@@ -1,5 +1,5 @@
-import 'package:test/test.dart';
 import 'package:queen_validators/queen_validators.dart';
+import 'package:test/test.dart';
 
 void main() {
   group(

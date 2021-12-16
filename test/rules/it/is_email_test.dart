@@ -12,10 +12,10 @@ void main() {
   });
   group('IsEmail Rule', () {
     test('it returns false if input is Empty', () {
-      expect(IsEmail().isValid(''), isFalse);
+      expect(const IsEmail().isValid(''), isFalse);
     });
     test('it returns true if is email', () {
-      expect(IsEmail().isValid('queen@dev.com'), isTrue);
+      expect(const IsEmail().isValid('queen@dev.com'), isTrue);
     });
   });
 }

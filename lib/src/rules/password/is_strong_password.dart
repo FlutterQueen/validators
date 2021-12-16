@@ -1,7 +1,5 @@
-import 'package:nations/nations.dart';
-
-import '../../../queen_validators.dart';
-// bool isStrongPassword(String str) {
+ 
+ // bool isStrongPassword(String str) {
 //   /// strong password has to meet all the requirements.
 //   ///
 //   final strongPassRegX =

@@ -17,12 +17,12 @@ void main() {
 
   group('is valid boolean', () {
     for (final v in validBooleanFormat) {
-      test(v, () => expect(IsBool().isValid(v.toString()), isTrue));
+      test(v, () => expect(const IsBool().isValid(v.toString()), isTrue));
     }
   });
   group('is not valid boolean format', () {
     for (final v in notValidBooleanFormat) {
-      test(v, () => expect(IsBool().isValid(v.toString()), isFalse));
+      test(v, () => expect(const IsBool().isValid(v), isFalse));
     }
   });
   group('is valid boolean', () {

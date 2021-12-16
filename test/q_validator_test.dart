@@ -1,4 +1,3 @@
-import 'package:nations/src/extensions/string.dart';
 import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart';
 
@@ -30,7 +29,10 @@ void main() {
       expect(msg2, isA<String>());
     });
     test('returns the first error message', () {
-      final msg = qValidator([IsRequired("this field is required"), MaxLength(1),])('');
+      final msg = qValidator([
+        IsRequired("this field is required"),
+        MaxLength(1),
+      ])('');
       expect(msg, equals("this field is required"));
     });
 
