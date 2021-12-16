@@ -1,4 +1,3 @@
-import '../../../queen_validators.dart';
 import 'package:nations/nations.dart';
 
 import '../../../queen_validators.dart';
@@ -10,7 +9,7 @@ class IsHindiNum extends TextValidationRule {
   @override
   bool isValid(String input) => isHindiNum(input);
   @override
-  String get localizedError => throw UnimplementedError();
+  String get localizedError => "must_be_num".tr;
 }
 
 bool isHindiNum(String input) {

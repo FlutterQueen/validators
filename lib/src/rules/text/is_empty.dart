@@ -1,4 +1,3 @@
-import '../../../queen_validators.dart';
 import 'package:nations/nations.dart';
 
 import '../../../queen_validators.dart';
@@ -9,7 +8,7 @@ class IsEmpty extends TextValidationRule {
   @override
   bool isValid(String input) => isEmpty(input);
   @override
-  String get localizedError => throw UnimplementedError();
+  String get localizedError =>"is_empty".tr;
 }
 
 /// `trim` the string then checks if `isEmpty`

@@ -1,3 +1,4 @@
+import 'package:queen_validators/queen_validators.dart';
 import 'package:queen_validators/src/rules/magic/is_optional.dart';
 import 'package:queen_validators/src/rules/text/is_empty.dart';
 import 'package:queen_validators/src/text_rule_class.dart';

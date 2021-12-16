@@ -1,4 +1,3 @@
-import '../../../queen_validators.dart';
 import 'package:nations/nations.dart';
 
 import '../../../queen_validators.dart';
@@ -10,7 +9,7 @@ class IsNumber extends TextValidationRule {
   @override
   bool isValid(String input) => isNumber(input);
   @override
-  String get localizedError => throw UnimplementedError();
+  String get localizedError => "must_be_int".tr;
 }
 
 bool isNumber(String? input) => num.tryParse(input ?? '') != null;

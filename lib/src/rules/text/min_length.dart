@@ -16,7 +16,7 @@ class MinLength extends TextValidationRule {
   }
 
   @override
-  String get localizedError => throw UnimplementedError();
+  String get localizedError =>'min length is $min';
 }
 
 bool minLength(String? input, int min) {
