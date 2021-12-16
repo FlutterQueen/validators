@@ -1,3 +1,4 @@
+import 'package:nations/src/extensions/string.dart';
 import 'package:queen_validators/queen_validators.dart';
 import 'package:test/test.dart';
 
@@ -29,11 +30,8 @@ void main() {
       expect(msg2, isA<String>());
     });
     test('returns the first error message', () {
-      final msg = qValidator([
-        IsRequired(),
-        MaxLength(1),
-      ])('');
-      expect(msg, equals('this felid is required'));
+      final msg = qValidator([IsRequired(), MaxLength(1),])('');
+      expect(msg, equals('is_required'.tr));
     });
 
     test(
