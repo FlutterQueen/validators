@@ -16,14 +16,24 @@ void main() {
     'date-2629240375178547',
     '26292403751785472629240375178547',
   ];
-
   test('valid isDateMills test', () {
     for (final date in validDates) {
       // print(date);
       expect(const IsDateMillis().isValid(date), isTrue);
     }
   });
+    test('valid isDateMills test with utc true', () {
+    for (final date in validDates) {
+      // print(date);
+      expect(const IsDateMillis(isUtc: true).isValid(date), isTrue);
+    }
+  });
   test('***NOT*** valid isDateMills test', () {
+    for (final date in notValidDates) {
+      expect(const IsDateMillis().isValid(date), isFalse);
+    }
+  });
+    test('***NOT*** valid isDateMills test with utc true', () {
     for (final date in notValidDates) {
       expect(const IsDateMillis().isValid(date), isFalse);
     }
@@ -38,5 +48,15 @@ void main() {
     for (final date in notValidDates) {
       expect(isDateMills(date), isFalse);
     }
+  });
+   test('test error parameter', () {
+    
+      expect(const IsDateMillis(error: "foo").errorMessage, "foo");
+  
+  });
+     test('test error', () {
+    
+      expect(const IsDateMillis(error: null).errorMessage, "null");
+  
   });
 }
