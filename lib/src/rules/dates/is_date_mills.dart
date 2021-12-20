@@ -8,13 +8,10 @@ class IsDateMillis extends TextValidationRule {
 
   /// * [isUtc] - if `true` the `DateTime` will be in UTC timezone, otherwise it will be in local timezone
   /// * [localizedError] - the error message to be displayed if the validation fails
-  const IsDateMillis({
+  IsDateMillis({
     this.isUtc = false,
     String? error,
-  }) : 
-  super(
-          error,
-        );
+  }) : super(error);
 
   @override
   bool isValid(String input) => isDateMills(input, isUtc: isUtc);

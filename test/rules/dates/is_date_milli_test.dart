@@ -19,23 +19,23 @@ void main() {
   test('valid isDateMills test', () {
     for (final date in validDates) {
       // print(date);
-      expect(const IsDateMillis().isValid(date), isTrue);
+      expect(IsDateMillis().isValid(date), isTrue);
     }
   });
-    test('valid isDateMills test with utc true', () {
+  test('valid isDateMills test with utc true', () {
     for (final date in validDates) {
       // print(date);
-      expect(const IsDateMillis(isUtc: true).isValid(date), isTrue);
+      expect(IsDateMillis(isUtc: true).isValid(date), isTrue);
     }
   });
   test('***NOT*** valid isDateMills test', () {
     for (final date in notValidDates) {
-      expect(const IsDateMillis().isValid(date), isFalse);
+      expect(IsDateMillis().isValid(date), isFalse);
     }
   });
-    test('***NOT*** valid isDateMills test with utc true', () {
+  test('***NOT*** valid isDateMills test with utc true', () {
     for (final date in notValidDates) {
-      expect(const IsDateMillis().isValid(date), isFalse);
+      expect(IsDateMillis().isValid(date), isFalse);
     }
   });
   test('valid isDateMills test', () {
@@ -49,14 +49,7 @@ void main() {
       expect(isDateMills(date), isFalse);
     }
   });
-   test('test error parameter', () {
-    
-      expect(const IsDateMillis(error: "foo").errorMessage, "foo");
-  
-  });
-     test('test error', () {
-    
-      expect(const IsDateMillis(error: null).errorMessage, "null");
-  
+  test('test error parameter', () {
+    expect(IsDateMillis(isUtc: true, error: "foo").errorMessage, "foo");
   });
 }

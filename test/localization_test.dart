@@ -40,7 +40,7 @@ void main() {
   final rules = <TextValidationRule>[
     /// colors
     const IsHexColor(),
-    const IsDateMillis(),
+    IsDateMillis(),
     const IsDate(),
     IsDateAfter(DateTime.now()),
 
