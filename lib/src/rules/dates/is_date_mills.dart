@@ -11,7 +11,10 @@ class IsDateMillis extends TextValidationRule {
   const IsDateMillis({
     this.isUtc = false,
     String? error,
-  }) : super(error);
+  }) : 
+  super(
+          error,
+        );
 
   @override
   bool isValid(String input) => isDateMills(input, isUtc: isUtc);
