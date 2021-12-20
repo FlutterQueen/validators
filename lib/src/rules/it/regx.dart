@@ -10,5 +10,5 @@ class RegExpRule extends TextValidationRule {
   @override
   bool isValid(String input) => regX.hasMatch(input);
   @override
-  String get localizedError => 'is_not_valid'.tr;
+  String get localizedError => 'validation.is_not_valid'.tr;
 }

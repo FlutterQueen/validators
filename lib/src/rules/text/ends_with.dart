@@ -11,7 +11,7 @@ class EndsWith extends TextValidationRule {
   bool isValid(String input) => input.trim().endsWith(end);
 
   @override
-  String get localizedError => "must_end_with".args(
+  String get localizedError => "validation.must_end_with".args(
         {
           "value": end,
         },

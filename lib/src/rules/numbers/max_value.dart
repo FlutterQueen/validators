@@ -11,7 +11,8 @@ class MaxValue extends TextValidationRule {
   @override
   bool isValid(String input) => maxValue(input, max);
   @override
-  String get localizedError => "must_be_max".args({"maxNum":max.toString()});
+  String get localizedError =>
+      "validation.must_be_max".args({"maxNum": max.toString()});
 }
 
 bool maxValue(Object? value, num max) {

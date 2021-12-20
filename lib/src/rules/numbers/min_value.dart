@@ -11,7 +11,8 @@ class MinValue extends TextValidationRule {
   @override
   bool isValid(String input) => minValue(input, min);
   @override
-  String get localizedError => "must_be_min".args({"minNum":min.toString()});
+  String get localizedError =>
+      "validation.must_be_min".args({"minNum": min.toString()});
 }
 
 bool minValue(Object? value, num min) {

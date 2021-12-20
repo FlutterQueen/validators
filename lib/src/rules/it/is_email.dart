@@ -11,7 +11,7 @@ class IsEmail extends TextValidationRule {
   @override
   bool isValid(String input) => isEmail(input);
   @override
-  String get localizedError => 'is_not_email_address'.tr;
+  String get localizedError => 'validation.is_not_email_address'.tr;
 }
 
 /// checks if the value can be well formatted email address

@@ -14,7 +14,7 @@ class IsNotIn extends TextValidationRule {
   bool isValid(String input) => isNotIn(input, list);
 
   @override
-  String get localizedError => "must_not_be_in_list".args({
+  String get localizedError => "validation.must_not_be_in_list".args({
         "list": list.toString(),
       });
 }

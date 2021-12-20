@@ -10,7 +10,7 @@ class IsHexColor extends TextValidationRule {
   bool isValid(String input) => isHexColor(input);
 
   @override
-  String get localizedError => 'is_not_hex_color'.tr;
+  String get localizedError => 'validation.is_not_hex_color'.tr;
 }
 
 /// can starts with or without`#`

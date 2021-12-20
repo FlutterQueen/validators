@@ -1,6 +1,5 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/queen_validators.dart';
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
 
 void main() {
   group('is RTL Rule ', () {

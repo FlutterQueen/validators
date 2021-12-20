@@ -20,7 +20,7 @@ class Match extends TextValidationRule {
       : match(input.toLowerCase(), other.toLowerCase());
 
   @override
-  String get localizedError => "should_match".args({
+  String get localizedError => "validation.should_match".args({
         "value1": other,
         "value2": caseSensitive.toString(),
       });

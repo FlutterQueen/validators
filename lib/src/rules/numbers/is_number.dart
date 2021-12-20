@@ -9,7 +9,7 @@ class IsNumber extends TextValidationRule {
   @override
   bool isValid(String input) => isNumber(input);
   @override
-  String get localizedError => "must_be_int".tr;
+  String get localizedError => "validation.must_be_int".tr;
 }
 
 bool isNumber(String? input) => num.tryParse(input ?? '') != null;

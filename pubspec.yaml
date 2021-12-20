@@ -7,12 +7,17 @@ issue_tracker: https://github.com/maxzod/queen_validators/issues
 publish_to: "none"
 environment:
   sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
 dependencies:
   email_validator: ^2.0.1
+  flutter:
+    sdk: flutter
   meta: ^1.7.0
   # * localization
   nations:
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
   lint:
-  test: ^1.16.8

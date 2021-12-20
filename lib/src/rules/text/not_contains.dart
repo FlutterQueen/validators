@@ -14,7 +14,7 @@ class NotContains extends TextValidationRule {
   bool isValid(String input) => !input.trim().contains(value);
 
   @override
-  String get localizedError => "not_contains".args(
+  String get localizedError => "validation.not_contains".args(
         {
           "value": value,
         },

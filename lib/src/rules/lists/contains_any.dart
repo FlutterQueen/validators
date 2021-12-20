@@ -13,7 +13,8 @@ class ContainsAny extends TextValidationRule {
   @override
   bool isValid(String input) => containsAny(input, value);
   @override
-  String get localizedError => "must_contains_any".args({'list': value.toString()});
+  String get localizedError =>
+      "validation.must_contains_any".args({'list': value.toString()});
 }
 
 // check if the provided string contains any keywords form the provided list

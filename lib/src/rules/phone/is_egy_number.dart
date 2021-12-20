@@ -10,7 +10,7 @@ class IsEgyptianPhone extends TextValidationRule {
   @override
   bool isValid(String input) => isEgyptianNumber(input);
   @override
-  String get localizedError =>"is_egyptian_num".tr;
+  String get localizedError => "validation.is_egyptian_num".tr;
 }
 
 bool isEgyptianNumber(String str) {

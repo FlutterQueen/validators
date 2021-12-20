@@ -10,5 +10,6 @@ class StartsWith extends TextValidationRule {
   @override
   bool isValid(String input) => input.trim().startsWith(pattern);
   @override
-  String get localizedError => "starts_with".args({"value":pattern.toString()});
+  String get localizedError =>
+      "validation.starts_with".args({"value": pattern.toString()});
 }

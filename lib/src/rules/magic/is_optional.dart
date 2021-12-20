@@ -11,5 +11,6 @@ class IsOptional extends TextValidationRule {
   @override
   bool isValid(String input) => true;
   @override
-  String get localizedError => '';
+  String get localizedError =>
+      throw Exception('this rules can not show errors');
 }

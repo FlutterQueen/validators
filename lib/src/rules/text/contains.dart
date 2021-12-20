@@ -13,5 +13,6 @@ class Contains extends TextValidationRule {
   @override
   bool isValid(String input) => input.trim().contains(value);
   @override
-  String get localizedError => "is_it_contains".args({"value":value});
+  String get localizedError =>
+      "validation.is_it_contains".args({"value": value});
 }

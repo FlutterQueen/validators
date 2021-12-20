@@ -16,7 +16,7 @@ class IsRTLLanguage extends TextValidationRule {
   @override
   bool isValid(String input) => isRtlLanguage(input);
   @override
-  String get localizedError => 'is_not_rtl_language_code'.tr;
+  String get localizedError => 'validation.is_not_rtl_language_code'.tr;
 }
 
 bool isRtlLanguage(String languageCode) =>

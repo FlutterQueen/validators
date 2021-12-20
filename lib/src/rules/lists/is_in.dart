@@ -13,7 +13,7 @@ class IsIn extends TextValidationRule {
   bool isValid(String input) => isIn(input, list);
 
   @override
-  String get localizedError => "must_be_in_list".args(
+  String get localizedError => "validation.must_be_in_list".args(
         {
           "list": list.toString(),
         },

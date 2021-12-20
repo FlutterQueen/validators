@@ -1,5 +1,5 @@
+import 'package:flutter_test/flutter_test.dart' hide isNotEmpty;
 import 'package:queen_validators/queen_validators.dart';
-import 'package:test/test.dart' hide isNotEmpty;
 
 void main() {
   group('IsRequired function ', () {

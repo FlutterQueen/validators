@@ -10,7 +10,7 @@ class IsPort extends TextValidationRule {
   bool isValid(String input) => isPort(input);
 
   @override
-  String get localizedError => 'is_not_port'.tr;
+  String get localizedError => 'validation.is_not_port'.tr;
 }
 
 // returns true if the input is valid port number

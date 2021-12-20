@@ -1,5 +1,5 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/queen_validators.dart' as q;
-import 'package:test/test.dart';
 
 void main() {
   group('is Not in List<String>', () {

@@ -9,7 +9,7 @@ class IsArabicNum extends TextValidationRule {
   @override
   bool isValid(String input) => isArabicNum(input);
   @override
-  String get localizedError => "must_be_num".tr;
+  String get localizedError => "validation.must_be_num".tr;
 }
 
 bool isArabicNum(String input) {

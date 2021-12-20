@@ -1,5 +1,5 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/src/rules/phone/is_egy_number.dart';
-import 'package:test/test.dart';
 
 void main() {
   group('IsEgyptianPhone Rule', () {

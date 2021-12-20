@@ -1,6 +1,5 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/src/rules/colors/is_hex_color.dart';
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
 
 void main() {
   const notValidColors = <String>[

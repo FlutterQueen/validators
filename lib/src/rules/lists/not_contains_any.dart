@@ -15,7 +15,7 @@ class NotContainsAny extends TextValidationRule {
   ]) : super(error);
 
   @override
-  String get localizedError => "must_not_contains_any".args(
+  String get localizedError => "validation.must_not_contains_any".args(
         {
           "list": value.toString(),
         },
