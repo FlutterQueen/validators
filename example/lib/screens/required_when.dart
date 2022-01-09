@@ -40,7 +40,8 @@
 //                 ]),
 //               ),
 //               TextFormField(
-//                 decoration: InputDecoration(labelText: 'password confirmation'),
+//                 decoration: InputDecoration(
+//labelText: 'password confirmation'),
 //                 controller: _passwordConfrimationController,
 //                 validator: qValidator([
 //                   IsRequired(),

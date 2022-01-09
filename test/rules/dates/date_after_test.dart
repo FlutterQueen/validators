@@ -41,11 +41,12 @@ void main() {
     });
     test('it returns false if the input int', () {
       expect(
-          isDateAfter(
-            23,
-            DateTime.now(),
-          ),
-          isFalse);
+        isDateAfter(
+          23,
+          DateTime.now(),
+        ),
+        isFalse,
+      );
     });
     test('it returns true if the input after the current Date', () {
       expect(

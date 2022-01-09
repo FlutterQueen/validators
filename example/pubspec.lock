@@ -53,6 +53,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_readable:
+    dependency: transitive
+    description:
+      name: flutter_readable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -72,6 +79,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+  lint:
+    dependency: "direct dev"
+    description:
+      name: lint
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.8.1"
   meta:
     dependency: transitive
     description:
@@ -85,7 +99,7 @@ packages:
       name: nations
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.5"
+    version: "0.0.7"
   nations_assets:
     dependency: transitive
     description:
@@ -148,7 +162,14 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0-beta"
+    version: "1.0.0"
+  readable:
+    dependency: transitive
+    description:
+      name: readable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3"
   shared_preferences:
     dependency: transitive
     description:
@@ -239,5 +260,5 @@ packages:
     source: hosted
     version: "0.2.0"
 sdks:
-  dart: ">=2.14.0 <3.0.0"
+  dart: ">=2.15.0-7.0.dev <3.0.0"
   flutter: ">=2.5.0"
