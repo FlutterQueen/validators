@@ -1,6 +1,5 @@
 import 'package:nations/nations.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// allow using a regular expression as validation rule
 class RegExpRule extends TextValidationRule {

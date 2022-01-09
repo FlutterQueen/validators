@@ -50,6 +50,6 @@ void main() {
     }
   });
   test('test error parameter', () {
-    expect(IsDateMillis(isUtc: true, error: "foo").errorMessage, "foo");
+    expect(IsDateMillis(isUtc: true, error: 'foo').errorMessage, 'foo');
   });
 }

@@ -79,7 +79,6 @@ void main() {
     });
     test('return false if is valid color', () {
       const rule = IsHexColor();
-
       expect(rule.isValid(''), isFalse);
     });
   });

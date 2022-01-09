@@ -1,7 +1,5 @@
 import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is match other string
 class Match extends TextValidationRule {
@@ -20,9 +18,9 @@ class Match extends TextValidationRule {
       : match(input.toLowerCase(), other.toLowerCase());
 
   @override
-  String get localizedError => "validation.should_match".args({
-        "value1": other,
-        "value2": caseSensitive.toString(),
+  String get localizedError => 'validation.should_match'.args({
+        'value1': other,
+        'value2': caseSensitive.toString(),
       });
 }
 

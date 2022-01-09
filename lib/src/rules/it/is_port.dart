@@ -1,6 +1,5 @@
 import 'package:nations/nations.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `port`
 class IsPort extends TextValidationRule {

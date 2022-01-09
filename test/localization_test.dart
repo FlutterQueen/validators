@@ -10,11 +10,13 @@ class QueenValidatorsNationsLoaders extends NationsLoader {
 
   @override
   Map<String, dynamic> load(Locale locale) {
+    // TODO :: move to nations_assets
     switch (locale.languageCode) {
       case 'ar':
         return arValidationErrors;
       case 'en':
         return enValidationErrors;
+
       default:
         return {};
     }
@@ -22,9 +24,6 @@ class QueenValidatorsNationsLoaders extends NationsLoader {
 }
 
 class NationsTestConfig extends NationsConfig {
-  @override
-  String Function(String key) get notFoundBuilder => (_) => '';
-
   @override
   List<NationsLoader> get loaders => [
         const QueenValidatorsNationsLoaders(),

@@ -1,7 +1,5 @@
 import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// check if the value contain at lest one of String form the provided list
 
@@ -14,7 +12,7 @@ class ContainsAny extends TextValidationRule {
   bool isValid(String input) => containsAny(input, value);
   @override
   String get localizedError =>
-      "validation.must_contains_any".args({'list': value.toString()});
+      'validation.must_contains_any'.args({'list': value.toString()});
 }
 
 // check if the provided string contains any keywords form the provided list

@@ -3,7 +3,7 @@ import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is valid hex color
 class IsHexColor extends TextValidationRule {
-  /// * [localizedError] - the error message to be displayed if the validation fails
+  /// he error message to be displayed if the validation fails
   const IsHexColor([String? error]) : super(error);
 
   @override

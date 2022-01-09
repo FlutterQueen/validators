@@ -1,7 +1,5 @@
 import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// checks if input does not contain the provided value;
 
@@ -14,9 +12,9 @@ class NotContains extends TextValidationRule {
   bool isValid(String input) => !input.trim().contains(value);
 
   @override
-  String get localizedError => "validation.not_contains".args(
+  String get localizedError => 'validation.not_contains'.args(
         {
-          "value": value,
+          'value': value,
         },
       );
 }

@@ -30,10 +30,10 @@ void main() {
     });
     test('returns the first error message', () {
       final msg = qValidator([
-        IsRequired("this field is required"),
+        IsRequired('this field is required'),
         MaxLength(1),
       ])('');
-      expect(msg, equals("this field is required"));
+      expect(msg, equals('this field is required'));
     });
 
     test(

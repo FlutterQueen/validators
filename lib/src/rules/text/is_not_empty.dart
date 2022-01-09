@@ -4,9 +4,6 @@
 /// wont be bad to have both
 import 'package:nations/nations.dart';
 import 'package:queen_validators/queen_validators.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
 
 class IsRequired extends TextValidationRule {
   IsRequired([String? error]) : super(error);

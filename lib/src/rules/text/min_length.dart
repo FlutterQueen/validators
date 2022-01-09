@@ -1,6 +1,4 @@
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input characters length is bigger than the min field
 

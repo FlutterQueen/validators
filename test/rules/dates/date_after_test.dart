@@ -2,24 +2,24 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 void main() {
-  group("isDateAfter Func", () {
-    test("it returns false if the input is null", () {
+  group('isDateAfter Func', () {
+    test('it returns false if the input is null', () {
       final result = isDateAfter(null, DateTime.now());
       expect(result, isFalse);
     });
-       test("test", () {
-      final result = IsDateAfter(DateTime.now()).isValid("");
+       test('test', () {
+      final result = IsDateAfter(DateTime.now()).isValid('');
       expect(result, isFalse);
     });
     test(
-      "it returns false if the input Empty",
+      'it returns false if the input Empty',
       () => expect(
         isDateAfter('', DateTime.now()),
         isFalse,
         reason: 'empty strings arent valid dates ',
       ),
     );
-    test("it returns false if the date is not after the current date", () {
+    test('it returns false if the date is not after the current date', () {
       expect(
         isDateAfter(
           DateTime.now(),
@@ -30,7 +30,7 @@ void main() {
         isFalse,
       );
     });
-    test("it returns false if the date is equal current date", () {
+    test('it returns false if the date is equal current date', () {
       expect(
         isDateAfter(
           DateTime.now(),
@@ -39,10 +39,10 @@ void main() {
         isFalse,
       );
     });
-     test("it returns false if the input int", () {
+     test('it returns false if the input int', () {
       expect(isDateAfter(23, DateTime.now(),), isFalse);
     });
-    test("it returns true if the input after the current Date", () {
+    test('it returns true if the input after the current Date', () {
       expect(
         isDateAfter(
           DateTime.now().add(

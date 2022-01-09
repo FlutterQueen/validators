@@ -6,7 +6,8 @@ void main() {
     'NotContains rule ',
     () {
       test(
-        'it should return True when the text does not contains the provided word',
+        'it should return True when the text does'
+        ' not contains the provided word',
         () {
           const word = 'xxxxxxxx';
           expect(NotContains('a').isValid(word), isTrue);
@@ -18,7 +19,8 @@ void main() {
         },
       );
       test(
-        'it should return False when the text does not contains the provided word',
+        'it should return False '
+        'when the text does not contains the provided word',
         () {
           const word = 'ghi';
           expect(NotContains('g').isValid(word), isFalse);

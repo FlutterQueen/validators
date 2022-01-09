@@ -1,7 +1,5 @@
 import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 class MaxValue extends TextValidationRule {
   final num max;
@@ -12,7 +10,7 @@ class MaxValue extends TextValidationRule {
   bool isValid(String input) => maxValue(input, max);
   @override
   String get localizedError =>
-      "validation.must_be_max".args({"maxNum": max.toString()});
+      'validation.must_be_max'.args({'maxNum': max.toString()});
 }
 
 bool maxValue(Object? value, num max) {

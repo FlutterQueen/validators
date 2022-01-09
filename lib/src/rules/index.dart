@@ -1,7 +1,3 @@
-/// * banking
-export 'banking/is_bic.dart';
-export 'banking/is_credit_card.dart';
-
 /// * colors
 export 'colors/is_hex_color.dart';
 
@@ -14,11 +10,9 @@ export 'dates/is_date_mills.dart';
 export 'it/is_boolean.dart';
 export 'it/is_email.dart';
 export 'it/is_port.dart';
-export 'it/is_uri.dart';
 export 'it/regx.dart';
 
 /// * languages
-export 'languages/is_arabic_chars.dart';
 export 'languages/is_ltr_language.dart';
 export 'languages/is_rtl_language.dart';
 
@@ -26,7 +20,6 @@ export 'languages/is_rtl_language.dart';
 export 'lists/contains_any.dart';
 export 'lists/is_in.dart';
 export 'lists/is_not_in.dart';
-export 'lists/list_equals.dart';
 export 'lists/not_contains_any.dart';
 
 /// * magic
@@ -34,17 +27,10 @@ export 'magic/is_optional.dart';
 export 'numbers/is_arabic_num.dart';
 
 /// * numbers
-export 'numbers/is_even.dart';
 export 'numbers/is_hindi_num.dart';
-export 'numbers/is_negative.dart';
 export 'numbers/is_number.dart';
-export 'numbers/is_odd.dart';
-export 'numbers/is_positive.dart';
 export 'numbers/max_value.dart';
 export 'numbers/min_value.dart';
-
-/// * password
-export 'password/is_strong_password.dart';
 
 /// * phone
 export 'phone/is_egy_number.dart';

@@ -1,10 +1,10 @@
 name: queen_validators
-description: queen support for validation in flutter , functions for variables validation , Rules for Forms with ZERO extra widgets
-version: 1.0.0-beta
-homepage: https://github.com/maxzod/queen_validators
-repository: https://github.com/maxzod/queen_validators
-issue_tracker: https://github.com/maxzod/queen_validators/issues
-publish_to: "none"
+description: collection of validation methods and rules for flutter form with ZERO extra widgets
+version: 1.0.0
+homepage: https://github.com/FlutterQueen/validators
+repository: https://github.com/FlutterQueen/validators
+issue_tracker: https://github.com/FlutterQueen/validators/issues
+
 environment:
   sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
@@ -13,11 +13,9 @@ dependencies:
   email_validator: ^2.0.1
   flutter:
     sdk: flutter
-  meta: ^1.7.0
-  # * localization
-  nations:
+  nations: ^0.0.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lint:
+  lint: ^1.8.1

@@ -1,6 +1,5 @@
 import 'package:nations/nations.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 class IsBool extends TextValidationRule {
   const IsBool([String? error]) : super(error);

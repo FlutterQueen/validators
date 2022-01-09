@@ -1,8 +1,6 @@
 import 'package:email_validator/email_validator.dart';
-
 import 'package:nations/nations.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input is a valid `email` address
 class IsEmail extends TextValidationRule {

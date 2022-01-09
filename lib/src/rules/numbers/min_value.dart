@@ -1,7 +1,5 @@
 import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 class MinValue extends TextValidationRule {
   final num min;
@@ -12,7 +10,7 @@ class MinValue extends TextValidationRule {
   bool isValid(String input) => minValue(input, min);
   @override
   String get localizedError =>
-      "validation.must_be_min".args({"minNum": min.toString()});
+      'validation.must_be_min'.args({'minNum': min.toString()});
 }
 
 bool minValue(Object? value, num min) {

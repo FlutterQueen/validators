@@ -1,7 +1,5 @@
 import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
-
-import '../../../queen_validators.dart';
+import 'package:queen_validators/queen_validators.dart';
 
 /// checks if the input `is in` provided List;
 class IsIn extends TextValidationRule {
@@ -13,9 +11,9 @@ class IsIn extends TextValidationRule {
   bool isValid(String input) => isIn(input, list);
 
   @override
-  String get localizedError => "validation.must_be_in_list".args(
+  String get localizedError => 'validation.must_be_in_list'.args(
         {
-          "list": list.toString(),
+          'list': list.toString(),
         },
       );
 }

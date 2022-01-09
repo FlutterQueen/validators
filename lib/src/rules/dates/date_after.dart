@@ -11,7 +11,7 @@ class IsDateAfter extends TextValidationRule {
 
   @override
   String get localizedError =>
-      'validation.is_not_after_date'.args({"date": date.toString()});
+      'validation.is_not_after_date'.args({'date': date.toString()});
 }
 
 bool isDateAfter(Object? input, DateTime date) {
