@@ -7,7 +7,7 @@ void main() {
       final result = isDateAfter(null, DateTime.now());
       expect(result, isFalse);
     });
-       test('test', () {
+    test('test', () {
       final result = IsDateAfter(DateTime.now()).isValid('');
       expect(result, isFalse);
     });
@@ -39,8 +39,13 @@ void main() {
         isFalse,
       );
     });
-     test('it returns false if the input int', () {
-      expect(isDateAfter(23, DateTime.now(),), isFalse);
+    test('it returns false if the input int', () {
+      expect(
+          isDateAfter(
+            23,
+            DateTime.now(),
+          ),
+          isFalse);
     });
     test('it returns true if the input after the current Date', () {
       expect(
