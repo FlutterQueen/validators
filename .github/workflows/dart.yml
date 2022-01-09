@@ -1,23 +1,38 @@
-name: dart
+#The name of your workflow.
+name: tests
+# Trigger the workflow on push or pull request
 on:
   push:
-    branches: [master]
+    branches:
+      - main
+      - dev
   pull_request:
-    branches: [master]
+    branches: [main, dev]
+#A workflow run is made up of one or more jobs. Jobs run in parallel by default.
 jobs:
   test:
+    #The type of machine to run the job on. [windows,macos, ubuntu , self-hosted]
     defaults:
       run:
         working-directory: ./
     runs-on: ubuntu-latest
+    #sequence of tasks called
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: "2.5.3"
-          channel: "stable"
-      - run: flutter pub get
-      - run: flutter test --coverage
-      - uses: codecov/codecov-action@v1.0.7
-      - name: Very Good Coverage
+      - uses: actions/checkout@v2.3.4
+      - uses: subosito/flutter-action@v1.5.3
+
+      - name: Install Dependencies
+        run: flutter packages get
+
+      - name: Format
+        run: flutter format --set-exit-if-changed .
+
+      - name: Analyze
+        run: flutter analyze lib test example
+
+      - name: Run tests
+        run: flutter test --coverage
+
+      - name: Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
