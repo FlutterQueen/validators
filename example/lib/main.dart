@@ -66,7 +66,7 @@
 //                 ]),
 //               ),
 //               TextFormField(
-//                 decoration: 
+//                 decoration:
 //InputDecoration(labelText: 'MinLenght AND IsEmail'),
 //                 validator: qValidator([
 //                   IsRequired(),
