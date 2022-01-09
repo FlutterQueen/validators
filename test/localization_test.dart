@@ -70,6 +70,7 @@ void main() {
 
     /// phones
     IsEgyptianPhone(),
+    ISKsaPhone(),
 
     /// text
     Contains(''),
