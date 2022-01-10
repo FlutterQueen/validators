@@ -34,6 +34,7 @@ export 'numbers/min_value.dart';
 
 /// * phone
 export 'phone/is_egy_number.dart';
+export 'phone/is_ksa_number.dart';
 
 /// * text
 export 'text/contains.dart';
