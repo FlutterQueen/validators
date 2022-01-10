@@ -11,7 +11,7 @@ class IsRequired extends TextValidationRule {
   @override
   bool isValid(String input) => isNotEmpty(input);
   @override
-  String get localizedError => 'validation.is_required'.tr;
+  String get localizedError => 'validation.required'.tr;
 }
 
 /// `trim` the string then checks if `isNotEmpty`

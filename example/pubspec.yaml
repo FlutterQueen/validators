@@ -7,6 +7,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  nations: ^0.0.7
   queen_validators:
     path: ../
 flutter:

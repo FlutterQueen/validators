@@ -26,7 +26,6 @@ const arValidationErrors = {
   'is_it_contains': 'يجب ان يحتوي علي :value',
   'must_end_with': 'يجب ان ينتهي بـ :value',
   'is_empty': 'يجب ان يكون فارغ',
-  'is_required': 'مطلوب',
   'should_match': 'يجب ان يكون مطابق لـ :value1',
   'starts_with': 'يجب ان يبدا بـ  :value',
   'not_valid_date_millis': 'not_valid_date_millis',

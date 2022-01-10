@@ -94,7 +94,7 @@ packages:
     source: hosted
     version: "1.7.0"
   nations:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: nations
       url: "https://pub.dartlang.org"

@@ -1,5 +1,8 @@
 library queen_validators;
 
+/// `QueenValidatorsNationsLoader`
+export 'package:queen_validators/src/loader.dart';
+
 /// * rules
 export 'package:queen_validators/src/rules/index.dart';
 
