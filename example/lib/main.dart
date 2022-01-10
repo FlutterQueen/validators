@@ -70,11 +70,12 @@ class HomePage extends StatelessWidget {
               TextFormField(
                 decoration: const InputDecoration(labelText: 'IsOptional'),
                 validator: qValidator([
-                  // if the textField contains value the rest of the validators will run
-                  // else it will pass the validation with checking them
+                  // if the textField contains value the rest of the validators
+                  // will run else it will pass alidation with checking them
                   IsOptional(),
 
-                  /// the input value must be a valid (`well formatted`) email address
+                  /// the input value must be a
+                  /// valid (`well formatted`) email address
                   const IsEmail(),
                 ]),
               ),
@@ -84,7 +85,8 @@ class HomePage extends StatelessWidget {
                 validator: qValidator([
                   IsRequired(),
 
-                  /// the input value must be a valid (`well formatted`) email address
+                  /// the input value must be a valid (`well formatted`)
+                  ///  email address
                   const IsEmail(),
                 ]),
               ),
