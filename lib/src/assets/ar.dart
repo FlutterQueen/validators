@@ -30,5 +30,6 @@ const arValidationErrors = {
   'starts_with': 'يجب ان يبدا بـ  :value',
   'not_valid_date_millis': 'not_valid_date_millis',
   'is_ksa_num': 'يجب ان يكون رقم سعودى',
-  'not_valid_url': 'يجب ان يكون رابط صالح'
+  'not_valid_url': 'يجب ان يكون رابط صالح',
+  'not_valid_facebook_url':'ليس رابط فيسبوك صحيح'
 };
