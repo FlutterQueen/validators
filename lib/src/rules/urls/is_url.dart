@@ -1,3 +1,4 @@
+// ignore: implementation_imports
 import 'package:nations/src/extensions/string.dart';
 import 'package:queen_validators/queen_validators.dart';
 
