@@ -29,5 +29,6 @@ const arValidationErrors = {
   'should_match': 'يجب ان يكون مطابق لـ :value1',
   'starts_with': 'يجب ان يبدا بـ  :value',
   'not_valid_date_millis': 'not_valid_date_millis',
-  'is_ksa_num': 'يجب ان يكون رقم سعودى'
+  'is_ksa_num': 'يجب ان يكون رقم سعودى',
+  'not_valid_url': 'يجب ان يكون رابط صالح'
 };
