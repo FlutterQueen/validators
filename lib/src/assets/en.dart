@@ -32,5 +32,6 @@ const enValidationErrors = {
   'is_ksa_num': 'It must be a Saudi number',
   'not_valid_url': 'This is not a valid url',
   'not_valid_facebook_url': 'This is not facebook url',
+  'not_valid_youtube_url': 'This is not youtube url',
   'not_valid_instagram_url': 'This is not instagram url'
 };
