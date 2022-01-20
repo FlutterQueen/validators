@@ -30,5 +30,6 @@ const enValidationErrors = {
   'starts_with': 'يجب ان يبدا بـ  :value',
   'not_valid_date_millis': 'not_valid_date_millis',
   'is_ksa_num': 'It must be a Saudi number',
-  'not_valid_url': 'This is not a valid url'
+  'not_valid_url': 'This is not a valid url',
+  'not_valid_facebook_url': 'This is not facebook url'
 };
