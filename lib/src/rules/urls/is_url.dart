@@ -1,7 +1,3 @@
-// ignore: duplicate_ignore
-// ignore_for_file: depend_on_referenced_packages, implementation_imports
-
-import 'package:matcher/src/interfaces.dart';
 import 'package:nations/src/extensions/string.dart';
 import 'package:queen_validators/queen_validators.dart';
 
