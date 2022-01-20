@@ -29,5 +29,6 @@ const enValidationErrors = {
   'should_match': 'يجب ان يكون مطابق لـ :value1',
   'starts_with': 'يجب ان يبدا بـ  :value',
   'not_valid_date_millis': 'not_valid_date_millis',
-  'is_ksa_num': 'It must be a Saudi number'
+  'is_ksa_num': 'It must be a Saudi number',
+   'not_valid_url' :'This is not a valid url'
 };
