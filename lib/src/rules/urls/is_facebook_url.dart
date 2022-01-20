@@ -10,10 +10,11 @@ class IsFacebookUrl extends TextValidationRule {
   bool isValid(String input) => isFacebookUrlValid(input);
 
   @override
-  
   String get localizedError => 'not_valid_facebook_url'.tr;
 }
 
-bool isFacebookUrlValid(String url){
-  return RegExp(r'^((https?):\/\/)((www\.)?(facebook)\.(com))\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)').hasMatch(url);
+bool isFacebookUrlValid(String url) {
+  return RegExp(
+    r'^((https?):\/\/)((www\.)?(facebook)\.(com))\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)',
+  ).hasMatch(url);
 }
