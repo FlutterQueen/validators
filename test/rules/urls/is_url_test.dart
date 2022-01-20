@@ -50,7 +50,7 @@ void main() {
         isFalse,
         reason: 'its not valid domain',
       );
-        expect(
+      expect(
         IsUrl().isValid('http//efwfwefwe'),
         isFalse,
         reason: 'its not valid domain',
