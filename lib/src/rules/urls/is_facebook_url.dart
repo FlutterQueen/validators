@@ -1,3 +1,6 @@
+// ignore_for_file: implementation_imports
+
+import 'package:nations/src/extensions/string.dart';
 import 'package:queen_validators/queen_validators.dart';
 
 class IsFacebookUrl extends TextValidationRule {
@@ -8,7 +11,7 @@ class IsFacebookUrl extends TextValidationRule {
 
   @override
   
-  String get localizedError => throw UnimplementedError();
+  String get localizedError => 'not_valid_facebook_url'.tr;
 }
 
 bool isFacebookUrlValid(String url){
