@@ -33,4 +33,5 @@ const arValidationErrors = {
   'not_valid_url': 'يجب ان يكون رابط صالح',
   'not_valid_facebook_url': 'ليس رابط فيسبوك صحيح',
   'not_valid_youtube_url': 'ليس رابط فيسبوك صحيح'
+  'not_valid_instagram_url': 'ليس رابط انستجرام صحيح'
 };
