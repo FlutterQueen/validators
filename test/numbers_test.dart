@@ -67,6 +67,4 @@ void main() {
       () => expect(minValue(10, 5), isTrue),
     );
   });
-
-  
 }
