@@ -9,7 +9,7 @@ bool isNotEmpty(String? string) {
   return string?.trim().isNotEmpty ?? false;
 }
 
-/// checks if two `Strings` are the same
+/// checks if two `Strings` are the sameم
 bool match(
   Object? input,
   Object? other,
@@ -19,6 +19,7 @@ bool match(
         input.runtimeType == other.runtimeType &&
         identical(input, other) ||
     input == other;
+
 bool minLength(String? input, int min) {
   if (input == null) return false;
   return input.trim().length >= min;
