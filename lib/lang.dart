@@ -7,7 +7,7 @@ const _rtlLocales = <String>[
 ];
 
 bool isLtrLanguage(Object languageCode) =>
-    !_rtlLocales.contains(languageCode.toLowerCase());
+    languageCode is String && !_rtlLocales.contains(languageCode.toLowerCase());
 
-bool isRtlLanguage(String languageCode) =>
-    _rtlLocales.contains(languageCode.toLowerCase());
+bool isRtlLanguage(Object languageCode) =>
+    languageCode is String && _rtlLocales.contains(languageCode.toLowerCase());
