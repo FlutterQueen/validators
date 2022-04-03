@@ -1,7 +1,4 @@
-// ignore_for_file: implementation_imports
-
-import 'package:nations/src/extensions/string.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 class IsInstagramUrl extends TextValidationRule {
   IsInstagramUrl([String? error]) : super(error);
@@ -10,7 +7,7 @@ class IsInstagramUrl extends TextValidationRule {
   bool isValid(String input) => isInstgramUrlValid(input);
 
   @override
-  String get localizedError => 'not_valid_instagram_url'.tr;
+  String toString() => 'not_valid_instagram_url';
 }
 
 bool isInstgramUrlValid(String url) => RegExp(

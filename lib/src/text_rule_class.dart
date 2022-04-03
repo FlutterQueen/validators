@@ -1,3 +1,5 @@
+import '../tr.dart';
+
 ///  interface for the queen validation rules
 ///  extend it and implement :
 ///   `isValid` to override the validation logic
@@ -13,11 +15,8 @@ abstract class TextValidationRule {
   ///  return a bool Either valid or NOT
   bool isValid(String input);
 
-  /// uses nations to translate rule error message
-  String get localizedError;
-
   /// passed throw constructor to skip localized error
   final String? error;
 
-  String get errorMessage => error ?? localizedError;
+  String get errorMessage => error ?? ValidatorsLocalization.translate(this);
 }

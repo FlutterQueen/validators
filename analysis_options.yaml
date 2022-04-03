@@ -1,4 +1,9 @@
 include: package:lint/analysis_options_package.yaml
+analyzer:
+  errors:
+    avoid_classes_with_only_static_members: false
+    always_use_package_imports: false
 linter:
-rules:
-  - public_member_api_docs
+  rules:
+    - prefer_relative_imports
+    # - public_member_api_docs

@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input `is NOT in` provided List;
 class IsNotIn extends TextValidationRule {
@@ -11,9 +10,7 @@ class IsNotIn extends TextValidationRule {
   bool isValid(String input) => isNotIn(input, list);
 
   @override
-  String get localizedError => 'validation.must_not_be_in_list'.args({
-        'list': list.toString(),
-      });
+  String toString() => 'validation.must_not_be_in_list';
 }
 
 /// check if `value` is `NOT` in `List`

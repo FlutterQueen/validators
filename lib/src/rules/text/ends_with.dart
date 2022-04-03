@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 class EndsWith extends TextValidationRule {
   final String end;
@@ -10,9 +9,5 @@ class EndsWith extends TextValidationRule {
   bool isValid(String input) => input.trim().endsWith(end);
 
   @override
-  String get localizedError => 'validation.must_end_with'.args(
-        {
-          'value': end,
-        },
-      );
+  String toString() => 'validation.must_end_with';
 }

@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `integer`
 class IsHindiNum extends TextValidationRule {
@@ -8,7 +7,7 @@ class IsHindiNum extends TextValidationRule {
   @override
   bool isValid(String input) => isHindiNum(input);
   @override
-  String get localizedError => 'validation.must_be_num'.tr;
+  String toString() => 'validation.must_be_num';
 }
 
 bool isHindiNum(String input) {

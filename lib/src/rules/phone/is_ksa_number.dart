@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/src/text_rule_class.dart';
+import '../../text_rule_class.dart';
 
 class ISKsaPhone extends TextValidationRule {
   ISKsaPhone([String? error]) : super(error);
@@ -7,7 +6,7 @@ class ISKsaPhone extends TextValidationRule {
   @override
   bool isValid(String input) => isKsaPhone(input);
   @override
-  String get localizedError => 'validation.is_ksa_num'.tr;
+  String toString() => 'validation.is_ksa_num';
 }
 
 bool isKsaPhone(String input) {

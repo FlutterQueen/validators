@@ -68,7 +68,7 @@ void main() {
       'valid case for localized error url',
       () {
         expect(
-          IsInstagramUrl().localizedError,
+          IsInstagramUrl().toString(),
           isNotNull,
           reason: 'because each rule must have a localized error',
         );

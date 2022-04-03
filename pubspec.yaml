@@ -13,9 +13,8 @@ dependencies:
   email_validator: ^2.0.1
   flutter:
     sdk: flutter
-  nations: ^0.0.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lint: ^1.8.1
+  lint: ^1.8.2

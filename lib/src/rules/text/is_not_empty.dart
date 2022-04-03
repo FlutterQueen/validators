@@ -2,8 +2,7 @@
 
 /// IsRequired is more convenient still
 /// wont be bad to have both
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 class IsRequired extends TextValidationRule {
   IsRequired([String? error]) : super(error);
@@ -11,7 +10,7 @@ class IsRequired extends TextValidationRule {
   @override
   bool isValid(String input) => isNotEmpty(input);
   @override
-  String get localizedError => 'validation.required'.tr;
+  String toString() => 'validation.required';
 }
 
 /// `trim` the string then checks if `isNotEmpty`

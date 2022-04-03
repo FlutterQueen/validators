@@ -1,6 +1,4 @@
-// ignore: implementation_imports
-import 'package:nations/src/extensions/string.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 class IsUrl extends TextValidationRule {
   IsUrl([String? error]) : super(error);
@@ -9,7 +7,7 @@ class IsUrl extends TextValidationRule {
   bool isValid(String input) => isUrlValid(input);
 
   @override
-  String get localizedError => 'not_valid_url'.tr;
+  String toString() => 'not_valid_url';
 }
 
 bool isUrlValid(String url) {

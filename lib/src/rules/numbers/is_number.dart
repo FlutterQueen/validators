@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `integer`
 class IsNumber extends TextValidationRule {
@@ -8,7 +7,7 @@ class IsNumber extends TextValidationRule {
   @override
   bool isValid(String input) => isNumber(input);
   @override
-  String get localizedError => 'validation.must_be_int'.tr;
+  String toString() => 'validation.must_be_int';
 }
 
 bool isNumber(String? input) => num.tryParse(input ?? '') != null;

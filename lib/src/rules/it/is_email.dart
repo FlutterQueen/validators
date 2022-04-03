@@ -1,6 +1,5 @@
 import 'package:email_validator/email_validator.dart';
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `email` address
 class IsEmail extends TextValidationRule {
@@ -9,7 +8,7 @@ class IsEmail extends TextValidationRule {
   @override
   bool isValid(String input) => isEmail(input);
   @override
-  String get localizedError => 'validation.is_not_email_address'.tr;
+  String toString() => 'validation.is_not_email_address';
 }
 
 /// checks if the value can be well formatted email address

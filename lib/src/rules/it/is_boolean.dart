@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 class IsBool extends TextValidationRule {
   const IsBool([String? error]) : super(error);
@@ -7,7 +6,7 @@ class IsBool extends TextValidationRule {
   @override
   bool isValid(String input) => isBool(input);
   @override
-  String get localizedError => 'validation.is_not_bool'.tr;
+  String toString() => 'validation.is_not_bool';
 }
 
 bool isBool(Object? input) {

@@ -73,7 +73,7 @@ void main() {
       'valid case for localized error url',
       () {
         expect(
-          IsYoutubeUrl().localizedError,
+          IsYoutubeUrl().toString(),
           isNotNull,
           reason: 'because each rule must have a localized error',
         );

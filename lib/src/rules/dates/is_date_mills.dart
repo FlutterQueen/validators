@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `date` to parse by
 ///  `DateTime.fromMillisecondsSinceEpoch` factory
@@ -19,7 +18,7 @@ class IsDateMillis extends TextValidationRule {
   bool isValid(String input) => isDateMills(input, isUtc: isUtc);
 
   @override
-  String get localizedError => 'validation.not_valid_date_millis'.tr;
+  String toString() => 'validation.not_valid_date_millis';
 }
 
 /// checks if the input is a valid `date` to parse by `

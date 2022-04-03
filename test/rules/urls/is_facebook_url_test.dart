@@ -68,7 +68,7 @@ void main() {
       'valid case for localized error url',
       () {
         expect(
-          IsFacebookUrl().localizedError,
+          IsFacebookUrl().toString(),
           isNotNull,
           reason: 'because each rule must have a localized error',
         );

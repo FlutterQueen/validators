@@ -1,4 +1,4 @@
-import 'package:queen_validators/queen_validators.dart';
+import '../queen_validators.dart';
 
 typedef OnFailureCallBack = void Function(
   /// the text field content

@@ -7,7 +7,7 @@ class TestRule extends TextValidationRule {
   @override
   bool isValid(String input) => input.isNotEmpty;
   @override
-  String get localizedError => throw UnimplementedError();
+  String toString() => throw UnimplementedError();
 }
 
 void main() {

@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nations/nations.dart';
 import 'package:queen_validators/queen_validators.dart';
 
-class LangConfig extends NationsConfig {
-  @override
-  List<NationsLoader> get loaders => [
-        const QueenValidatorsNationsLoaders(),
-      ];
-}
-
 Future<void> main() async {
-  await Nations.boot(LangConfig());
-
   runApp(
     MaterialApp(
       title: 'Queen Validators 👑',
       debugShowCheckedModeBanner: false,
-      supportedLocales: Nations.supportedLocales,
-      locale: Nations.locale,
-      localizationsDelegates: Nations.delegates,
       home: HomePage(),
       theme: ThemeData.light(),
     ),
@@ -32,7 +19,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Queen Validators 👑 ${Nations.locale}'),
+        title: const Text('Queen Validators 👑'),
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(

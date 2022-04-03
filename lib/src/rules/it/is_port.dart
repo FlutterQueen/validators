@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input is a valid `port`
 class IsPort extends TextValidationRule {
@@ -9,7 +8,7 @@ class IsPort extends TextValidationRule {
   bool isValid(String input) => isPort(input);
 
   @override
-  String get localizedError => 'validation.is_not_port'.tr;
+  String toString() => 'validation.is_not_port';
 }
 
 // returns true if the input is valid port number

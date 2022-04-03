@@ -58,7 +58,7 @@ void main() {
     });
 
     test('it should return true if the error not null', () {
-      expect(IsUrl().localizedError, isNotNull);
+      expect(IsUrl().toString(), isNotNull);
     });
   });
 }

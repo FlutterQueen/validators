@@ -1,4 +1,4 @@
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 /// checks if the input characters length is bigger than the min field
 
@@ -13,7 +13,7 @@ class MinLength extends TextValidationRule {
   }
 
   @override
-  String get localizedError => 'validation.min length is $min';
+  String toString() => 'validation.min length is $min';
 }
 
 bool minLength(String? input, int min) {

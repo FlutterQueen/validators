@@ -1,6 +1,4 @@
-import 'package:nations/nations.dart';
-
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 const _rtlLocales = <String>[
   'ar', // Arabic
@@ -16,7 +14,7 @@ class IsRTLLanguage extends TextValidationRule {
   @override
   bool isValid(String input) => isRtlLanguage(input);
   @override
-  String get localizedError => 'validation.is_not_rtl_language_code'.tr;
+  String toString() => 'validation.is_not_rtl_language_code';
 }
 
 bool isRtlLanguage(String languageCode) =>

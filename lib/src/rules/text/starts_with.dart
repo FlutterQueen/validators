@@ -1,5 +1,4 @@
-import 'package:nations/nations.dart';
-import 'package:queen_validators/queen_validators.dart';
+import '../../../queen_validators.dart';
 
 class StartsWith extends TextValidationRule {
   final Pattern pattern;
@@ -8,8 +7,7 @@ class StartsWith extends TextValidationRule {
 
   @override
   bool isValid(String input) => input.trim().startsWith(pattern);
+
   @override
-  String get localizedError => 'validation.starts_with'.args(
-        {'value': pattern.toString()},
-      );
+  String toString() => 'validation.starts_with';
 }
