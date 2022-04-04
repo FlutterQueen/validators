@@ -35,11 +35,11 @@ void main() {
           final testRule = TestRule('mSg');
           final testRule2 = TestRule('gSm');
           expect(
-            testRule.errorMessage,
+            testRule.error,
             'mSg',
           );
           expect(
-            testRule2.errorMessage,
+            testRule2.error,
             'gSm',
           );
         },

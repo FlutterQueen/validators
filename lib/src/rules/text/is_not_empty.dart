@@ -10,7 +10,7 @@ class IsRequired extends TextValidationRule {
   @override
   bool isValid(String input) => isNotEmpty(input);
   @override
-  String toString() => 'validation.required';
+  String toString() => 'required';
 }
 
 /// `trim` the string then checks if `isNotEmpty`

@@ -4,9 +4,18 @@
 import 'queen_validators.dart';
 
 // ignore: avoid_classes_with_only_static_members
+
 abstract class ValidatorsLocalization {
-  static String Function(
+  static final _map = <String, String Function(TextValidationRule)>{};
+  static String translate(
     TextValidationRule rule,
-    // ignore: prefer_function_declarations_over_variables
-  ) translate = (rule) => rule.toString();
+  ) =>
+      _map[rule.runtimeType.toString()] == null
+          ? rule.toString()
+          : _map[rule.runtimeType.toString()]!(rule);
+
+  static void on<T extends TextValidationRule>(
+    String Function(TextValidationRule) func,
+  ) =>
+      _map[T.toString()] = func;
 }

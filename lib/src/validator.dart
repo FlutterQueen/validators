@@ -1,4 +1,5 @@
 import '../queen_validators.dart';
+import '../tr.dart';
 
 typedef OnFailureCallBack = void Function(
   /// the text field content
@@ -51,7 +52,9 @@ String? Function(String?) qValidator(
       /// else ir will return the failure message
       /// which will be return as the validation
       ///  error for the entire validation process
-      msg = rule.isValid(input) ? null : rule.errorMessage;
+      msg = rule.isValid(input)
+          ? null
+          : (rule.error ?? ValidatorsLocalization.translate(rule));
 
       /// if the failure message `msg` has value on it
       /// that means some rule has failed

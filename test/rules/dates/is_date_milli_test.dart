@@ -25,31 +25,49 @@ void main() {
   test('valid isDateMills test with utc true', () {
     for (final date in validDates) {
       // print(date);
-      expect(IsDateMillis(isUtc: true).isValid(date), isTrue);
+      expect(
+        IsDateMillis(isUtc: true).isValid(date),
+        isTrue,
+      );
     }
   });
   test('***NOT*** valid isDateMills test', () {
     for (final date in notValidDates) {
-      expect(IsDateMillis().isValid(date), isFalse);
+      expect(
+        IsDateMillis().isValid(date),
+        isFalse,
+      );
     }
   });
   test('***NOT*** valid isDateMills test with utc true', () {
     for (final date in notValidDates) {
-      expect(IsDateMillis().isValid(date), isFalse);
+      expect(
+        IsDateMillis().isValid(date),
+        isFalse,
+      );
     }
   });
   test('valid isDateMills test', () {
     for (final date in validDates) {
       // print(date);
-      expect(isDateMills(date), isTrue);
+      expect(
+        isDateMills(date),
+        isTrue,
+      );
     }
   });
   test('***NOT*** valid isDateMills test', () {
     for (final date in notValidDates) {
-      expect(isDateMills(date), isFalse);
+      expect(
+        isDateMills(date),
+        isFalse,
+      );
     }
   });
   test('test error parameter', () {
-    expect(IsDateMillis(isUtc: true, error: 'foo').errorMessage, 'foo');
+    expect(
+      IsDateMillis(isUtc: true, error: 'foo').error,
+      'foo',
+    );
   });
 }
