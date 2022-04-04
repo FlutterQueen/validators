@@ -46,3 +46,9 @@ export 'text/max_length.dart';
 export 'text/min_length.dart';
 export 'text/not_contains.dart';
 export 'text/starts_with.dart';
+
+/// * url
+export 'urls/is_facebook_url.dart';
+export 'urls/is_instgram_url.dart';
+export 'urls/is_url.dart';
+export 'urls/is_youtube_url.dart';

@@ -9,6 +9,7 @@ class IsOptional extends TextValidationRule {
 
   @override
   bool isValid(String input) => true;
+
   @override
   String toString() => throw Exception('this rules can not show errors');
 }
