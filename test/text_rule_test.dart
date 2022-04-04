@@ -7,34 +7,43 @@ class TestRule extends TextValidationRule {
   @override
   bool isValid(String input) => input.isNotEmpty;
   @override
-  String toString() => throw UnimplementedError();
+  String toString() => error ?? (throw UnimplementedError());
 }
 
 void main() {
   group(
     'TextValidationRule base rule',
     () {
-      // test(
-      //   'if is valid return null',
-      //   () {
-      //     final testRule = TestRule();
-      //     expect(testRule.run('v'), equals(null));
-      //   },
-      // );
-      // test(
-      //   'if is not valid return the message',
-      //   () {
-      //     final testRule = TestRule();
-      //     expect(testRule.run(''), equals('the_message'));
-      //   },
-      // );
-      // test(
-      //   'can override the error message from the constructor',
-      //   () {
-      //     final testRule = TestRule(msg: 'foo');
-      //     expect(testRule.run(''), equals('foo'));
-      //   },
-      // );
+      test(
+        'if is valid return null',
+        () {
+          final testRule = TestRule();
+          expect(testRule.isValid('v'), isTrue);
+        },
+      );
+
+      test(
+        'if is valid return null',
+        () {
+          final testRule = TestRule();
+          expect(testRule.isValid('v'), isTrue);
+        },
+      );
+      test(
+        'it can have a sign custom message',
+        () {
+          final testRule = TestRule('mSg');
+          final testRule2 = TestRule('gSm');
+          expect(
+            testRule.errorMessage,
+            'mSg',
+          );
+          expect(
+            testRule2.errorMessage,
+            'gSm',
+          );
+        },
+      );
     },
   );
 }
