@@ -41,5 +41,17 @@ return TextFormField(
 if you need to show a custom error message you can
 
 - use the rule constructor (scooped for a single rule)
-- use `ValidatorsLocalization.translate` (scooped for the entire rules)
+- use `ValidatorsLocalization.on` (scooped for the entire Type rules)
+  import 'package:flutter_test/flutter_test.dart';
+  import 'package:queen_validators/queen_validators.dart';
+  import 'package:queen_validators/tr.dart';
+
+```dart
+void main() {
+
+    ValidatorsLocalization.on<IsRequired>((rule) => 'the new required message');
+
+}
+```
+
 - if you use queen all the rules are localized out of the box 🎁 !
