@@ -42,15 +42,10 @@ if you need to show a custom error message you can
 
 - use the rule constructor (scooped for a single rule)
 - use `ValidatorsLocalization.on` (scooped for the entire Type rules)
-  import 'package:flutter_test/flutter_test.dart';
-  import 'package:queen_validators/queen_validators.dart';
-  import 'package:queen_validators/tr.dart';
 
 ```dart
 void main() {
-
     ValidatorsLocalization.on<IsRequired>((rule) => 'the new required message');
-
 }
 ```
 
