@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/queen_validators.dart';
+import 'package:queen_validators/src/rules/urls/is_secure_url.dart';
 
 void main() {
   test('all rules override toString', () {
@@ -55,6 +56,7 @@ void main() {
       IsInstagramUrl(),
       IsUrl(),
       IsYoutubeUrl(),
+      const IsSecureUrl()
 
       /// text
       /// magic
