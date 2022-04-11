@@ -56,7 +56,7 @@ void main() {
       IsInstagramUrl(),
       IsUrl(),
       IsYoutubeUrl(),
-      const IsSecureUrl()
+      const IsSecureUrl(),
 
       /// text
       /// magic
