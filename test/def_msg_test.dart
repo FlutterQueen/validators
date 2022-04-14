@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/queen_validators.dart';
+import 'package:queen_validators/src/rules/it/is_ip_address.dart';
 import 'package:queen_validators/src/rules/urls/is_secure_url.dart';
 
 void main() {
@@ -18,6 +19,7 @@ void main() {
       const IsEmail(),
       const IsPort(),
       RegExpRule(RegExp('')),
+      const IsIpAddress(),
 
       /// languages
       IsRTLLanguage(),
