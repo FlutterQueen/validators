@@ -42,11 +42,21 @@ void main() {
         reason: 'ip address cant contain letters',
       );
     });
-    test('returns false  if  ip address is null', () {
+    test('returns false  if  ip address not String', () {
       expect(
         isIpAddress(null),
         isFalse,
         reason: 'ip cant be null value',
+      );
+      expect(
+        isIpAddress(1.123),
+        isFalse,
+        reason: 'ip cant be double value',
+      );
+      expect(
+        isIpAddress(0x1222),
+        isFalse,
+        reason: 'ip cant be hexa value',
       );
     });
   });
