@@ -31,6 +31,11 @@ void main() {
           isTrue,
           reason: 'valid protocol, vlid domain,valid search query',
         );
+        expect(
+          IsFacebookUrl().isValid('https://facebook.com/#'),
+          isTrue,
+          reason: 'a hash symbol is vlid after the url',
+        );
       },
     );
     test(
