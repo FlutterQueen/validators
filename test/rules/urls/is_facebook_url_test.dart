@@ -36,6 +36,11 @@ void main() {
           isTrue,
           reason: 'a hash symbol is vlid after the url',
         );
+        expect(
+          IsFacebookUrl().isValid('https://fb.com/#'),
+          isTrue,
+          reason: 'a hash symbol is vlid after the url',
+        );
       },
     );
     test(

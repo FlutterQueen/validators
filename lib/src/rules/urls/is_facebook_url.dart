@@ -12,6 +12,6 @@ class IsFacebookUrl extends TextValidationRule {
 
 bool isFacebookUrlValid(String url) {
   return RegExp(
-    r'^((https?):\/\/)((www\.)?(facebook)\.(com))\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)',
+    r'^((https?):\/\/)((www\.)?(facebook|fb)\.(com))\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)',
   ).hasMatch(url);
 }
