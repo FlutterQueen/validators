@@ -10,5 +10,4 @@ class IsNumbersOnly extends TextValidationRule {
   String toString() => 'validation.is_numbers_only';
 }
 
-bool isNumbersOnly(String input) =>
-    RegExp('[0-9]').hasMatch(input);
+bool isNumbersOnly(String input) => RegExp('[0-9]').hasMatch(input);

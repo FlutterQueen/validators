@@ -10,5 +10,4 @@ class IsEnglishChars extends TextValidationRule {
   String toString() => 'validation.is_english_chars';
 }
 
-bool isEnglishChars(String input) =>
-    RegExp(r'^[a-zA-Z]+$').hasMatch(input);
+bool isEnglishChars(String input) => RegExp(r'^[a-zA-Z]+$').hasMatch(input);
