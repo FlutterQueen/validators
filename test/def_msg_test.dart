@@ -1,6 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:queen_validators/queen_validators.dart';
 import 'package:queen_validators/src/rules/it/is_ip_address.dart';
+import 'package:queen_validators/src/rules/languages/is_arabic_chars.dart';
+import 'package:queen_validators/src/rules/languages/is_english_char.dart';
 import 'package:queen_validators/src/rules/urls/is_secure_url.dart';
 
 void main() {
@@ -32,6 +34,7 @@ void main() {
       NotContainsAny([]),
 
       /// Numbers
+      IsNumber(),
       IsArabicNum(),
       IsHindiNum(),
       IsNumber(),
@@ -43,6 +46,8 @@ void main() {
       ISKsaPhone(),
 
       /// Text
+      IsArabicChars(),
+      IsEnglishChars(),
       Contains(''),
       EndsWith(''),
       IsEmpty(),
